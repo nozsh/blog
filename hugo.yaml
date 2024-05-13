@@ -1,3 +1,181 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: https://nozsh.su/blog/
+languageCode: ru
+defaultContentLanguage: ru
+title: nozsh
+paginate: 5
+theme: ["PaperMod"]
+
+enableRobotsTXT: false
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+## SITE \\ THEME SETTINGS ##
+params:
+  env: production
+  title: nozsh
+  description: "Заметки. Идеи. Гайды."
+  keywords: [Блог, заметки, идеи, гайды]
+  author: ["nozsh"] # ['Me', 'You'] multiple authors
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "2 Jan 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: false
+    favicon: "fav/favicon.ico"
+    favicon32x32: "fav/favicon-32px.png"
+    favicon16x16: "fav/favicon-16px.png"
+    apple_touch_icon: "fav/favicon-180px.png"
+    safari_pinned_tab: "fav/favicon.svg"
+
+  label:
+    # text: "AnotherSiteTitle"
+    icon: /logo.jpg
+    iconHeight: 35
+
+  # homeInfoParams:
+  #   Title: nozsh
+  #   Content: Заметки. Идеи. Гайды.
+
+  # socialIcons: # optional
+  #   - name: "GitHub"
+  #     url: "https://github.com/nozsh?nt"
+  #   - name: "Telegram"
+  #     url: "https://t.me/"
+
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: nozsh
+    subtitle: "Заметки. Идеи. Гайды."
+    imageUrl: "logo.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: Cowboy Bebop
+    buttons:
+      - identifier: archives
+        name: Архив
+        url: /archives/
+        weight: 20
+      - identifier: categories
+        name: Категории
+        url: /categories/
+        weight: 30
+      - identifier: tags
+        name: Теги
+        url: /tags/
+        weight: 40
+
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: "XYZabc"
+  #   bing:
+  #     SiteVerificationTag: "XYZabc"
+  #   yandex:
+  #     SiteVerificationTag: "XYZabc"
+
+  cover:
+    responsiveImages: false # More one size of cover
+    linkFullImages: false # Clicable cover
+    # hidden: false # hide everywhere but not in structured data
+    # hiddenInList: false # hide on list pages and home
+    # hiddenInSingle: false # hide on single page
+
+  editPost:
+    URL: "https://github.com/nozsh/blog/content"
+    Text: "Предложить изменения" # edit text
+    appendFilePath: true # to append file path to Edit link
+
+  # For search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    # - identifier: links
+    #   name: Ссылки
+    #   url: /links/
+    #   weight: 10
+    - identifier: archives
+      name: Архив
+      url: /archives/
+      weight: 20
+    - identifier: categories
+      name: Категории
+      url: /categories/
+      weight: 30
+    - identifier: tags
+      name: Теги
+      url: /tags/
+      weight: 40
+    - identifier: search
+      name: 🔎
+      url: /search/
+      weight: 50
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+
+## MARKDOWN SETTINGS ##
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 2
+    endLevel: 5
+    ordered: false
+  highlight:
+    noClasses: false
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+
+languages:
+  ru:
+    languageCode: ru
+    languageDirection: ltr
+    languageName: Русский
+    weight: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+permalinks:
+  posts: "/:filename" # convert = /posts/post1 => /post1, https://gohugo.io/content-management/urls/
+  pages: "/:filename"
