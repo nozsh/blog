@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Trust Wallet - Нулевой баланс"
 description: "Нулевой баланс на Trust Wallet после восстановления, как быть?"
 summary: "Нулевой баланс на Trust Wallet после восстановления, как быть?"
