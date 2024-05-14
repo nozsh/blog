@@ -5,7 +5,7 @@ description: "Нулевой баланс на Trust Wallet после восс�
 summary: "Нулевой баланс на Trust Wallet после восстановления, как быть?"
 date: 2024-04-01
 tags: ["Trust Wallet"] # ['tag 1', 'tag 2']
-categories: ["Крипта", "📝 Заметки"] # ["cat 1", "cat 2"]
+categories: ["Крипта", "Заметки"] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 
