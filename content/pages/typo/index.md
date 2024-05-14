@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Typo"
 description: "Как правильно писать"
 # date: 2001-01-29
