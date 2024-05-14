@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>nozsh</title>
-    <link>https://nozsh.su/blog/</link>
-    <description>Recent content on nozsh</description>
+    <title>Web on nozsh</title>
+    <link>https://nozsh.su/blog/categories/web/</link>
+    <description>Recent content in Web on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
     <lastBuildDate>Tue, 14 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nozsh.su/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nozsh.su/blog/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Маскировка ссылок на вашем сайте через href.li</title>
       <link>https://nozsh.su/blog/maskirovka-ssylok-na-vashem-saite-cherez-href-li/</link>
       <pubDate>Tue, 14 May 2024 00:00:00 +0000</pubDate>
       <guid>https://nozsh.su/blog/maskirovka-ssylok-na-vashem-saite-cherez-href-li/</guid>
       <description>Заметка о том как маскировать ссылки на вашем сайте.</description>
-    </item>
-    <item>
-      <title>Trust Wallet - Нулевой баланс</title>
-      <link>https://nozsh.su/blog/trust-wallet-nulevoi-balans/</link>
-      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/trust-wallet-nulevoi-balans/</guid>
-      <description>Нулевой баланс на Trust Wallet после восстановления, как быть?</description>
     </item>
   </channel>
 </rss>
