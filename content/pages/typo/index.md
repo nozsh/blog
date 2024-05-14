@@ -39,12 +39,10 @@ cover:
 {{< /callout/note >}}
 
 ```bash
-{{\< callout/note >}}
+{{</* callout/note */>}}
 Это **заметка**.
-{{\< /callout/note >}}
+{{</* /callout/note */>}}
 ```
-
-После вставки необходимо убрать `\`.
 
 ---
 
@@ -53,12 +51,10 @@ cover:
 {{< /callout/hint >}}
 
 ```bash
-{{\< callout/hint >}}
+{{</* callout/hint */>}}
 Это **подсказка**.
-{{\< /callout/hint >}}
+{{</* /callout/hint */>}}
 ```
-
-После вставки необходимо убрать `\`.
 
 ---
 
@@ -67,22 +63,18 @@ cover:
 {{< /callout/warn >}}
 
 ```bash
-{{\< callout/warn >}}
+{{</* callout/warn */>}}
 Это **предупреждение**.
-{{\< /callout/warn >}}
+{{</* /callout/warn */>}}
 ```
-
-После вставки необходимо убрать `\`.
 
 ### Ахтунг
 
 {{< ahtung/1 >}}
 
 ```md
-{{\< ahtung/1 >}}
+{{</* ahtung/1 */>}}
 ```
-
-После вставки необходимо убрать `\`.
 
 ## Заголовки
 
@@ -211,20 +203,16 @@ cover:
 {{< imgs/img "alt text" "50%" "typo-cover.jpg" >}}
 
 ```md
-{{\< imgs/img "alt text" "50%" "typo-cover.jpg" >}}
+{{</* imgs/img "alt text" "50%" "typo-cover.jpg" */>}}
 ```
-
-После вставки необходимо убрать `\`.
 
 ### С подписью (Кастом)
 
-{{< imgs/imgc width="" caption="Подпись тут" alt="alt text" src="typo-cover.jpg" >}}
+{{< imgs/imgc width="" caption="Это подпись" alt="alt text" src="typo-cover.jpg" >}}
 
 ```md
-{{\< imgs/imgc width="" caption="" alt="" src="" >}}
+{{</* imgs/imgc width="" caption="" alt="" src="" */>}}
 ```
-
-После вставки необходимо убрать `\`.
 
 ## Таблицы
 
