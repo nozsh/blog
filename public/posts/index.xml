@@ -6,8 +6,15 @@
     <description>Recent content in Посты on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
-    <lastBuildDate>Tue, 14 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nozsh.su/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Брутфорс архива WinRAR</title>
+      <link>https://nozsh.su/blog/brutfors-arkhiva-winrar/</link>
+      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://nozsh.su/blog/brutfors-arkhiva-winrar/</guid>
+      <description>Покажу как перебирать пароли от архива WinRAR, используя 7z и Batch.</description>
+    </item>
     <item>
       <title>Маскировка ссылок на вашем сайте через href.li</title>
       <link>https://nozsh.su/blog/maskirovka-ssylok-na-vashem-saite-cherez-href-li/</link>

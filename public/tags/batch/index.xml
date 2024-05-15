@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Batch on nozsh</title>
+    <link>https://nozsh.su/blog/tags/batch/</link>
+    <description>Recent content in Batch on nozsh</description>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>ru</language>
+    <lastBuildDate>Wed, 15 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nozsh.su/blog/tags/batch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Брутфорс архива WinRAR</title>
+      <link>https://nozsh.su/blog/brutfors-arkhiva-winrar/</link>
+      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://nozsh.su/blog/brutfors-arkhiva-winrar/</guid>
+      <description>Покажу как перебирать пароли от архива WinRAR, используя 7z и Batch.</description>
+    </item>
+  </channel>
+</rss>
