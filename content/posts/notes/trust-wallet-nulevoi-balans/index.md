@@ -4,8 +4,8 @@ title: "Trust Wallet - Нулевой баланс"
 description: "Нулевой баланс на Trust Wallet после восстановления, как быть?"
 summary: "Нулевой баланс на Trust Wallet после восстановления, как быть?"
 date: 2024-04-01
-tags: ["Trust Wallet"] # ['tag 1', 'tag 2']
-categories: ["Крипта", "Заметки"] # ["cat 1", "cat 2"]
+tags: ["Trust Wallet", "Заметки"] # ['tag 1', 'tag 2']
+categories: ["Крипта"] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 
@@ -26,8 +26,8 @@ UseHugoToc: true
 cover:
   image: "trust-wallet-nulievoi-balans-cover.jpg" # image path/url
   alt: "Trust Wallet - Нулевой баланс - Cover" # alt text
-  caption: "Photo by [Sajad Nori](https://unsplash.com/@sajadnori?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit?nt) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit?nt)" # display caption under cover
-  relative: false # when using page bundles set this to true
+  caption: "Photo by [Sajad Nori](https://unsplash.com/@sajadnorit?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
 

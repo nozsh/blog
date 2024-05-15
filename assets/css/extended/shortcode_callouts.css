@@ -10,6 +10,14 @@
   background: rgba(240, 165, 15, 0.13);
 }
 
+.kg-callout-card p {
+  margin-bottom: 10px;
+}
+
+.kg-callout-card p:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
 .kg-callout-card,
 .kg-callout-card * {
   box-sizing: border-box;

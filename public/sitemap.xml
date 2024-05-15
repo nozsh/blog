@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nozsh.su/blog/</loc>
+    <lastmod>2024-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nozsh.su/blog/posts/</loc>
+    <lastmod>2024-05-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nozsh.su/blog/tags/href.li/</loc>
     <lastmod>2024-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nozsh.su/blog/</loc>
+    <loc>https://nozsh.su/blog/categories/%D0%B2%D0%B5%D0%B1/</loc>
     <lastmod>2024-05-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nozsh.su/blog/categories/web/</loc>
-    <lastmod>2024-05-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nozsh.su/blog/categories/%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/</loc>
+    <loc>https://nozsh.su/blog/tags/%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/</loc>
     <lastmod>2024-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/categories/</loc>
@@ -21,9 +24,6 @@
     <lastmod>2024-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/maskirovka-ssylok-na-vashem-saite-cherez-href-li/</loc>
-    <lastmod>2024-05-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nozsh.su/blog/posts/</loc>
     <lastmod>2024-05-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/tags/</loc>
