@@ -1,10 +1,10 @@
 ---
 draft: true
-title: "Обход пароля Windows"
+title: "Обход пароля на машине"
 description: "Забыли пароль? Украли ноутбук? Не проблема."
 summary: "Забыли пароль? Украли ноутбук? Не проблема."
 date: 2024-05-15
-tags: ["Windows", "Статьи"] # ['tag 1', 'tag 2']
+tags: ["Windows", "Linux", "Статьи"] # ['tag 1', 'tag 2']
 categories: ["Хакинг"] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
@@ -27,7 +27,7 @@ cover:
   image: "Obkhod-parolia-Windows-cover.jpg" # image path/url
   alt: "Cover" # alt text
   caption: "Photo by [rc.xyz NFT gallery](https://unsplash.com/@moneyphotos?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
-  relative: false # when using page bundles set this to true
+  relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
 

@@ -27,7 +27,7 @@ cover:
   image: "" # image path/url
   alt: "Cover" # alt text
   caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
-  relative: false # when using page bundles set this to true
+  relative: true # when using page bundles set this to true
   hidden: true # only hide on current single page
 ---
 
@@ -51,7 +51,7 @@ cover:
 
 `path\to\output` - путь куда будет распакован архив
 
-`-y` - _Yes\Да_ подтвердить замену файлов, если они уже существуют.
+`-y` - _Yes/Да_ подтвердить замену файлов, если они уже существуют.
 
 {{< callout/note >}}
 Указывать параметры после флагов `-p` и `-o` нужно без пробелов.
@@ -103,7 +103,7 @@ echo %errorlevel%
 
 ---
 
-Создает файл с расширением `.bat` или `.cmd`. Начинаем скрипт с:
+Создаем файл с расширением `.bat` или `.cmd`. Начинаем скрипт с:
 
 ```bash
 @echo off

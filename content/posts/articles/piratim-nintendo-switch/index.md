@@ -27,7 +27,7 @@ cover:
   image: "piratim-nintendo-switch-cover.jpg" # image path/url
   alt: "Пиратим Nintendo Switch (Prince of Persia: The Lost Crown) - Cover" # alt text
   caption: "Prince of Persia: The Lost Crown" # display caption under cover
-  relative: false # when using page bundles set this to true
+  relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
 
