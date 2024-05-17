@@ -78,16 +78,16 @@ cover:
 
 ### Спойлер/Аккордион
 
-{{< details/1 title="Заголовок" open=true >}}
+{{< details/1 "Заголовок" open >}}
 Контент
 {{< /details/1 >}}
 
-{{< details/1 title="Заголовок" >}}
+{{< details/1 "Заголовок" >}}
 Контент
 {{< /details/1 >}}
 
 ```md
-{{</* details/1 title="Заголовок" open=true */>}}
+{{</* details/1 "Заголовок" open */>}}
 Контент
 {{</* /details/1 */>}}
 ```

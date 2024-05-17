@@ -227,7 +227,8 @@ pause
 exit
 ```
 
-{{< details/1 title="Полный код скрипта" >}}
+{{< details/1 "Полный код скрипта" >}}
+
 ```batch
 @echo off
 
@@ -315,6 +316,7 @@ if /I %errorlevel% EQU 0 (
   exit
 )
 ```
+
 {{< /details/1 >}}
 
 ## Улучшения
@@ -360,12 +362,12 @@ for /f "tokens=1,* delims==" %%a in (config.txt) do (
 
 То есть выглядит это так:
 
-| `%%a` | = | `%%b` |
-| :---: | :-: | :---: |
-| z7dir | = | значение |
-| archive | = | значение |
-| output | = | значение |
-| wordlist | = | значение |
+|  `%%a`   |  =  |  `%%b`   |
+| :------: | :-: | :------: |
+|  z7dir   |  =  | значение |
+| archive  |  =  | значение |
+|  output  |  =  | значение |
+| wordlist |  =  | значение |
 
 И как можно догадаться, порядок строк в **config.txt** не имеет значения.
 
@@ -429,7 +431,8 @@ if /I "%yesornot%"=="y" (
 
 А перед кодом, где начинается брут пишем: `:startbruting`.
 
-{{< details/1 title="Код" >}}
+{{< details/1 "Код" >}}
+
 ```batch
 @echo off
 
@@ -554,9 +557,9 @@ if /I %errorlevel% EQU 0 (
   exit
 )
 ```
+
 {{< /details/1 >}}
 
-
-***
+---
 
 [_Источник_](https://youtu.be/Il2CF15F6cg?si=c4wMnPuCVvC3GGeP?nt)
