@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nozsh.su/blog/tags/batch/</loc>
-    <lastmod>2024-05-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nozsh.su/blog/</loc>
+    <lastmod>2024-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nozsh.su/blog/posts/</loc>
+    <lastmod>2024-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nozsh.su/blog/tags/batch/</loc>
     <lastmod>2024-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/tags/windows/</loc>
@@ -21,9 +24,6 @@
     <lastmod>2024-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/categories/</loc>
-    <lastmod>2024-05-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nozsh.su/blog/posts/</loc>
     <lastmod>2024-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</loc>
@@ -58,6 +58,15 @@
   </url><url>
     <loc>https://nozsh.su/blog/categories/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0/</loc>
     <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nozsh.su/blog/tags/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/</loc>
+    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nozsh.su/blog/categories/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0/</loc>
+    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nozsh.su/blog/udalenie-razdelov-nakopitelia/</loc>
+    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nozsh.su/blog/pages/</loc>
   </url><url>
