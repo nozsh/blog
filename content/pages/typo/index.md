@@ -94,10 +94,10 @@ cover:
 
 ### Встраивание YouTube
 
-{{< iframes/yt dQw4w9WgXcQ >}}
+{{< iframes/yt jfKfPfyJRdk >}}
 
 ```md
-{{</* iframes/yt dQw4w9WgXcQ */>}}
+{{</* iframes/yt jfKfPfyJRdk */>}}
 ```
 
 ## Заголовки
