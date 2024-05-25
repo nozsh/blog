@@ -94,10 +94,14 @@ cover:
 
 ### Встраивание YouTube
 
-{{< iframes/yt jfKfPfyJRdk >}}
+{{< iframes/yt jfKfPfyJRdk "lofi hip hop radio 📚 - beats to relax/study to" >}}
 
 ```md
 {{</* iframes/yt jfKfPfyJRdk */>}}
+```
+
+```md
+{{</* iframes/yt jfKfPfyJRdk "title" */>}}
 ```
 
 ## Заголовки
