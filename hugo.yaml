@@ -97,7 +97,7 @@ params:
   #     SiteVerificationTag: "XYZabc"
 
   cover:
-    responsiveImages: false # More one size of cover
+    responsiveImages: true # More one size of cover
     linkFullImages: false # Clicable cover
     # hidden: false # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
