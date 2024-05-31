@@ -3,3 +3,14 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.post-tags .category {
+  background: #f0f622;
+  color: #000;
+  font-weight: bold;
+}
+
+.post-tags .category:hover {
+  background: #c7cd1b;
+  color: #000;
+}

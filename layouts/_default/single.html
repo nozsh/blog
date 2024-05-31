@@ -48,10 +48,8 @@
 
     <ul class="post-tags">
       {{- range ($.GetTerms $categories) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      <li><a href="{{ .Permalink }}" class="category">{{ .LinkTitle }}</a></li>
       {{- end }}
-
-      <li>|</li>
 
       {{- range ($.GetTerms $tags) }}
       <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>

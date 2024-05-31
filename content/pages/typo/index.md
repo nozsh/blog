@@ -7,6 +7,7 @@ tags: [""] # ['tag 1', 'tag 2']
 categories: [""] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
+robotsNoIndex: true
 
 showToc: true
 TocOpen: true
@@ -15,12 +16,14 @@ comments: false
 disableHLJS: false
 disableShare: false
 hideSummary: false
-searchHidden: false
+searchHidden: true
 ShowReadingTime: false
 ShowWordCount: false
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
 ShowRssButtonInSectionTermList: true
+ShowCanonicalLink: false
+# CanonicalLinkText: ""
 UseHugoToc: true
 cover:
   image: "typo-cover.jpg" # image path/url

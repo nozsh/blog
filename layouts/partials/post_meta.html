@@ -18,10 +18,17 @@
 {{- end }}
 {{- end }}
 
-{{- with ($scratch.Get "meta") }}
-{{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
+{{- if (.Param "byai") -}}
+{{- $byaiBadge := partial "byai.html" . | safeHTML -}}
+{{- $scratch.Add "metaByAi" (slice $byaiBadge) }}
+{{- end }}
+
+{{- $combinedMeta := slice }}
+{{- with ($scratch.Get "metaByAi") -}}
+{{- $combinedMeta = $combinedMeta | append . -}}
+{{- end -}}
+{{- with ($scratch.Get "meta") -}}
+{{- $combinedMeta = $combinedMeta | append . -}}
 {{- end -}}
 
-{{- if (.Param "byai") -}}
-{{- partial "byai.html" . -}}
-{{- end }}
+{{- delimit $combinedMeta "&nbsp;·&nbsp;" | safeHTML -}}
