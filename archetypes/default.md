@@ -23,6 +23,8 @@ ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
+hideAuthor: false
+byai: false
 cover:
   image: "" # image path/url
   alt: "Cover" # alt text

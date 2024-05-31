@@ -1,0 +1,36 @@
+.byai {
+  max-width: 75px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(30px);
+  background-image: linear-gradient(
+    to right,
+    rgba(74, 0, 143, 0.6),
+    rgba(132, 0, 255, 1)
+  );
+
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 2px 10px 2px 10px;
+  font-weight: 500;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.byai svg {
+  color: #fff;
+  max-width: 15px;
+  max-height: 15px;
+  margin-right: 5px;
+}
+
+.entry-footer,
+.post-meta,
+.archive-meta {
+  display: flex;
+  align-items: center;
+}

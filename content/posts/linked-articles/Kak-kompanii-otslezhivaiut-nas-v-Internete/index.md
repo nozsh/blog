@@ -19,6 +19,7 @@ hideSummary: false
 searchHidden: false
 ShowReadingTime: false
 ShowWordCount: false
+hideAuthor: false
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
