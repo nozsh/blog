@@ -6,8 +6,15 @@
     <description>Recent content in Статьи on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
-    <lastBuildDate>Wed, 15 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://nozsh.su/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI для статей - ChatGPT</title>
+      <link>https://nozsh.su/blog/ai-dlia-statei-chatgpt/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nozsh.su/blog/ai-dlia-statei-chatgpt/</guid>
+      <description>AI облегчает написание статей, повышая их доступность и эффективность.</description>
+    </item>
     <item>
       <title>Брутфорс архива WinRAR</title>
       <link>https://nozsh.su/blog/brutfors-arkhiva-winrar/</link>

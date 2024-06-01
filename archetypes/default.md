@@ -4,8 +4,8 @@ title: "IDK"
 description: "Desc"
 summary: "Desc"
 date: 2001-01-29
-tags: [""] # ['tag 1', 'tag 2']
 categories: [""] # ["cat 1", "cat 2"]
+tags: [""] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1

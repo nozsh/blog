@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ChatGPT on nozsh</title>
+    <link>https://nozsh.su/blog/tags/chatgpt/</link>
+    <description>Recent content in ChatGPT on nozsh</description>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>ru</language>
+    <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nozsh.su/blog/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI для статей - ChatGPT</title>
+      <link>https://nozsh.su/blog/ai-dlia-statei-chatgpt/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://nozsh.su/blog/ai-dlia-statei-chatgpt/</guid>
+      <description>AI облегчает написание статей, повышая их доступность и эффективность.</description>
+    </item>
+  </channel>
+</rss>
