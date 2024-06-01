@@ -1,3 +1,5 @@
+/* Meta Badge */
+
 .byai {
   max-width: 75px;
   display: flex;
@@ -11,9 +13,9 @@
   );
 
   color: #fff;
-  border-radius: var(--radius);
-  padding: 2px 10px 2px 10px;
   font-weight: 500;
+  padding: 2px 10px 2px 10px;
+  border-radius: var(--radius);
 
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -28,9 +30,37 @@
   margin-right: 5px;
 }
 
+/* Some styles for Meta Badge area */
+
 .entry-footer,
 .post-meta,
 .archive-meta {
   display: flex;
   align-items: center;
+}
+
+/* Post Tag */
+
+.post-tags .category.category-by-ai {
+  background: transparent;
+  backdrop-filter: blur(30px);
+  background-image: linear-gradient(
+    to right,
+    rgba(74, 0, 143, 0.6),
+    rgba(132, 0, 255, 1)
+  );
+  border: 0;
+  padding: 1px 15px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.post-tags .category.category-by-ai:hover {
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(74, 0, 143, 0.4),
+    rgba(132, 0, 255, 0.8)
+  );
+  color: #fff;
 }

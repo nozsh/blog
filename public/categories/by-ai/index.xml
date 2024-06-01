@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>By AI on nozsh</title>
+    <link>https://nozsh.su/blog/categories/by-ai/</link>
+    <description>Recent content in By AI on nozsh</description>
+    <generator>Hugo -- 0.125.7</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 23 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nozsh.su/blog/categories/by-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Как компании отслеживают нас в Интернете? Возможно ли этого избежать?</title>
+      <link>https://nozsh.su/blog/kak-kompanii-otslezhivaiut-nas-v-internete/</link>
+      <pubDate>Thu, 23 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://nozsh.su/blog/kak-kompanii-otslezhivaiut-nas-v-internete/</guid>
+      <description>Ставим жирную точку в вопросах защиты своих персональных данных.</description>
+    </item>
+  </channel>
+</rss>

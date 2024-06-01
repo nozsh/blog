@@ -1,0 +1,5 @@
+{{ $r := anchorize . }}
+{{ range $from, $to := site.Data.translit }}
+{{ $r = replace $r $from $to }}
+{{ end }}
+{{ return $r }}
