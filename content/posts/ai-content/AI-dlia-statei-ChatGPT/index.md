@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "AI для статей - ChatGPT"
+title: "AI для статей: ChatGPT"
 description: "AI облегчает написание статей, повышая их доступность и эффективность."
 summary: "AI облегчает написание статей, повышая их доступность и эффективность."
 date: 2024-06-01
@@ -32,8 +32,8 @@ TocOpen: true
 # hideAuthor: true
 byai: true
 cover:
-  image: "AI-dlia-statei-ChatGPT__cmpr.jpg" # image path/url
-  alt: "Cover" # alt text
+  image: "AI-dlia-statei-ChatGPT-cover.jpg" # image path/url
+  alt: "AI для статей: ChatGPT - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true # only hide on current single page
