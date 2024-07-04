@@ -12,6 +12,10 @@
 #echo
 #hugo && echo "Re-generate public dir: Done"
 #echo
+
+echo Delete public and resources
+rm -rf public && rm -rf resources
+echo
 echo "- Work with git"
 echo
 git add . && git commit -m "upd" && git push
