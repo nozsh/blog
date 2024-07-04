@@ -36,5 +36,5 @@ cover:
   alt: "Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
-  # hidden: true # only hide on current single page
+  hidden: true # only hide on current single page
 ---

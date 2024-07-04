@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pages on nozsh</title>
-    <link>https://nozsh.su/blog/pages/</link>
+    <link>http://localhost:1313/blog/pages/</link>
     <description>Recent content in Pages on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
-    <atom:link href="https://nozsh.su/blog/pages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>By AI</title>
-      <link>https://nozsh.su/blog/by-ai/</link>
+      <link>http://localhost:1313/blog/by-ai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/by-ai/</guid>
+      <guid>http://localhost:1313/blog/by-ai/</guid>
       <description>Часть этого контента подготовлена с помощью ИИ.</description>
     </item>
     <item>
       <title>Typo</title>
-      <link>https://nozsh.su/blog/typo/</link>
+      <link>http://localhost:1313/blog/typo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/typo/</guid>
+      <guid>http://localhost:1313/blog/typo/</guid>
       <description>Как правильно писать</description>
     </item>
   </channel>

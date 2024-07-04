@@ -2,59 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Категории on nozsh</title>
-    <link>https://nozsh.su/blog/categories/</link>
+    <link>http://localhost:1313/blog/categories/</link>
     <description>Recent content in Категории on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
     <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nozsh.su/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>https://nozsh.su/blog/categories/ai/</link>
+      <link>http://localhost:1313/blog/categories/ai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/ai/</guid>
+      <guid>http://localhost:1313/blog/categories/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>By AI</title>
-      <link>https://nozsh.su/blog/categories/by-ai/</link>
+      <link>http://localhost:1313/blog/categories/by-ai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/by-ai/</guid>
+      <guid>http://localhost:1313/blog/categories/by-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>А И Б</title>
-      <link>https://nozsh.su/blog/categories/%D0%B0-%D0%B8-%D0%B1/</link>
+      <link>http://localhost:1313/blog/categories/%D0%B0-%D0%B8-%D0%B1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/%D0%B0-%D0%B8-%D0%B1/</guid>
+      <guid>http://localhost:1313/blog/categories/%D0%B0-%D0%B8-%D0%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>Система</title>
-      <link>https://nozsh.su/blog/categories/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0/</link>
+      <link>http://localhost:1313/blog/categories/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0/</guid>
+      <guid>http://localhost:1313/blog/categories/%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0/</guid>
       <description></description>
     </item>
     <item>
       <title>Хакинг</title>
-      <link>https://nozsh.su/blog/categories/%D1%85%D0%B0%D0%BA%D0%B8%D0%BD%D0%B3/</link>
+      <link>http://localhost:1313/blog/categories/%D1%85%D0%B0%D0%BA%D0%B8%D0%BD%D0%B3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/%D1%85%D0%B0%D0%BA%D0%B8%D0%BD%D0%B3/</guid>
+      <guid>http://localhost:1313/blog/categories/%D1%85%D0%B0%D0%BA%D0%B8%D0%BD%D0%B3/</guid>
       <description></description>
     </item>
     <item>
       <title>Веб</title>
-      <link>https://nozsh.su/blog/categories/%D0%B2%D0%B5%D0%B1/</link>
+      <link>http://localhost:1313/blog/categories/%D0%B2%D0%B5%D0%B1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/%D0%B2%D0%B5%D0%B1/</guid>
+      <guid>http://localhost:1313/blog/categories/%D0%B2%D0%B5%D0%B1/</guid>
       <description></description>
     </item>
     <item>
       <title>Крипта</title>
-      <link>https://nozsh.su/blog/categories/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0/</link>
+      <link>http://localhost:1313/blog/categories/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/categories/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0/</guid>
+      <guid>http://localhost:1313/blog/categories/%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Черный Флаг</title>
+      <link>http://localhost:1313/blog/categories/%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D1%84%D0%BB%D0%B0%D0%B3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/categories/%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B9-%D1%84%D0%BB%D0%B0%D0%B3/</guid>
       <description></description>
     </item>
   </channel>

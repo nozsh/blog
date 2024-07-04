@@ -2,143 +2,157 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Теги on nozsh</title>
-    <link>https://nozsh.su/blog/tags/</link>
+    <link>http://localhost:1313/blog/tags/</link>
     <description>Recent content in Теги on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
     <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nozsh.su/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ChatGPT</title>
-      <link>https://nozsh.su/blog/tags/chatgpt/</link>
+      <link>http://localhost:1313/blog/tags/chatgpt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/chatgpt/</guid>
+      <guid>http://localhost:1313/blog/tags/chatgpt/</guid>
       <description></description>
     </item>
     <item>
       <title>Искусственный Интеллект</title>
-      <link>https://nozsh.su/blog/tags/%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82/</link>
+      <link>http://localhost:1313/blog/tags/%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82/</guid>
       <description></description>
     </item>
     <item>
       <title>Нейросети</title>
-      <link>https://nozsh.su/blog/tags/%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8/</link>
+      <link>http://localhost:1313/blog/tags/%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D1%81%D0%B5%D1%82%D0%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>Статьи</title>
-      <link>https://nozsh.su/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</link>
+      <link>http://localhost:1313/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</guid>
+      <guid>http://localhost:1313/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>Linked</title>
-      <link>https://nozsh.su/blog/tags/linked/</link>
+      <link>http://localhost:1313/blog/tags/linked/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/linked/</guid>
+      <guid>http://localhost:1313/blog/tags/linked/</guid>
       <description></description>
     </item>
     <item>
       <title>Безопасность В Интернете</title>
-      <link>https://nozsh.su/blog/tags/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</link>
+      <link>http://localhost:1313/blog/tags/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</guid>
       <description></description>
     </item>
     <item>
       <title>Конфиденциальность Данных</title>
-      <link>https://nozsh.su/blog/tags/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/</link>
+      <link>http://localhost:1313/blog/tags/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85/</guid>
       <description></description>
     </item>
     <item>
       <title>Слежка В Интернете</title>
-      <link>https://nozsh.su/blog/tags/%D1%81%D0%BB%D0%B5%D0%B6%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</link>
+      <link>http://localhost:1313/blog/tags/%D1%81%D0%BB%D0%B5%D0%B6%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D1%81%D0%BB%D0%B5%D0%B6%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</guid>
+      <guid>http://localhost:1313/blog/tags/%D1%81%D0%BB%D0%B5%D0%B6%D0%BA%D0%B0-%D0%B2-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82%D0%B5/</guid>
       <description></description>
     </item>
     <item>
       <title>2k10 Live</title>
-      <link>https://nozsh.su/blog/tags/2k10-live/</link>
+      <link>http://localhost:1313/blog/tags/2k10-live/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/2k10-live/</guid>
+      <guid>http://localhost:1313/blog/tags/2k10-live/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://nozsh.su/blog/tags/windows/</link>
+      <link>http://localhost:1313/blog/tags/windows/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/windows/</guid>
+      <guid>http://localhost:1313/blog/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Заметки</title>
-      <link>https://nozsh.su/blog/tags/%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/</link>
+      <link>http://localhost:1313/blog/tags/%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%B7%D0%B0%D0%BC%D0%B5%D1%82%D0%BA%D0%B8/</guid>
       <description></description>
     </item>
     <item>
       <title>Мультибут</title>
-      <link>https://nozsh.su/blog/tags/%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%B1%D1%83%D1%82/</link>
+      <link>http://localhost:1313/blog/tags/%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%B1%D1%83%D1%82/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%B1%D1%83%D1%82/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%B1%D1%83%D1%82/</guid>
       <description></description>
     </item>
     <item>
       <title>Batch</title>
-      <link>https://nozsh.su/blog/tags/batch/</link>
+      <link>http://localhost:1313/blog/tags/batch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/batch/</guid>
+      <guid>http://localhost:1313/blog/tags/batch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/blog/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>WinRAR</title>
-      <link>https://nozsh.su/blog/tags/winrar/</link>
+      <link>http://localhost:1313/blog/tags/winrar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/winrar/</guid>
+      <guid>http://localhost:1313/blog/tags/winrar/</guid>
       <description></description>
     </item>
     <item>
       <title>Брутфорс</title>
-      <link>https://nozsh.su/blog/tags/%D0%B1%D1%80%D1%83%D1%82%D1%84%D0%BE%D1%80%D1%81/</link>
+      <link>http://localhost:1313/blog/tags/%D0%B1%D1%80%D1%83%D1%82%D1%84%D0%BE%D1%80%D1%81/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%B1%D1%80%D1%83%D1%82%D1%84%D0%BE%D1%80%D1%81/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%B1%D1%80%D1%83%D1%82%D1%84%D0%BE%D1%80%D1%81/</guid>
       <description></description>
     </item>
     <item>
       <title>Href.li</title>
-      <link>https://nozsh.su/blog/tags/href.li/</link>
+      <link>http://localhost:1313/blog/tags/href.li/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/href.li/</guid>
+      <guid>http://localhost:1313/blog/tags/href.li/</guid>
       <description></description>
     </item>
     <item>
       <title>Маскировка Ссылок</title>
-      <link>https://nozsh.su/blog/tags/%D0%BC%D0%B0%D1%81%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA/</link>
+      <link>http://localhost:1313/blog/tags/%D0%BC%D0%B0%D1%81%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%BC%D0%B0%D1%81%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%BC%D0%B0%D1%81%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D1%81%D1%8B%D0%BB%D0%BE%D0%BA/</guid>
       <description></description>
     </item>
     <item>
       <title>Trust Wallet</title>
-      <link>https://nozsh.su/blog/tags/trust-wallet/</link>
+      <link>http://localhost:1313/blog/tags/trust-wallet/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/trust-wallet/</guid>
+      <guid>http://localhost:1313/blog/tags/trust-wallet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nintendo</title>
+      <link>http://localhost:1313/blog/tags/nintendo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/tags/nintendo/</guid>
       <description></description>
     </item>
     <item>
       <title>Данные</title>
-      <link>https://nozsh.su/blog/tags/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/</link>
+      <link>http://localhost:1313/blog/tags/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/tags/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/</guid>
+      <guid>http://localhost:1313/blog/tags/%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5/</guid>
       <description></description>
     </item>
   </channel>

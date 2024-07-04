@@ -2,7 +2,7 @@ baseURL: https://nozsh.su/blog/
 languageCode: ru
 defaultContentLanguage: ru
 title: nozsh
-paginate: 5
+paginate: 10
 theme: ["PaperMod"]
 
 enableRobotsTXT: false

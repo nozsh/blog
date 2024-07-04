@@ -2,25 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Статьи on nozsh</title>
-    <link>https://nozsh.su/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</link>
+    <link>http://localhost:1313/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/</link>
     <description>Recent content in Статьи on nozsh</description>
     <generator>Hugo -- 0.125.7</generator>
     <language>ru</language>
     <lastBuildDate>Sat, 01 Jun 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nozsh.su/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/tags/%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI для статей: ChatGPT</title>
-      <link>https://nozsh.su/blog/ai-dlia-statei-chatgpt/</link>
+      <link>http://localhost:1313/blog/ai-dlia-statei-chatgpt/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/ai-dlia-statei-chatgpt/</guid>
+      <guid>http://localhost:1313/blog/ai-dlia-statei-chatgpt/</guid>
       <description>AI облегчает написание статей, повышая их доступность и эффективность.</description>
     </item>
     <item>
       <title>Брутфорс архива WinRAR</title>
-      <link>https://nozsh.su/blog/brutfors-arkhiva-winrar/</link>
+      <link>http://localhost:1313/blog/brutfors-arkhiva-winrar/</link>
       <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://nozsh.su/blog/brutfors-arkhiva-winrar/</guid>
+      <guid>http://localhost:1313/blog/brutfors-arkhiva-winrar/</guid>
       <description>Покажу как перебирать пароли от архива WinRAR, используя 7z и Batch.</description>
+    </item>
+    <item>
+      <title>Обход пароля на машине</title>
+      <link>http://localhost:1313/blog/obkhod-parolia-na-mashine/</link>
+      <pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/obkhod-parolia-na-mashine/</guid>
+      <description>Забыли пароль? Украли ноутбук? Не проблема.</description>
+    </item>
+    <item>
+      <title>Пиратим Nintendo Switch</title>
+      <link>http://localhost:1313/blog/piratim-nintendo-switch/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/piratim-nintendo-switch/</guid>
+      <description>У вас Denuvo - у нас эмулятор.</description>
+    </item>
+    <item>
+      <title>Делаем свою сборку Windows</title>
+      <link>http://localhost:1313/blog/delaem-svoiu-sborku-windows/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/delaem-svoiu-sborku-windows/</guid>
+      <description>Всегда хотелось сделать сборку как у васи 777? Я покажу как.</description>
     </item>
   </channel>
 </rss>

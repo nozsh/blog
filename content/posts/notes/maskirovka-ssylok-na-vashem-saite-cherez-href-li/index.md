@@ -68,15 +68,15 @@ llinks_moredetail = document
 
 Пример:
 
-Я пишу ссылку так: `https://nozsh.su/?nt`, а получается это - [ссылка](https://nozsh.su/?nt).
+Я пишу ссылку так: `https://example.com/?nt`, а получается это - [ссылка](https://example.com/?nt).
 
 ```html
-<a href="https://nozsh.su/?nt">ссылка</a>
+<a href="https://example.com/?nt">ссылка</a>
 
 ==>>
 
 <a
-  href="https://href.li/?https://nozsh.su/"
+  href="https://href.li/?https://example.com/"
   target="moredetail"
   rel="noreferrer nofollow noopener"
   >ссылка</a
