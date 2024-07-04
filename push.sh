@@ -13,7 +13,8 @@
 #hugo && echo "Re-generate public dir: Done"
 #echo
 
-echo Delete public and resources
+echo "- Delete public and resources"
+echo
 rm -rf public && rm -rf resources
 echo
 echo "- Work with git"
