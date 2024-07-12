@@ -4,7 +4,7 @@ title: "Пиратим Nintendo Switch"
 description: "У вас Denuvo - у нас эмулятор."
 summary: "У вас Denuvo - у нас эмулятор."
 date: 2024-01-26
-tags: ["Nintendo", "Статьи"] # ['tag 1', 'tag 2']
+tags: ["Статьи"] # ['tag 1', 'tag 2']
 categories: ["Черный флаг"] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"

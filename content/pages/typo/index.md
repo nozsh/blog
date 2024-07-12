@@ -245,6 +245,16 @@ cover:
 {{</* imgs/imgc width="" caption="" alt="" src="" */>}}
 ```
 
+## Видео
+
+### HTML
+
+{{< vids/vidr >}}
+<video muted="" controls="">
+  <source src="https://assets.mixkit.co/videos/51921/51921-720.mp4" type="video/mp4">
+ </video>
+{{< /vids/vidr >}}
+
 ## Таблицы
 
 | Заголовок #1  | Заголовок #2 | Заголовок #3 | Заголовок #4 | etc. |

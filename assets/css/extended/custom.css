@@ -14,3 +14,11 @@
   background: #c7cd1b;
   color: #000;
 }
+
+.sh-video {
+}
+
+.sh-video video {
+  border-radius: var(--radius);
+  width: var(--main-width);
+}

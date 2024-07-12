@@ -4,7 +4,7 @@ title: "Маскировка ссылок на вашем сайте через 
 description: "Заметка о том как маскировать ссылки на вашем сайте."
 summary: "Заметка о том как маскировать ссылки на вашем сайте."
 date: 2024-05-14
-tags: ["Маскировка ссылок", "href.li", "Заметки"] # ['tag 1', 'tag 2']
+tags: ["Заметки"] # ['tag 1', 'tag 2']
 categories: ["Веб"] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"

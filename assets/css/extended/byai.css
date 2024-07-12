@@ -41,7 +41,7 @@
 
 /* Post Tag */
 
-.post-tags .category.category-by-ai {
+.post-tags .tag.tag-by-ai {
   background: transparent;
   backdrop-filter: blur(30px);
   background-image: linear-gradient(

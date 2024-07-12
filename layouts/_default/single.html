@@ -53,7 +53,7 @@
       {{- end }}
 
       {{- range ($.GetTerms $tags) }}
-      <li><a href="{{ .Permalink }}" class='tag-{{ partial "slugify.html" .LinkTitle }}'>{{ .LinkTitle }}</a></li>
+      <li><a href="{{ .Permalink }}" class='tag tag-{{ partial "slugify.html" .LinkTitle }}'>{{ .LinkTitle }}</a></li>
 
       {{- end }}
     </ul>

@@ -4,7 +4,7 @@ title: "Мультибут 2k10 Live"
 description: "Инструкция как сделать мультизагрузочную флешку/диск c 2k10 Live."
 summary: "Инструкция как сделать мультизагрузочную флешку/диск c 2k10 Live."
 date: 2024-05-19
-tags: ["2k10 Live", "Мультибут", "Windows", "Заметки"] # ['tag 1', 'tag 2']
+tags: ["Windows", "Заметки"] # ['tag 1', 'tag 2']
 categories: ["Система"] # ["cat 1", "cat 2"]
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
