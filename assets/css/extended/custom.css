@@ -5,20 +5,31 @@
 }
 
 .post-tags .category {
-  background: #f0f622;
+  background: rgba(255, 212, 93, 0.8);
   color: #000;
   font-weight: bold;
 }
 
 .post-tags .category:hover {
-  background: #c7cd1b;
+  background: rgba(255, 212, 93, 0.6);
+}
+
+.post-tags .tag.tag-zametki {
+  background: rgba(232, 246, 34, 0.8);
   color: #000;
+  font-weight: 600;
 }
 
-.sh-video {
+.post-tags .tag.tag-zametki:hover {
+  background: rgba(232, 246, 34, 0.6);
 }
 
-.sh-video video {
-  border-radius: var(--radius);
-  width: var(--main-width);
+.post-tags .tag.tag-stati {
+  background: rgba(61, 181, 255, 0.8);
+  color: #000;
+  font-weight: 600;
+}
+
+.post-tags .tag.tag-stati:hover {
+  background: rgba(61, 181, 255, 0.6);
 }

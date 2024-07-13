@@ -49,13 +49,13 @@
     rgba(74, 0, 143, 0.6),
     rgba(132, 0, 255, 1)
   );
-  border: 0;
-  padding: 1px 15px;
+  /* border: 0; */
+  /* padding: 1px 15px; */
   color: #fff;
   font-weight: 500;
 }
 
-.post-tags .category.category-by-ai:hover {
+.post-tags .tag.tag-by-ai:hover {
   background: transparent;
   background-image: linear-gradient(
     to right,
