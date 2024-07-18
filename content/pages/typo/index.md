@@ -284,3 +284,29 @@ cover:
 | :---- | :---: | ----: |
 | Текст | Текст | Текст |
 ```
+
+## Блоки кода
+
+```js
+llinks_safe = document
+  .querySelectorAll("a[href*='?safelink']")
+  .forEach((llinks_safe) => {
+    llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
+
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -9);
+    llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
+  });
+```
+
+Убрать нумерацию строк `{linenos=false}`.
+
+```js {linenos=false}
+llinks_safe = document
+  .querySelectorAll("a[href*='?safelink']")
+  .forEach((llinks_safe) => {
+    llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
+
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -9);
+    llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
+  });
+```

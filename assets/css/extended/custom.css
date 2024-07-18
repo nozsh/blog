@@ -33,3 +33,14 @@
 .post-tags .tag.tag-stati:hover {
   background: rgba(61, 181, 255, 0.6);
 }
+
+.post-content figure > figcaption {
+  /* text-align: center; */
+  font-size: 0.875rem;
+  margin: 1px 0 16px;
+  font-weight: 500;
+}
+
+.post-content figure > img {
+  margin: 1rem 0 5px 0;
+}
