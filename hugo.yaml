@@ -33,7 +33,7 @@ params:
   ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
-  CanonicalLinkText: "Источник:"
+  # CanonicalLinkText: "Источник:"
   UseHugoToc: true
   disableSpecial1stPost: true
   disableScrollToTop: false

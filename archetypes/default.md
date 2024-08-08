@@ -27,7 +27,7 @@ showToc: true
 # ShowPostNavLinks: fales
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
-# CanonicalLinkText: ""
+# CanonicalLinkText: "Источник:"
 # UseHugoToc: false
 # hideAuthor: true
 # byai: true
