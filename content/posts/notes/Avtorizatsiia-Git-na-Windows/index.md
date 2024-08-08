@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Авторизация Git на Windows"
 description: "Как запушить этот код?"
 summary: "Как запушить этот код?"
