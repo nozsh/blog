@@ -47,7 +47,7 @@ cover:
 Это заметка о том как запустить **Flux** модель.<br> **А не как запустить локальную установку для генерации пикч.**
 {{< /callout/warn >}}
 
-На момент написания этой статьи Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?nt) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?nt), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?nt). И еще, на текущий момент с Flux идеально работают только видеокартами NVIDIA.
+На момент написания этой статьи Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?nt) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?nt), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?nt). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
 
 Стоковая модель Flux [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt) может работать без текстовых энкодеров, лично у меня так.
 
