@@ -44,7 +44,7 @@ cover:
 Вероятней всего вы получаете ошибку **You do not have CLIP state dict!**, при попытки запуска Flux модели на том же Stable Diffusion web UI by AUTOMATIC1111. И видимо именно поэтому вы это читаете.
 
 {{< callout/warn >}}
-Это заметка о том как запустить **Flux** модель.<br> **А не как запустить локальную установку для генерации пикч.**
+Это заметка о том как запустить **Flux** модель.<br> **А не о том как запустить локальную установку для генерации пикч.**
 {{< /callout/warn >}}
 
 На момент написания этой статьи Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?nt) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?nt), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?nt). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
