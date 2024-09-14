@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Запуск Flux моделей локально"
 # url: ""
 description: "You do not have CLIP state dict!"
