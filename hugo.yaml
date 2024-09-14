@@ -170,6 +170,8 @@ languages:
     languageDirection: ltr
     languageName: Русский
     weight: 10
+    params:
+      transliterate: true
 
 outputs:
   home:

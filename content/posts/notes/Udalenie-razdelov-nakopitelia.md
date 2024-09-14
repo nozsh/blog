@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "Udalenie-razdelov-nakopitelia-cover.jpg" # image path/url
+  image: "udalenie-razdelov-nakopitelia/@img/Udalenie-razdelov-nakopitelia-cover.jpg" # image path/url
   alt: "Удаление разделов накопителя - Cover" # alt text
   caption: "Photo by [Drew DeArcos](https://href.li/?https://unsplash.com/@starvox?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: false # when using page bundles set this to true
@@ -40,7 +40,7 @@ clean             # Очищаем
 cre par pri       # create partition primary # Создаём раздел
 sel par 1         # select partition # Выбираем раздел (счет начинается с 1)
 active            # Делаем раздел активным. Если выдаст ошибку, пропускаем и идем дальше.
-format fs=$ quick # Форматируем в файловую систему например: fat32, ntfs, опционально label=«name» - имя накопителя. Quick - быстрое форматирование. 
+format fs=$ quick # Форматируем в файловую систему например: fat32, ntfs, опционально label=«name» - имя накопителя. Quick - быстрое форматирование.
 assign            # Назначаем букву, чтобы накопитель появился в проводнике.
 exit              # Выход из diskpart
 ```

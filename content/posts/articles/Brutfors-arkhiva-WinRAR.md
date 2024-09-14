@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "Brutfors-arkhiva-WinRAR-Cover__cmpr.jpg" # image path/url
+  image: "brutfors-arkhiva-winrar/@img/Brutfors-arkhiva-WinRAR-Cover.jpg" # image path/url
   alt: "Брутфорс архива WinRAR - Cover" # alt text
   caption: "" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -571,4 +571,3 @@ if /I %errorlevel% EQU 0 (
 {{< details/1 "Источник" >}}
 {{< iframes/yt Il2CF15F6cg "WinRAR Password Cracker!" >}}
 {{< /details/1 >}}
-
