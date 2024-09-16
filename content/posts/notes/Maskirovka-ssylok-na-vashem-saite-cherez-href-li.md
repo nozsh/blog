@@ -79,8 +79,9 @@ llinks_moredetail = document
   href="https://href.li/?https://example.com/"
   target="moredetail"
   rel="noreferrer nofollow noopener"
-  >ссылка</a
 >
+  ссылка
+</a>
 ```
 
 То есть я пишу `?nt` в конце ссылки, если хочу чтобы она открывалась в новой вкладке. Так как я предпочитаю, чтобы в новой вкладке открывались в основном только внешние ссылки, я так же добавил атрибуты.
