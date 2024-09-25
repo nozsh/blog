@@ -127,20 +127,24 @@ menu:
     #   name: Ссылки
     #   url: /links/
     #   weight: 10
+    - identifier: contact
+      name: ☕ Контакт
+      url: ../contact/
+      weight: 10
     - identifier: archives
-      name: Архив
+      name: 🗄️ Архив
       url: /archives/
       weight: 20
     - identifier: categories
-      name: Категории
+      name: 📂 Категории
       url: /categories/
       weight: 30
     - identifier: tags
-      name: Теги
+      name: 🏷️ Теги
       url: /tags/
       weight: 40
     - identifier: search
-      name: 🔎
+      name: 🔎 Поиск
       url: /search/
       weight: 50
 
