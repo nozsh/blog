@@ -9,6 +9,7 @@ date: 2024-09-14
 categories: ["AI"] # ["cat 1", "cat 2"]
 tags: ["Заметки"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
+authorURL: [""]
 # canonicalURL: "yourself"
 # weight: 1
 # robotsNoIndex: true

@@ -1,7 +1,20 @@
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--header-bg);
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
 .toc details summary {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.toc a,
+.toc a:hover {
+  box-shadow: none;
 }
 
 .post-tags .category {
@@ -43,4 +56,27 @@
 
 .post-content figure > img {
   margin: 1rem 0 5px 0;
+}
+
+.entry-cover img {
+  pointer-events: inherit;
+}
+
+.post-meta a:not(:last-child) {
+  color: inherit;
+  box-shadow: 0 1px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Medium Zoom*/
+.medium-zoom-overlay {
+  background: var(--theme) !important;
+  /* background: transparent !important; */
+  /* backdrop-filter: blur(6px); */
+  z-index: 2;
+}
+
+.medium-zoom-image--opened {
+  z-index: 3;
 }

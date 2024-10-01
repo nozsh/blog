@@ -34,18 +34,21 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   # CanonicalLinkText: "Источник:"
-  UseHugoToc: true
   disableSpecial1stPost: true
   disableScrollToTop: false
   comments: false
   hidemeta: false
   hideSummary: false
+  UseHugoToc: true
   showtoc: false
-  tocopen: false
+  tocopen: true
+  disableAnchoredHeadings: true
+  TocSide: "right"
+  EnableImageZoom: true
 
   assets:
     disableHLJS: true # to disable highlight.js
-    disableFingerprinting: true
+    disableFingerprinting: false
     favicon: "fav/favicon.ico"
     favicon32x32: "fav/favicon-32px.png"
     favicon16x16: "fav/favicon-16px.png"
@@ -127,26 +130,26 @@ menu:
     #   name: Ссылки
     #   url: /links/
     #   weight: 10
-    - identifier: contact
-      name: ☕ Контакт
-      url: ../contact/
+    - identifier: search
+      name: 🔎 Поиск
+      url: /search/
       weight: 10
     - identifier: archives
       name: 🗄️ Архив
       url: /archives/
-      weight: 20
+      weight: 100
     - identifier: categories
       name: 📂 Категории
       url: /categories/
-      weight: 30
+      weight: 200
     - identifier: tags
       name: 🏷️ Теги
       url: /tags/
-      weight: 40
-    - identifier: search
-      name: 🔎 Поиск
-      url: /search/
-      weight: 50
+      weight: 300
+    - identifier: contact
+      name: ☕ Контакт
+      url: ../contact/
+      weight: 400
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true

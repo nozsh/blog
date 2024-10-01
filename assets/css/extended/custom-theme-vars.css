@@ -1,0 +1,7 @@
+:root {
+  --header-bg: rgba(255, 255, 255, 0.5);
+}
+
+.dark {
+  --header-bg: rgba(29, 30, 32, 0.5);
+}

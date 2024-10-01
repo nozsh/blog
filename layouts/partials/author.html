@@ -1,0 +1,19 @@
+{{- if or .Params.author site.Params.author }}
+{{- $author := (.Params.author | default site.Params.author) }}
+{{- $author_type := (printf "%T" $author) }}
+{{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
+    {{- $author_links := slice }}
+    {{- range $index, $author_name := $author }}
+        {{- $author_url := (index $.Params.authorURL $index) }}
+        {{- if $author_url }}
+            {{- $author_links = $author_links | append (printf `<a href="%s">%s</a>` $author_url $author_name) }}
+        {{- else }}
+            {{- $author_links = $author_links | append $author_name }}
+        {{- end }}
+    {{- end }}
+    {{- delimit $author_links "&nbsp;\\&nbsp;" | safeHTML }}
+{{- else }}
+    {{- $author_url := .Params.authorURL }}
+    <a href="{{ $author_url }}">{{ $author }}</a>
+{{- end }}
+{{- end -}}

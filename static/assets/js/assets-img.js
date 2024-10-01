@@ -14,8 +14,9 @@ function extractLastPartFromUrl(url) {
 }
 
 function addBaseUrl(relativePath) {
-  let replaceIT = window.location.href + imgPATH;
-  let replaceON = imgURL + extractLastPartFromUrl(window.location.href) + "/";
+  let urlWithoutHash = window.location.href.split("#")[0]; // Fix /my/link/url/#abracadabra
+  let replaceIT = urlWithoutHash + imgPATH;
+  let replaceON = imgURL + extractLastPartFromUrl(urlWithoutHash) + "/";
   return relativePath.replace(replaceIT, replaceON);
 }
 

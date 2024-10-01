@@ -9,12 +9,13 @@ date: 2001-01-29
 categories: [""] # ["cat 1", "cat 2"]
 tags: [""] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
+authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"
 # weight: 1
 # robotsNoIndex: true
 
 showToc: true
-# TocOpen: true
+# TocOpen: false
 # hidemeta: true
 # comments: true
 # disableHLJS: true

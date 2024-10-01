@@ -10,7 +10,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 
 showToc: true
-TocOpen: false
+TocOpen: true
 hidemeta: false
 comments: false
 disableHLJS: false
@@ -51,7 +51,9 @@ cover:
 
 Для начала качаем эмулятор Yuzu ([1](https://4pda.to/2024/03/05/425100/?nt), [2](https://4pda.to/forum/index.php?showtopic=1070467?nt)) или [Ryujinx](https://ryujinx.org/?nt) ([GitHub](https://github.com/Ryujinx/Ryujinx?nt)), какой значения не имеет. Попробуйте оба если хотите, какой больше понравится тот и используйте. Я буду использовать Ryujinx.
 
-## Первый запуск Ryujinx
+## Первый запуск Ryujinx {#asdahsdjk}
+
+<!-- ## Fist Start -->
 
 Вы уже скачали эмулятор и распаковали его в нужную директорию.
 
