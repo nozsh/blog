@@ -42,7 +42,7 @@ params:
   UseHugoToc: true
   showtoc: false
   tocopen: true
-  disableAnchoredHeadings: true
+  disableAnchoredHeadings: false
   TocSide: "right"
   EnableImageZoom: true
 

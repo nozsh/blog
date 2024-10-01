@@ -6,7 +6,7 @@
     {{- range $index, $author_name := $author }}
         {{- $author_url := (index $.Params.authorURL $index) }}
         {{- if $author_url }}
-            {{- $author_links = $author_links | append (printf `<a href="%s">%s</a>` $author_url $author_name) }}
+            {{- $author_links = $author_links | append (printf `<a class="author-link" href="%s">%s</a>` $author_url $author_name) }}
         {{- else }}
             {{- $author_links = $author_links | append $author_name }}
         {{- end }}
@@ -14,6 +14,6 @@
     {{- delimit $author_links "&nbsp;\\&nbsp;" | safeHTML }}
 {{- else }}
     {{- $author_url := .Params.authorURL }}
-    <a href="{{ $author_url }}">{{ $author }}</a>
+    <a class="author-link" href="{{ $author_url }}">{{ $author }}</a>
 {{- end }}
 {{- end -}}

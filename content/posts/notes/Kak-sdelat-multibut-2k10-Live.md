@@ -10,7 +10,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 
 showToc: true
-TocOpen: false
+# TocOpen: false
 hidemeta: false
 comments: false
 disableHLJS: false

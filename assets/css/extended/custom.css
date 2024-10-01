@@ -6,6 +6,10 @@
   z-index: 2;
 }
 
+#menu li {
+  font-weight: 500;
+}
+
 .toc details summary {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
@@ -62,7 +66,7 @@
   pointer-events: inherit;
 }
 
-.post-meta a:not(:last-child) {
+.post-meta a.author-link {
   color: inherit;
   box-shadow: 0 1px;
   box-decoration-break: clone;

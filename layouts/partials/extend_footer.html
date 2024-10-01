@@ -1,10 +1,8 @@
-<!-- <script src="/blog/assets/js/sticky-header-scroll-headings-fix.js?v=1" defer></script> -->
-<script src="/blog/assets/js/ntlinks.js?v=1" defer></script>
-<script src="/blog/assets/js/assets-img.js?v=2" defer></script>
-
-<script data-goatcounter="https://saladvisor-blog.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
+<script src="/blog/assets/js/ntlinks.js?v={{ time.Now.Unix }}" defer></script>
+<script src="/blog/assets/js/assets-img.js?v={{ time.Now.Unix }}" defer></script>
 
 {{- if .IsPage }}
 {{- partial "page_footer.html" . }}
 {{- end}}
+
+<script data-goatcounter="https://saladvisor-blog.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
