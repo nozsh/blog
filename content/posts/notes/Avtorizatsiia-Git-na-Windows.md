@@ -95,11 +95,11 @@ git config --global --list
 
 В разделе "Developer settings" выберите "Personal access tokens". Нажмите на кнопку "Generate new token" (Создать новый токен) и выберите "Generate new token (classic)".
 
-![Авторизация Git на Windows // Генерация токенов](https://i.imgur.com/X3y7VEt.png)
+![Авторизация Git на Windows // Генерация токенов](@img/001-avtorizatsiia-git-na-windows-generatsiia-tokenov.png)
 
 Введите описание токена (например, "Git Bash Windows"), выберите срок действия токена (можно выбрать "No expiration" для токена без истечения срока действия) и установите необходимые разрешения (scopes) для токена (например, `repo` для полного доступа к репозиториям).
 
-![Авторизация Git на Windows // Генерация токенов - scopes](https://i.imgur.com/UYfyIdR.png)
+![Авторизация Git на Windows // Генерация токенов - scopes](@img/002-avtorizatsiia-git-na-windows-generatsiia-tokenov-scopes.png)
 
 Прокрутите вниз и нажмите на кнопку "Generate token". После создания токена GitHub покажет вам токен. **Скопируйте его**, так как вы больше не сможете увидеть его в открытом виде.
 
