@@ -54,6 +54,8 @@ params:
     favicon16x16: "fav/favicon-16px.png"
     apple_touch_icon: "fav/favicon-180px.png"
     safari_pinned_tab: "fav/favicon.svg"
+    assetsURL: "https://assets.nozsh.su/img/blog/"
+    assetsPATH: "@img/"
 
   label:
     # text: "AnotherSiteTitle"

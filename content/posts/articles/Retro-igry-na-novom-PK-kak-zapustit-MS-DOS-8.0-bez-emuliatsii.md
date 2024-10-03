@@ -32,7 +32,7 @@ CanonicalLinkText: "Источник:"
 # hideAuthor: true
 # byai: true
 cover:
-  image: "retro-igry-na-novom-pk-kak-zapustit-ms-dos-8.0-bez-emuliatsii/@img/retro-igry-na-novom-pk-kak-zapustit-ms-dos-8.0-bez-emuliatsii-cover.jpg" # image path/url
+  image: "@img/retro-igry-na-novom-pk-kak-zapustit-ms-dos-8.0-bez-emuliatsii-cover.jpg" # image path/url
   alt: "Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true

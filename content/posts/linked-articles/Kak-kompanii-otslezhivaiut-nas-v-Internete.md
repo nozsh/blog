@@ -25,7 +25,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "kak-kompanii-otslezhivaiut-nas-v-internete/@img/Kak-kompanii-otslezhivaiut-nas-v-Internete-cover.jpg" # image path/url
+  image: "@img/Kak-kompanii-otslezhivaiut-nas-v-Internete-cover.jpg" # image path/url
   alt: "Cover" # alt text
   caption: "" # display caption under cover
   relative: true # when using page bundles set this to true

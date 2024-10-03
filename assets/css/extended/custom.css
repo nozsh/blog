@@ -73,6 +73,12 @@
   -webkit-box-decoration-break: clone;
 }
 
+.entry-footer {
+  word-break: keep-all;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
 /* Medium Zoom*/
 .medium-zoom-overlay {
   background: var(--theme) !important;

@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "trust-wallet-nulevoi-balans/@img/trust-wallet-nulievoi-balans-cover.jpg" # image path/url
+  image: "@img/trust-wallet-nulievoi-balans-cover.jpg" # image path/url
   alt: "Trust Wallet - Нулевой баланс - Cover" # alt text
   caption: "Photo by [Sajad Nori](https://unsplash.com/@sajadnorit?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true

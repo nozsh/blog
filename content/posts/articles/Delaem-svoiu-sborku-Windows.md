@@ -32,7 +32,7 @@ showToc: true
 # hideAuthor: true
 # byai: true
 cover:
-  image: "delaem-svoiu-sborku-windows/@img/Delaem-svoiu-sborku-Windows-cover.jpg" # image path/url
+  image: "@img/Delaem-svoiu-sborku-Windows-cover.jpg" # image path/url
   alt: "Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true

@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "kak-sdelat-multibut-2k10-live/@img/Kak-sdelat-multibut-2k10-Live-cover.jpg" # image path/url
+  image: "@img/Kak-sdelat-multibut-2k10-Live-cover.jpg" # image path/url
   alt: "Cover" # alt text
   caption: "Photo by [charlesdeluvio](https://unsplash.com/@charlesdeluvio?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true

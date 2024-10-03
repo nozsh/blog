@@ -1,4 +1,17 @@
+{{- $imgURL := site.Params.assets.assetsURL -}}
+{{- $imgPATH := site.Params.assets.assetsPATH -}}
+
+{{- $src := .Get "src" | safeURL -}}
+
 <figure>
-  <img alt='{{.Get "alt"}}' width='{{.Get "width"}}' src='{{.Get "src"}}'>
+  {{- if hasPrefix $src $imgPATH -}}
+    {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
+    {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
+    {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
+    <img alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ $newSrc }}'>
+  {{- else -}}
+    <img alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ .Get "src" }}'>
+  {{- end -}}
+
   <figcaption>{{.Get "caption" | markdownify}}</figcaption>
 </figure>

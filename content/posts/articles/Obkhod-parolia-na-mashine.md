@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "obkhod-parolia-na-mashine/@img/Obkhod-parolia-na-mashine.jpg" # image path/url
+  image: "@img/Obkhod-parolia-na-mashine.jpg" # image path/url
   alt: "Cover" # alt text
   caption: "Photo by [rc.xyz NFT gallery](https://unsplash.com/@moneyphotos?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true

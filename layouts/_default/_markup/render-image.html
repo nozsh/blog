@@ -1,0 +1,13 @@
+{{- $imgURL := site.Params.assets.assetsURL -}}
+{{- $imgPATH := site.Params.assets.assetsPATH -}}
+
+{{- $url := .Destination | safeURL -}}
+
+{{- if hasPrefix $url $imgPATH -}}
+  {{- $urlWithoutHash := $.Page.Permalink | replaceRE "#.*$" "" -}}
+  {{- $lastPart := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" -}}
+  {{- $newUrl := $url | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $lastPart) -}}
+  <img loading="lazy" src="{{ $newUrl }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+{{- else -}}
+  <img loading="lazy" src="{{ $url }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+{{- end -}}

@@ -33,7 +33,7 @@ showToc: true
 # hideAuthor: true
 # byai: true
 cover:
-  image: "git-guide/@img/Git-Guide-cover.jpg" # image path/url
+  image: "@img/Git-Guide-cover.jpg" # image path/url
   alt: "Cover" # alt text
   caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
