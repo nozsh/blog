@@ -69,8 +69,6 @@ params:
   # socialIcons: # optional
   #   - name: "GitHub"
   #     url: "https://github.com/nozsh?nt"
-  #   - name: "Telegram"
-  #     url: "https://t.me/"
 
   profileMode:
     enabled: false # needs to be explicitly set
@@ -148,6 +146,10 @@ menu:
       name: 🏷️ Теги
       url: /tags/
       weight: 300
+    - identifier: Knowledge Base
+      name: 🧠 Knowledge Base
+      url: ../kb/
+      weight: 350
     - identifier: contact
       name: ☕ Контакт
       url: ../contact/
