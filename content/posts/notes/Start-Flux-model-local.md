@@ -62,7 +62,9 @@ cover:
 
 Но при запуске других моделей на основе Flux, возникает ошибка. Она возникает из-за отсутствия **text encoder**, так же это называют **CLIP**, хотя это немного разные вещи.
 
-Чтобы, все таки запустить Flux модель, нужно скачать энкодеры и VAE. Качаем **clip-l\*** и **t5\*** [здесь](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?nt).
+Чтобы, все таки запустить Flux модель, нужно скачать энкодеры и VAE.
+
+Качаем **clip-l\*** и **t5\*** [здесь](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?nt).
 
 {{< callout/note >}}
 Что использовать **fp8** или **fp16** зависит от вашего железа.
