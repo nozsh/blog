@@ -62,8 +62,8 @@
   margin: 1rem 0 5px 0;
 }
 
-.entry-cover img {
-  pointer-events: inherit;
+.post-content a:hover {
+  color: var(--link-hover-color);
 }
 
 .post-meta a.author-link {
@@ -71,6 +71,10 @@
   box-shadow: 0 1px;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.entry-cover img {
+  pointer-events: inherit;
 }
 
 .entry-footer {

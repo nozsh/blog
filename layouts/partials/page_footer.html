@@ -5,7 +5,7 @@
 {{/* Load mediumZoom script */}}
 {{- if (.Param "EnableImageZoom") }}
 {{- $imagezoom := resources.Get "js/medium-zoom.min.js" }}
-<script src="{{ $imagezoom.RelPermalink }}?v={{ time.Now.Unix }}" data-no-instant
+<script src="{{ $imagezoom.RelPermalink }}?v=1.0.6" data-no-instant
   {{- if site.Params.assets.disableFingerprinting }} integrity="{{ $imagezoom.Data.Integrity }}" {{- end }}></script>
 
 <script>

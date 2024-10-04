@@ -42,7 +42,7 @@ cover:
   hidden: false # only hide on current single page
 ---
 
-Вероятней всего вы получаете ошибку **You do not have CLIP state dict!**, при попытки запуска Flux модели на том же Stable Diffusion web UI by AUTOMATIC1111. И видимо именно поэтому вы это читаете.
+Вероятней всего вы получаете ошибку **You do not have CLIP state dict!**, при попытки запуска Flux модели на том же [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?nt). И видимо именно поэтому вы это читаете.
 
 {{< callout/warn >}}
 Это заметка о том как запустить **Flux** модель.<br> **А не о том как запустить локальную установку для генерации пикч.**
@@ -50,7 +50,15 @@ cover:
 
 На момент написания этой заметки Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?nt) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?nt), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?nt). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
 
-Стоковая модель Flux [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt) может работать без текстовых энкодеров, лично у меня так.
+{{< callout/note >}}
+**Оптимизированная версия** оригинальной модели Flux [отсюда](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?nt), может работать без текстовых энкодеров, лично у меня так.
+{{< /callout/note >}}
+
+{{< details/1 "Модели" >}}
+Оригинальные модели **(не оптимизированные)** можно скачать [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt).
+
+**GGUF версии** можно скачать [отсюда](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?nt) или [отсюда](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?nt).
+{{< /details/1 >}}
 
 Но при запуске других моделей на основе Flux, возникает ошибка. Она возникает из-за отсутствия **text encoder**, так же это называют **CLIP**, хотя это немного разные вещи.
 

@@ -1,7 +1,14 @@
 :root {
+  --accent-acid: #ccff00;
+  --accent-jam: #fb2d8d;
+}
+
+:root {
   --header-bg: rgba(255, 255, 255, 0.5);
+  --link-hover-color: var(--accent-jam);
 }
 
 .dark {
   --header-bg: rgba(29, 30, 32, 0.5);
+  --link-hover-color: var(--accent-acid);
 }
