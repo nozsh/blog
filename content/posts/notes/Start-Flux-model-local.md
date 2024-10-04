@@ -80,7 +80,7 @@ cover:
 Если в будущем появятся другие версии, думаю примерно прикинете что вам нужно.
 {{< /callout/hint >}}
 
-Качаем VAE, `diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt).
+Качаем VAE, `vae/diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt).
 
 VAE помещаем в `models\VAE`, энкодеры в `models\text_encoder` или `models\CLIP` (если вы используете Stability Matrix).
 
