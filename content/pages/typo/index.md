@@ -5,7 +5,7 @@ description: "Как правильно писать"
 # date: 2001-01-29
 tags: [""] # ['tag 1', 'tag 2']
 categories: [""] # ["cat 1", "cat 2"]
-# author: ["nozsh"] # ['Me', 'You'] multiple authors
+author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 robotsNoIndex: true
 
@@ -107,10 +107,10 @@ cover:
 
 ## Ссылка на пост
 
-{{< embed url="typo" >}}
+{{< embedPost url="typo" >}}
 
 ```md
-{{</* embed url="typo" */>}}
+{{</* embedPost url="typo" */>}}
 ```
 
 ## Заголовки
