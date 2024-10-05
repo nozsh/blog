@@ -19,7 +19,7 @@ params:
   env: production
   title: nozsh
   description: "Заметки. Идеи. Гайды."
-  keywords: [Блог, заметки, идеи, гайды]
+  keywords: [Блог, заметки, идеи, гайды, nozsh]
   author: ["nozsh"] # ['Me', 'You'] multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2 Jan 2006"
