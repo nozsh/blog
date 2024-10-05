@@ -107,10 +107,10 @@ cover:
 
 ## Ссылка на пост
 
-{{< embedPost url="typo" >}}
+{{< embedPost "typo" >}}
 
 ```md
-{{</* embedPost url="typo" */>}}
+{{</* embedPost "typo" */>}}
 ```
 
 ## Заголовки

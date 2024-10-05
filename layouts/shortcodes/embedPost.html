@@ -1,4 +1,4 @@
-{{ $url := .Get "url" }}
+{{ $url := .Get 0 }}
 {{ $page := .Site.GetPage $url }}
 
 {{ if $page }}
@@ -13,7 +13,7 @@
       </div>
       <div class="embed-post-metadata">
         <div class="embed-post-meta">
-          <img class="embed-post-icon" src='{{ .Site.Params.assets.safari_pinned_tab | absURL }}' alt="" no-zoom>
+          <img class="embed-post-icon" src='{{ .Site.Params.assets.safari_pinned_tab | absURL }}' alt="icon" no-zoom>
           <span class="embed-post-author">
             {{ range $index, $author := $page.Params.author }}
             {{ if $index }}\ {{ end }}{{ $author }}
@@ -41,9 +41,9 @@
       {{- $urlWithoutHash := $page.RelPermalink | replaceRE "#.*$" "" -}}
       {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
       {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-      <img loading="lazy" src='{{ $newSrc }}' alt="{{ $page.Title }}" no-zoom>
+      <img loading="lazy" src='{{ $newSrc }}' alt="{{ $page.Title }} - Cover" no-zoom>
       {{- else -}}
-      <img loading="lazy" src='{{ $src2 }}' alt="{{ $page.Title }}" no-zoom>
+      <img loading="lazy" src='{{ $src2 }}' alt="{{ $page.Title }} - Cover" no-zoom>
       {{- end -}}
     </div>
     {{ end }}
