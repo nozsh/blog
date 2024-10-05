@@ -36,7 +36,7 @@
     {{- $src := $page.Params.cover.image | safeURL -}}
     {{- $src2 := $page.Params.cover.image | absURL | safeURL -}}
 
-    <div class="embed-post-thumbnail">
+    <div class="embed-post-cover">
       {{- if hasPrefix $src $imgPATH -}}
       {{- $urlWithoutHash := $page.RelPermalink | replaceRE "#.*$" "" -}}
       {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
@@ -62,7 +62,7 @@
       </div>
     </div>
 
-    <div class="embed-post-thumbnail">
+    <div class="embed-post-cover">
       <img loading="lazy" src="https://nozsh.su/assets/img/no-signal.jpg" alt="Ошибка, запись не найдена" no-zoom>
     </div>
   </div>
