@@ -5,13 +5,13 @@ description: "Как правильно писать"
 # date: 2001-01-29
 tags: [""] # ['tag 1', 'tag 2']
 categories: [""] # ["cat 1", "cat 2"]
-author: ["nozsh"] # ['Me', 'You'] multiple authors
+# author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 robotsNoIndex: true
 
 showToc: true
 TocOpen: true
-hidemeta: false
+# hidemeta: true
 comments: false
 disableHLJS: false
 disableShare: false
@@ -26,16 +26,14 @@ ShowCanonicalLink: false
 # CanonicalLinkText: ""
 UseHugoToc: true
 cover:
-  image: "typo-cover.jpg" # image path/url
+  image: "typo/typo-cover.jpg" # image path/url
   alt: "Typo Cover" # alt text
   caption: "" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
 
-## Кастом
-
-### Каллауты
+## Каллауты
 
 {{< callout/note >}}
 Это **заметка**.
@@ -71,7 +69,7 @@ cover:
 {{</* /callout/warn */>}}
 ```
 
-### Ахтунг
+## Ахтунг
 
 {{< ahtung/1 >}}
 
@@ -79,7 +77,7 @@ cover:
 {{</* ahtung/1 */>}}
 ```
 
-### Спойлер/Аккордион
+## Спойлер/Аккордион
 
 {{< details/1 "Заголовок" open >}}
 Контент
@@ -95,7 +93,7 @@ cover:
 {{</* /details/1 */>}}
 ```
 
-### Встраивание YouTube
+## Встраивание YouTube видео
 
 {{< iframes/yt jfKfPfyJRdk "lofi hip hop radio 📚 - beats to relax/study to" >}}
 
@@ -105,6 +103,14 @@ cover:
 
 ```md
 {{</* iframes/yt jfKfPfyJRdk "title" */>}}
+```
+
+## Ссылка на пост
+
+{{< embed url="typo" >}}
+
+```md
+{{</* embed url="typo" */>}}
 ```
 
 ## Заголовки
@@ -229,7 +235,7 @@ cover:
 ![alt text](typo-cover.jpg)
 ```
 
-### Другой размер (Кастом)
+### Другой размер
 
 {{< imgs/img "alt text" "50%" "typo-cover.jpg" >}}
 
@@ -237,7 +243,7 @@ cover:
 {{</* imgs/img "alt text" "50%" "typo-cover.jpg" */>}}
 ```
 
-### С подписью (Кастом)
+### С подписью
 
 {{< imgs/imgc width="" caption="Это подпись" alt="alt text" src="typo-cover.jpg" >}}
 

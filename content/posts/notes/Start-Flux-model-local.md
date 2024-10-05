@@ -14,7 +14,7 @@ authorURL: [""]
 # weight: 1
 # robotsNoIndex: true
 
-showToc: true
+# showToc: true
 # TocOpen: true
 # hidemeta: true
 # comments: true

@@ -1,0 +1,16 @@
+{{ $url := .Get "url" }}
+{{ $page := .Site.GetPage $url }}
+
+{{ if $page }}
+<div class="embed-post">
+  <a href="{{ $page.Permalink }}" class="embed-post-link">
+    <h3 class="embed-post-title">{{ $page.Title }}</h3>
+    <p class="embed-post-description">{{ $page.Description }}</p>
+    {{ with $page.Params.cover.image }}
+    <img src="{{ . | safeURL }}" alt="{{ $page.Title }}" class="embed-post-image">
+    {{ end }}
+  </a>
+</div>
+{{ else }}
+<p>Запись не найдена.</p>
+{{ end }}

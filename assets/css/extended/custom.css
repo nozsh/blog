@@ -78,8 +78,8 @@
 }
 
 .entry-footer {
-  word-break: keep-all;
   overflow-x: hidden;
+  word-break: keep-all;
   white-space: nowrap;
 }
 

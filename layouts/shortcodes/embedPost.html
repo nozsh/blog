@@ -1,0 +1,151 @@
+<figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container"
+    href="https://github.com/nozsh/blog?ref=localhost">
+    <div class="kg-bookmark-content">
+      <div class="kg-bookmark-title">GitHub - nozsh/blog</div>
+      <div class="kg-bookmark-description">Contribute to nozsh/blog development by creating an account on GitHub.</div>
+      <div class="kg-bookmark-metadata"><img class="kg-bookmark-icon"
+          src="http://localhost:2368/content/images/icon/pinned-octocat-093da3e6fa40.svg" alt=""><span
+          class="kg-bookmark-author">GitHub</span><span class="kg-bookmark-publisher">nozsh</span></div>
+    </div>
+    <div class="kg-bookmark-thumbnail"><img src="http://localhost:2368/content/images/thumbnail/blog" alt=""
+        onerror="this.style.display = 'none'"></div>
+  </a></figure>
+
+
+
+<style>
+  figure {
+    margin: 0 -20px;
+    padding: 20px 0 40px;
+  }
+
+  @media only screen and (min-width: 48rem) {
+    figure {
+      margin: 0;
+      padding: 20px 0 50px;
+    }
+  }
+
+  .kg-bookmark-card {
+    background: red;
+    margin: 30px auto !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 48rem) {
+    .kg-bookmark-card {
+      margin: 40px auto !important;
+    }
+  }
+
+  .kg-bookmark-container {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, .1);
+    color: purple;
+    display: flex;
+    min-height: 148px;
+    text-decoration: none !important;
+    transition: opacity .2s linear;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 500px) {
+    .kg-bookmark-container {
+      flex-direction: column;
+    }
+  }
+
+  .kg-bookmark-card:hover .kg-bookmark-container {
+    color: blue;
+    opacity: .8;
+  }
+
+  .kg-bookmark-content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+
+  @media (max-width: 500px) {
+    .kg-bookmark-content {
+      order: 2;
+    }
+  }
+
+  .kg-bookmark-thumbnail {
+    max-height: 100%;
+    min-width: 30%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  @media (max-width: 500px) {
+    .kg-bookmark-thumbnail {
+      min-height: 160px;
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  .kg-bookmark-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .kg-bookmark-description {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-top: 12px;
+    overflow-y: hidden;
+  }
+
+  .kg-bookmark-metadata {
+    align-items: center;
+    color: red;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: .9rem;
+    font-weight: 400;
+    margin-top: 14px;
+  }
+
+  figure img {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .kg-bookmark-thumbnail img {
+    border-radius: 0 3px 3px 0;
+    height: 100% !important;
+    left: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+  }
+
+  .kg-bookmark-icon {
+    height: 22px !important;
+    margin-right: 8px !important;
+    width: 22px !important;
+  }
+
+  .kg-bookmark-author::after {
+    content: "•";
+    margin: 0 6px;
+  }
+
+  .kg-bookmark-publisher {
+    color: inherit;
+  }
+</style>
