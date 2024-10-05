@@ -115,7 +115,9 @@ cover:
 
 ## Заголовки
 
-Следующие элементы HTML `h2` - `h6` представляют шесть уровней заголовков разделов. `h2` это самый высокий уровень, а `h6` самый низкий.
+Следующие элементы HTML `h2` - `h6` представляют пять уровней заголовков разделов. `h2` это самый высокий уровень, а `h6` самый низкий.
+
+Заголовок `h1` это заголовок (название) записи, поэтому он не используется.
 
 ```md
 ## H2 <-- Учитывается в содержании
@@ -140,7 +142,8 @@ cover:
 | Sub<sub>Текст</sub>                                 |       `<sub>text</sub>` |
 | Sup<sup>Текст</sup>                                 |       `<sup>text</sup>` |
 | [Ссылка](typo)                                      |             `[text](#)` |
-| [Ссылка в новой вкладке](typo?nt) <sup>Кастом</sup> |          `[text](#?nt)` |
+| [Анонимная ссылка в новой вкладке](https://example.com/?nt)         |          `[text](#?nt)` |
+| [Анонимная ссылка в текущей вкладке](https://example.com/?sl)       |          `[text](#?sl)` |
 | `inline code`                                       |            `` `text` `` |
 | <mark>Выделение</mark>                              |     `<mark>text</mark>` |
 
@@ -229,26 +232,26 @@ cover:
 
 ## Изображения
 
-![alt text](typo-cover.jpg)
+![Type - Cover](typo-cover.jpg)
 
 ```md
-![alt text](typo-cover.jpg)
+![alt](typo-cover.jpg)
 ```
 
 ### Другой размер
 
-{{< imgs/img "alt text" "50%" "typo-cover.jpg" >}}
+{{< imgs/img "Type - Cover" "50%" "typo-cover.jpg" >}}
 
 ```md
-{{</* imgs/img "alt text" "50%" "typo-cover.jpg" */>}}
+{{</* imgs/img "alt" "50%" "typo-cover.jpg" */>}}
 ```
 
 ### С подписью
 
-{{< imgs/imgc width="" caption="Это подпись" alt="alt text" src="typo-cover.jpg" >}}
+{{< imgs/imgc width="" caption="Это подпись" alt="Type - Cover" src="typo-cover.jpg" >}}
 
 ```md
-{{</* imgs/imgc width="" caption="" alt="" src="" */>}}
+{{</* imgs/imgc width="" caption="Текст" alt="alt" src="typo-cover.jpg" */>}}
 ```
 
 ## Таблицы
@@ -295,24 +298,43 @@ cover:
 
 ```js
 llinks_safe = document
-  .querySelectorAll("a[href*='?safelink']")
+  .querySelectorAll("a[href*='?sl']")
   .forEach((llinks_safe) => {
     llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
 
-    let llinks_safe_href = llinks_safe.href.toString().slice(0, -9);
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -3);
     llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
   });
 ```
+
+Для блоков кода используются три обратные кавычки `` ` ``, в начале и в конце.
+
+Подсветка синтаксиса указывается после первых трех обратных кавычек:
+
+````
+```js
+llinks_safe = document
+  .querySelectorAll("a[href*='?sl']")
+  .forEach((llinks_safe) => {
+    llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
+
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -3);
+    llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
+  });
+```
+````
 
 Убрать нумерацию строк `{linenos=false}`.
 
+````{linenos=false}
 ```js {linenos=false}
 llinks_safe = document
-  .querySelectorAll("a[href*='?safelink']")
+  .querySelectorAll("a[href*='?sl']")
   .forEach((llinks_safe) => {
     llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
 
-    let llinks_safe_href = llinks_safe.href.toString().slice(0, -9);
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -3);
     llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
   });
 ```
+````

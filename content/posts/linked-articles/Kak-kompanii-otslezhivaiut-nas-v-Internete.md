@@ -32,4 +32,4 @@ cover:
   hidden: false # only hide on current single page
 ---
 
-[Статья от SecurityLab](https://www.securitylab.ru/analytics/548472.php?safelink).
+[Статья от SecurityLab](https://www.securitylab.ru/analytics/548472.php?sl).

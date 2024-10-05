@@ -1,9 +1,9 @@
 llinks_safe = document
-  .querySelectorAll("a[href*='?safelink']")
+  .querySelectorAll("a[href*='?sl']")
   .forEach((llinks_safe) => {
     llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
 
-    let llinks_safe_href = llinks_safe.href.toString().slice(0, -9);
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -3);
     llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
   });
 
