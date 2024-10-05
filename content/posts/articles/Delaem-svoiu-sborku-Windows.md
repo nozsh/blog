@@ -33,7 +33,7 @@ showToc: true
 # byai: true
 cover:
   image: "@img/Delaem-svoiu-sborku-Windows-cover.jpg" # image path/url
-  alt: "Cover" # alt text
+  alt: "Делаем свою сборку Windows - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true # only hide on current single page

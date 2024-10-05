@@ -33,8 +33,8 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 # hideAuthor: true
 # byai: true
 cover:
-  image: "https://i.giphy.com/26BROFLJSFhP0cMGk.webp" # image path/url
-  alt: "Cover" # alt text
+  image: "@img/ssh-bez-parolia-cover.webp" # image path/url
+  alt: "SSH без пароля - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page

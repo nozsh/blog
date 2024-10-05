@@ -36,7 +36,7 @@ authorURL: [""]
 # byai: true
 cover:
   image: "@img/Start-Flux-model-local-cover.v1.jpg" # image path/url
-  alt: "Cover" # alt text
+  alt: "Запуск Flux моделей локально - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
