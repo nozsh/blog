@@ -33,7 +33,7 @@ showToc: true
 # hideAuthor: true
 # byai: true
 cover:
-  image: "@img/Git-Guide-cover.jpg" # image path/url
+  image: "@img/git-guide-cover.avif" # image path/url
   alt: "Гайд на Git - Cover" # alt text
   caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -46,7 +46,7 @@ cover:
 **Git не следует путать с [GitHub](https://ru.wikipedia.org/wiki/GitHub?nt), [GitLab](https://ru.wikipedia.org/wiki/GitLab?nt) и [Gitea](https://ru.wikipedia.org/wiki/Gitea?nt) - веб-сайтами для размещения git-репозиториев и совместной разработки проектов.**
 {{< /callout/warn >}}
 
-**Git** -- это инструмент, который помогает разработчикам отслеживать изменения в коде. Git позволяет каждому участнику проекта иметь полную копию всех изменений, что упрощает совместную работу
+**Git** - это инструмент, который помогает разработчикам отслеживать изменения в коде. Git позволяет каждому участнику проекта иметь полную копию всех изменений, что упрощает совместную работу
 
 **Git** не ограничивается работой только с GitHub, он также работает и с другими платформами (которые поддерживаются), такими как GitLab, Hugging Face, Bitbucket, Azure DevOps и др.
 

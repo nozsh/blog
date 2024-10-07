@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "@img/Udalenie-razdelov-nakopitelia-cover.jpg" # image path/url
+  image: "@img/udalenie-razdelov-nakopitelia-cover.avif" # image path/url
   alt: "Удаление разделов накопителя - Cover" # alt text
   caption: "Photo by [Drew DeArcos](https://href.li/?https://unsplash.com/@starvox?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: false # when using page bundles set this to true

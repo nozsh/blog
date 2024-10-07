@@ -35,7 +35,7 @@ authorURL: [""]
 # hideAuthor: true
 # byai: true
 cover:
-  image: "@img/Start-Flux-model-local-cover.v1.jpg" # image path/url
+  image: "@img/start-flux-model-local-cover.avif" # image path/url
   alt: "Запуск Flux моделей локально - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -86,7 +86,7 @@ VAE помещаем в `models\VAE`, энкодеры в `models\text_encoder` 
 
 Осталось только загрузить VAE и энкодеры в соответствующем списке.
 
-![](@img/001-start-flux-model-local-load-vae-text-encoder-clip.png)
+![](@img/001-start-flux-model-local-load-vae-text-encoder-clip.avif)
 
 Загружать их можно в любом порядке.
 

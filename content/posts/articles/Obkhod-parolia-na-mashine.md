@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "@img/Obkhod-parolia-na-mashine.jpg" # image path/url
+  # image: "@img/Obkhod-parolia-na-mashine.avif" # image path/url
   alt: "Обход пароля на машине - Cover" # alt text
   caption: "Photo by [rc.xyz NFT gallery](https://unsplash.com/@moneyphotos?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -51,7 +51,7 @@ cover:
 
 Сделали загрузочную флешку, вставили, загрузились с нее. Нажимаем сочетание клавиш `Shift + F10`. Открылась командная строка:
 
-![Командная строка Windows](@img/001-ekran-ustanovki-windows-komandnaia-stroka.jpg)
+![Командная строка Windows](@img/001-ekran-ustanovki-windows-komandnaia-stroka.avif)
 
 Далее нужно узнать букву системного диска, проблема в том что она может быть не `C`.
 

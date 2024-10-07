@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "@img/Brutfors-arkhiva-WinRAR-Cover.jpg" # image path/url
+  image: "@img/brutfors-arkhiva-winrar-cover.avif" # image path/url
   alt: "Брутфорс архива WinRAR - Cover" # alt text
   caption: "" # display caption under cover
   relative: true # when using page bundles set this to true

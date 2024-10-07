@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "@img/piratim-nintendo-switch-cover.jpg" # image path/url
+  image: "@img/piratim-nintendo-switch-cover.avif" # image path/url
   alt: "Пиратим Nintendo Switch (Prince of Persia: The Lost Crown) - Cover" # alt text
   caption: "Prince of Persia: The Lost Crown" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -59,15 +59,15 @@ cover:
 
 Открываем ryujinx, видим это:
 
-{{< imgs/imgc width="" caption="Ryujinx ошибка prod.keys" alt="Ryujinx ошибка prod.keys - RYU-0001 Keys not found" src="@img/001-ryujinx-oshibka-zapuska.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx ошибка prod.keys" alt="Ryujinx ошибка prod.keys - RYU-0001 Keys not found" src="@img/001-ryujinx-oshibka-zapuska.avif" >}}
 
 Не обращаем внимания, так и должно быть. Нажимаем **ОК**.
 
-{{< imgs/imgc width="" caption="Интерфейс Ryujinx" alt="Интерфейс эмулятора Ryujinx" src="@img/002-interfeys-emulyatora-ryujinx.jpg" >}}
+{{< imgs/imgc width="" caption="Интерфейс Ryujinx" alt="Интерфейс эмулятора Ryujinx" src="@img/002-interfeys-emulyatora-ryujinx.avif" >}}
 
 Переходим в директорию где хранятся конфиг файлы Ryujinx:
 
-{{< imgs/imgc width="" caption="File > Open Ryujinx Folder >> System" alt="Ryujinx - Предустановка ключей" src="@img/003-ryujinx-predustanovka-klyuchey.jpg" >}}
+{{< imgs/imgc width="" caption="File > Open Ryujinx Folder >> System" alt="Ryujinx - Предустановка ключей" src="@img/003-ryujinx-predustanovka-klyuchey.avif" >}}
 
 Вы должны оказаться в:
 
@@ -113,7 +113,7 @@ cover:
 
 Tools > Install Firmware > ...from XCI or ZIP >> Архив с прошивкой:
 
-{{< imgs/imgc width="" caption="Ryujinx - Установка прошивки" alt="Ryujinx - Установка прошивки" src="@img/004-ryujinx-ustanovka-proshivki.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - Установка прошивки" alt="Ryujinx - Установка прошивки" src="@img/004-ryujinx-ustanovka-proshivki.avif" >}}
 
 {{< callout/note >}}
 Процесс установки прошивки можно посмотреть в консоли.
@@ -129,7 +129,7 @@ Tools > Install Firmware > ...from XCI or ZIP >> Архив с прошивко�
 
 Для конвертации будем использовать утилиту [nsz](https://github.com/nicoboss/nsz?nt), качаем и распаковываем ее. Открываем **nsz.exe** и видим это:
 
-{{< imgs/imgc width="" caption="NSZ GUI - ERROR" alt="NSZ GUI - ERROR" src="@img/005-Piratim-Nintendo-Switch-NSZ-GUI-ERROR.jpg" >}}
+{{< imgs/imgc width="" caption="NSZ GUI - ERROR" alt="NSZ GUI - ERROR" src="@img/005-piratim-nintendo-switch-nsz-gui-error.avif" >}}
 
 ```{linenos=false}
 ...\nsz_v4.6.1_win64_portable\keys.txt or C:\Users\%username%\.switch\prod.keys not found!
@@ -151,7 +151,7 @@ Press Enter to exit...
 
 Открываем скачанный `prod.keys` с помощью любого текстового редактора, копируем содержимое `prod.keys` в `keys.txt`. Запускаем снова и ошибки нет:
 
-{{< imgs/imgc width="" caption="NSZ GUI" alt="NSZ GUI" src="@img/006-piratim-nintendo-switch-NSZ-GUI.jpg" >}}
+{{< imgs/imgc width="" caption="NSZ GUI" alt="NSZ GUI" src="@img/006-piratim-nintendo-switch-nsz-gui.avif" >}}
 
 {{< callout/hint >}}
 Открываем настройки **Settings [F1]** > Tools > Kivy always on top >> Off - перезапускаем утилиту. Таким образом вы выключили функцию "всегда поверх всех окон" - не благодарите ;)
@@ -159,7 +159,7 @@ Press Enter to exit...
 
 Следуя строке белого цвета жирного шрифта в центре окна, берем файл вашей игры (в моем случае .nsz) и перетаскиваем его в окно утилиты:
 
-{{< imgs/imgc width="" caption="NSZ GUI & Prince of Persia: The Lost Crown" alt="NSZ GUI & Prince of Persia: The Lost Crown" src="@img/007-piratim-nintendo-switch-NSZ-GUI-Prince-of-Persia-The-Lost-Crown.jpg" >}}
+{{< imgs/imgc width="" caption="NSZ GUI & Prince of Persia: The Lost Crown" alt="NSZ GUI & Prince of Persia: The Lost Crown" src="@img/007-piratim-nintendo-switch-nsz-gui-prince-of-persia-the-lost-crown.avif" >}}
 
 **Decompress NSZ/XCZ**. Ожидаем окончания, новый дамп будет лежать в той же директории что и оригинальный дамп.
 
@@ -192,7 +192,7 @@ Press Enter to exit...
 
 Открываем Ryujinx > Load Application from File\Unpacked Game >> выбираем дамп\папку:
 
-{{< imgs/imgc width="" caption="Ryujinx - Запуск игры" alt="Ryujinx - Запуск игры" src="@img/008-piratim-nintendo-switch-Ryujinx-Zapusk-igry.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - Запуск игры" alt="Ryujinx - Запуск игры" src="@img/008-piratim-nintendo-switch-ryujinx-zapusk-igry.avif" >}}
 
 {{< callout/note >}}
 Если у вас распакованная игра то соответственно выбирайте **Load Unpacked Game**, у меня же это просто .NSP, поэтому я выбираю **Load Application from File**.
@@ -202,7 +202,7 @@ Press Enter to exit...
 
 Для подключения DLC у вас должен быть каталог игр (см. Настройка Ryujinx > [Каталог игр](#каталог-игр)), ПКМ по игре > **Manage DLC**:
 
-{{< imgs/imgc width="" caption="Ryujinx - DLC" alt="Ryujinx - DLC" src="@img/009-piratim-nintendo-switch-Ryujinx-DLC.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - DLC" alt="Ryujinx - DLC" src="@img/009-piratim-nintendo-switch-ryujinx-dlc.avif" >}}
 
 Нажимаем **Add** >> .NSP. И так выбираете каждое DLC, возможно можно выбрать сразу все. Проставляете галочки напротив каждого DLC, если те не проставлены.
 
@@ -216,7 +216,7 @@ Press Enter to exit...
 
 Настройки находятся тут Options > Settings.
 
-{{< imgs/imgc width="" caption="Ryujinx - Настройки" alt="Ryujinx - Настройки" src="@img/010-piratim-nintendo-switch-Ryujinx-Nastroiki.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - Настройки" alt="Ryujinx - Настройки" src="@img/010-piratim-nintendo-switch-ryujinx-nastroiki.avif" >}}
 
 ### Каталог игр
 
@@ -245,7 +245,7 @@ Press Enter to exit...
 
 Но по сути это пресеты для пресетов. Если у геймпада вы биндите только левый и правый стик, то на клавиатуре левый/правый стик - верх, низ, лево, право. Включите - посмотрите.
 
-{{< imgs/imgc width="" caption="Ryujinx - Настройки ввода" alt="Ryujinx - Настройки ввода" src="@img/011-piratim-nintendo-switch-Ryujinx-Nastroiki-vvoda.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - Настройки ввода" alt="Ryujinx - Настройки ввода" src="@img/011-piratim-nintendo-switch-ryujinx-nastroiki-vvoda.avif" >}}
 
 Настраиваем все профили если (уже) собираетесь играть 8-ром, если нет, то только **Player 1**.
 
@@ -265,11 +265,11 @@ Press Enter to exit...
 
 Не забудьте выбрать устройства в **Input Device**.
 
-{{< imgs/imgc width="" caption="" alt="Ryujinx - Настройки ввода" src="@img/012-piratim-nintendo-switch.jpg" >}}
+{{< imgs/imgc width="" caption="" alt="Ryujinx - Настройки ввода" src="@img/012-piratim-nintendo-switch.avif" >}}
 
 Все что не кнопки, настраивайте по своему усмотрению. Чтобы забиндить кнопку нажимаем на **Unbound** > Нажимаем кнопку\клавишу на которую хотим сделать бинд:
 
-{{< imgs/imgc width="" caption="" alt="Ryujinx - Настройки ввода" src="@img/013-piratim-nintendo-switch.jpg" >}}
+{{< imgs/imgc width="" caption="" alt="Ryujinx - Настройки ввода" src="@img/013-piratim-nintendo-switch.avif" >}}
 
 Биндите на что хотите, но желательно, чтобы бинд совпадал с функцией на которую вы биндите (если это геймпад), как на скриншоте выше.
 
@@ -281,11 +281,11 @@ Press Enter to exit...
 
 Мои настройки:
 
-{{< imgs/imgc width="" caption="Ryujinx - Настройки графики" alt="Ryujinx - Настройки графики" src="@img/014-piratim-nintendo-switch-Ryujinx-Nastroiki-grafiki.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - Настройки графики" alt="Ryujinx - Настройки графики" src="@img/014-piratim-nintendo-switch-ryujinx-nastroiki-grafiki.avif" >}}
 
 Для начала советую поставить что-то по типу этого:
 
-{{< imgs/imgc width="" caption="Ryujinx - Настройки графики" alt="Ryujinx - Настройки графики" src="@img/015-piratim-nintendo-switch-Ryujinx-Nastroiki-grafiki.jpg" >}}
+{{< imgs/imgc width="" caption="Ryujinx - Настройки графики" alt="Ryujinx - Настройки графики" src="@img/015-piratim-nintendo-switch-ryujinx-nastroiki-grafiki.avif" >}}
 
 Экспериментируйте с настройками. Сглаживание вероятней съедает больше всего производительности.
 

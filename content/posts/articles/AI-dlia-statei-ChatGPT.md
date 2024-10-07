@@ -32,7 +32,7 @@ TocOpen: true
 # hideAuthor: true
 byai: true
 cover:
-  image: "@img/AI-dlia-statei-ChatGPT-cover.jpg" # image path/url
+  image: "@img/ai-dlia-statei-chatgpt-cover.avif" # image path/url
   alt: "AI для статей: ChatGPT - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true

@@ -24,7 +24,7 @@ ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-  image: "@img/Kak-sdelat-multibut-2k10-Live-cover.jpg" # image path/url
+  image: "@img/kak-sdelat-multibut-2k10-live-cover.avif" # image path/url
   alt: "Мультибут 2k10 Live - Cover" # alt text
   caption: "Photo by [charlesdeluvio](https://unsplash.com/@charlesdeluvio?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -35,11 +35,11 @@ cover:
 
 Для начала нужно подготовить флешку/диск, если ваш накопитель имеет несколько разделов, и это так не потому что вы так захотели, то их нужно [удалить](https://nozsh.su/blog/udalenie-razdelov-nakopitelia/). Что-то по типу этого:
 
-![Лишние разделы накопителя - Мультибут 2k10 Live](@img/001-Kak-sdelat-multibut-2k10-Live-lishnie-razdely-nakopitelia.jpg)
+![Лишние разделы накопителя - Мультибут 2k10 Live](@img/001-kak-sdelat-multibut-2k10-live-lishnie-razdely-nakopitelia.avif)
 
 Если же вы хотите сделать несколько разделов, на одном из которых будет 2k10 Live, то его нужно делать первым:
 
-{{< imgs/imgc width="" caption="Мой внешний SSD диск, с 2k10 Live на разделе \"zboot\", в NTFS" alt="Пример 2k10 live на одном из разделов SSD - Мультибут 2k10 Live" src="@img/002-Kak-sdelat-multibut-2k10-Live-neskolko-razdelov.jpg" >}}
+{{< imgs/imgc width="" caption="Мой внешний SSD диск, с 2k10 Live на разделе \"zboot\", в NTFS" alt="Пример 2k10 live на одном из разделов SSD - Мультибут 2k10 Live" src="@img/002-kak-sdelat-multibut-2k10-live-neskolko-razdelov.avif" >}}
 
 Я буду использовать флешку. Но вы можете использовать как внешний SDD, так и внешний HDD.
 
@@ -62,7 +62,7 @@ cover:
 {{< details/1 "RMPrepUSB" >}}
 Распаковываем образ 2k10 Live с помощью 7z. И запускаем утилиту **RMPrepUSB** из `\2k10\Programs-2k10\Flash-Utilites\RMPrepUSB\`.
 
-![RMPrepUSB - Мультибут 2k10 Live](@img/RMPrepUSB.jpg)
+![RMPrepUSB - Мультибут 2k10 Live](@img/rmprepusb.avif)
 
 Проверяем чтобы флешка была выбрана верно, загрузочный сектор и файловая система была как на скриншоте выше.
 
@@ -75,7 +75,7 @@ cover:
 
 Запускаем утилиту **UTmake**, которая идет в комплекте с 2k10 Live. Если по какой-то причине UTMake не была скачена с ISO образом, запускаем ее из распакованного образа - `\2k10\Programs-2k10\Flash-Utilites\UTmake\`.
 
-{{< imgs/imgc width="" caption="Это старый скриншот с файловой системой NTFS, я делаю на FAT32" alt="" src="@img/003-Kak-sdelat-multibut-2k10-Live-interfeis-utmake.jpg" >}}
+{{< imgs/imgc width="" caption="Это старый скриншот с файловой системой NTFS, я делаю на FAT32" alt="" src="@img/003-kak-sdelat-multibut-2k10-live-interfeis-utmake.avif" >}}
 
 Выбираете другой накопитель, если программа выбрала его не правильно.
 
@@ -87,7 +87,7 @@ cover:
 Если кнопка **Copy** недоступна - переключите UFD/USB-Hdd туда и обратно.
 {{< /callout/hint >}}
 
-![Копирование образа 2k10 Live на флешку - Мультибут 2k10 Live](@img/004-Kak-sdelat-multibut-2k10-Live-protsess-kopirovaniia.jpg)
+![Копирование образа 2k10 Live на флешку - Мультибут 2k10 Live](@img/004-kak-sdelat-multibut-2k10-live-protsess-kopirovaniia.avif)
 
 После завершения копирования, выбираем загрузчик в секции **Select loader** и нажимаем на **Setup**, если кнопки доступны. Я советую поставить **Syslinux** или оставить по умолчанию - **Bootmgr**.
 
@@ -95,7 +95,7 @@ cover:
 
 Вы можете нажать на **Test Disk**, чтобы посмотреть работает или нет. Если вы не устанавливали загрузчик то вы особо ничего не увидите, а если устанавливали, то что-то произойдет:
 
-![Тест флешки QEMU - Мультибут 2k10 Live](@img/004.1-Kak-sdelat-multibut-2k10-Live-neskolko-razdelov-qemu.jpg)
+![Тест флешки QEMU - Мультибут 2k10 Live](@img/004.1-kak-sdelat-multibut-2k10-live-neskolko-razdelov-qemu.avif)
 
 В моем случае работал только режим **UEFI**, то есть **EFIx64** и **EFIx32**. Режим **Legacy** не работал.
 
@@ -107,7 +107,7 @@ UTMake можно закрыть.
 
 Далее **ВАЖНО**! Не перепутайте, вы должны в корне вашего накопителя открыть **SetLDR-2k10** из `\2k10\`. То есть это нужно делать НА накопители, а не из папки откуда вы изначально запускали UTMake и где лежит образ!
 
-{{< imgs/imgc width="" caption="Скриншот старый, я делаю на FAT32" alt="Установка загрузчика - Мультибут 2k10 Live" src="@img/005-Kak-sdelat-multibut-2k10-Live-ustanovka-zagruzchika.jpg" >}}
+{{< imgs/imgc width="" caption="Скриншот старый, я делаю на FAT32" alt="Установка загрузчика - Мультибут 2k10 Live" src="@img/005-kak-sdelat-multibut-2k10-live-ustanovka-zagruzchika.avif" >}}
 
 Выбираем загрузчик который вам больше нравится, но я опять таки советую **Syslinux**, с ним будет большая совместимость со старым железом. Нажимаем **Setup**. Если **Syslinux** недоступен, то ставьте **Grub4Dos**.
 
