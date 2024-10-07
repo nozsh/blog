@@ -73,6 +73,26 @@
   -webkit-box-decoration-break: clone;
 }
 
+.post-content h2 {
+  font-size: 2rem;
+}
+
+.post-content h3 {
+  font-size: 1.75rem;
+}
+
+.post-content h4 {
+  font-size: 1.5rem;
+}
+
+.post-content h5 {
+  font-size: 1.25rem;
+}
+
+.post-content h6 {
+  font-size: 1.15rem;
+}
+
 .entry-cover img {
   pointer-events: inherit;
 }
@@ -93,4 +113,8 @@
 
 .medium-zoom-image--opened {
   z-index: 3;
+}
+
+.medium-zoom-image {
+  object-fit: contain;
 }

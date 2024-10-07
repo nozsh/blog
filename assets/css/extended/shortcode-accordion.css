@@ -5,6 +5,14 @@
   margin-bottom: var(--content-gap);
 }
 
+/* .a-details .a-details {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.a-details .a-details:last-child {
+  padding: 1rem;
+} */
+
 .a-details summary {
   line-height: 1.3rem;
   padding: 1.1rem;

@@ -1,3 +1,0 @@
-<h{{ .Level }} id='{{ partial "slugify.html" .Anchor}}'>
-  {{- .Text -}}
-</h{{ .Level }}>

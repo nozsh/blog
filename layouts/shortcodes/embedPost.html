@@ -15,9 +15,7 @@
         <div class="embed-post-meta">
           <img class="embed-post-icon" src='{{ .Site.Params.assets.safari_pinned_tab | absURL }}' alt="icon" no-zoom>
           <span class="embed-post-author">
-            {{ range $index, $author := $page.Params.author }}
-            {{ if $index }}\ {{ end }}{{ $author }}
-            {{ end }}
+            {{ range $index, $author := $page.Params.author }}{{ if $index }}, {{ end }}{{ $author }}{{ end }}
           </span>
         </div>
         <!-- <div class="embed-post-date">

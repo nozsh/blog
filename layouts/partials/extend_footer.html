@@ -1,8 +1,24 @@
-<script src="/blog/assets/js/ntlinks.js?v={{ time.Now.Unix }}" defer></script>
-<!-- <script src="/blog/assets/js/assets-img.js?v={{ time.Now.Unix }}" defer></script> -->
+{{- $ntlinks := resources.Get "js/ntlinks.js" }}
+<script src="{{ $ntlinks.RelPermalink }}?v=1.0.0" defer></script>
 
-{{- if .IsPage }}
-{{- partial "page_footer.html" . }}
-{{- end}}
+{{/* Load Smooth Anchor Scroll script */}}
+{{- $anchorscroll := resources.Get "js/anchor-scroll.js" }}
+<script src="{{ $anchorscroll.RelPermalink }}?v=1.0.0" defer></script>
 
+{{/* Load Lite YouTube Embed JS */}}
+{{- $liteytembedJS := resources.Get "js/lite-yt-embed.js" }}
+<script src="{{ $liteytembedJS.RelPermalink }}?v=1.0.0" defer></script>
+
+{{/* Load mediumZoom script */}}
+{{- if (.Param "EnableImageZoom") }}
+{{- $imagezoom := resources.Get "js/medium-zoom.min.js" }}
+<script src="{{ $imagezoom.RelPermalink }}?v=1.0.6" {{- if site.Params.assets.disableFingerprinting }}
+  integrity="{{ $imagezoom.Data.Integrity }}" {{- end }}></script>
+<script>
+  mediumZoom('.entry-cover img');
+  mediumZoom('.post-content img:not([no-zoom])');
+</script>
+{{- end }}
+
+{{/* GoatCounter */}}
 <script data-goatcounter="https://saladvisor-blog.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

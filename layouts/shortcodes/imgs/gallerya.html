@@ -1,0 +1,21 @@
+{{- $imgURL := site.Params.assets.assetsURL -}}
+{{- $imgPATH := site.Params.assets.assetsPATH -}}
+
+{{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
+{{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
+
+
+<div class="gallery">
+  <div class="gallery-grid-wrapper">
+    {{ $params := .Params }}
+    {{ $len := div (len $params) 2 }}
+    {{ range $i := (seq 0 (sub $len 1)) }}
+    {{ $class := index $params (mul $i 2 | add 1) }}
+    {{ $src := index $params (mul $i 2) | safeURL }}
+    {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
+    <div class="gallery-item {{ if $class }}{{ $class }}{{ else }}{{ end }}">
+      <img src="{{ $newSrc }}" alt="" />
+    </div>
+    {{ end }}
+  </div>
+</div>

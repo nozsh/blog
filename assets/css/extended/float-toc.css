@@ -11,7 +11,7 @@
     position: fixed;
     top: 118px;
     z-index: 1;
-    max-height: calc(100% - 150px);
+    max-height: calc(90% - 150px);
     overflow: auto;
     font-size: 0.8em;
   }

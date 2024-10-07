@@ -1,0 +1,13 @@
+<div class="gallery">
+  <div class="gallery-grid-wrapper">
+    {{ $params := .Params }}
+    {{ $len := div (len $params) 2 }}
+    {{ range $i := (seq 0 (sub $len 1)) }}
+    {{ $class := index $params (mul $i 2 | add 1) }}
+    {{ $src := index $params (mul $i 2) }}
+    <div class="gallery-item {{ if $class }}{{ $class }}{{ else }}{{ end }}">
+      <img src="{{ $src }}" alt="" />
+    </div>
+    {{ end }}
+  </div>
+</div>
