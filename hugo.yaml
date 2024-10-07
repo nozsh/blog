@@ -59,7 +59,7 @@ params:
 
   label:
     # text: "AnotherSiteTitle"
-    icon: logo__cmpr.jpg
+    icon: logo-mini.avif
     iconHeight: 35
 
   # homeInfoParams:
