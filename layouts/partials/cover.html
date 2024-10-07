@@ -41,9 +41,9 @@
               {{- $urlWithoutHash := .RelPermalink | replaceRE "#.*$" "" -}}
               {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
               {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-              <img loading="{{$loading}}" src="{{ $newSrc }}" alt="{{ $alt }}">
+              <img loading="{{$loading}}" src="{{ $newSrc }}" alt="{{ $alt }}" width="1px" height="1px">
             {{- else -}}
-              <img loading="{{$loading}}" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}">
+              <img loading="{{$loading}}" src="{{ (.Params.cover.image) | absURL }}" alt="{{ $alt }}" width="1px" height="1px">
             {{- end -}}
 
     {{- end }}
