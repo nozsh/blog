@@ -104,7 +104,7 @@ params:
     responsiveImages: true # More one size of cover
     linkFullImages: false # Clicable cover
     # hidden: false # hide everywhere but not in structured data
-    hiddenInList: false # hide on list pages and home
+    hiddenInList: true # hide on list pages and home
     # hiddenInSingle: false # hide on single page
 
   editPost:
