@@ -1,2 +1,11 @@
 public/
 resources/
+
+# Media
+content/**/*.jpg
+content/**/*.jpeg
+content/**/*.png
+content/**/*.webp
+content/**/*.webm
+content/**/*.gif
+content/**/*.avif
