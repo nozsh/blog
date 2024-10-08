@@ -26,7 +26,7 @@ UseHugoToc: true
 cover:
   image: "@img/trust-wallet-nulievoi-balans-cover.avif" # image path/url
   alt: "Trust Wallet - Нулевой баланс - Cover" # alt text
-  caption: "Photo by [Sajad Nori](https://unsplash.com/@sajadnorit?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  caption: "Photo by [Sajad Nori](https://unsplash.com/@sajadnorit?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---

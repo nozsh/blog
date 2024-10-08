@@ -26,7 +26,7 @@ UseHugoToc: true
 cover:
   image: "@img/udalenie-razdelov-nakopitelia-cover.avif" # image path/url
   alt: "Удаление разделов накопителя - Cover" # alt text
-  caption: "Photo by [Drew DeArcos](https://href.li/?https://unsplash.com/@starvox?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  caption: "Photo by [Drew DeArcos](https://href.li/?https://unsplash.com/@starvox?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: false # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
@@ -45,4 +45,4 @@ assign            # Назначаем букву, чтобы накопител
 exit              # Выход из diskpart
 ```
 
-Подробнее об [активных](https://compfixer.info/partition-active/?nt) разделах.
+Подробнее об [активных](https://compfixer.info/partition-active/?sl) разделах.

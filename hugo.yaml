@@ -2,7 +2,7 @@ baseURL: https://nozsh.su/blog/
 languageCode: ru
 defaultContentLanguage: ru
 title: nozsh
-paginate: 20
+paginate: 15
 theme: ["PaperMod"]
 
 enableRobotsTXT: false
@@ -59,7 +59,7 @@ params:
 
   label:
     # text: "AnotherSiteTitle"
-    icon: logo-mini.avif
+    icon: logo-256px.avif
     iconHeight: 35px
 
   # homeInfoParams:
@@ -68,7 +68,7 @@ params:
 
   # socialIcons: # optional
   #   - name: "GitHub"
-  #     url: "https://github.com/nozsh?nt"
+  #     url: "https://github.com/nozsh?sl"
 
   profileMode:
     enabled: false # needs to be explicitly set

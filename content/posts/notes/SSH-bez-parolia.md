@@ -35,7 +35,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 cover:
   image: "@img/ssh-bez-parolia-cover.webp" # image path/url
   alt: "SSH без пароля - Cover" # alt text
-  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---

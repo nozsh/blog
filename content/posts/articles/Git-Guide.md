@@ -35,7 +35,7 @@ showToc: true
 cover:
   image: "@img/git-guide-cover.avif" # image path/url
   alt: "Гайд на Git - Cover" # alt text
-  caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true # only hide on current single page
 ---
@@ -43,7 +43,7 @@ cover:
 ## Введение
 
 {{< callout/warn >}}
-**Git не следует путать с [GitHub](https://ru.wikipedia.org/wiki/GitHub?nt), [GitLab](https://ru.wikipedia.org/wiki/GitLab?nt) и [Gitea](https://ru.wikipedia.org/wiki/Gitea?nt) - веб-сайтами для размещения git-репозиториев и совместной разработки проектов.**
+**Git не следует путать с [GitHub](https://ru.wikipedia.org/wiki/GitHub?sl), [GitLab](https://ru.wikipedia.org/wiki/GitLab?sl) и [Gitea](https://ru.wikipedia.org/wiki/Gitea?sl) - веб-сайтами для размещения git-репозиториев и совместной разработки проектов.**
 {{< /callout/warn >}}
 
 **Git** - это инструмент, который помогает разработчикам отслеживать изменения в коде. Git позволяет каждому участнику проекта иметь полную копию всех изменений, что упрощает совместную работу

@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "📝 Typo"
 # url: ""
 description: "Как правильно писать"
@@ -37,7 +37,7 @@ showToc: true
 cover:
   image: "@img/typo-cover.jpg" # image path/url
   alt: "Typo Cover" # alt text
-  caption: "Photo by [camilo jimenez](https://unsplash.com/@camstejim?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  caption: "Photo by [camilo jimenez](https://unsplash.com/@camstejim?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true # only hide on current single page
 ---
@@ -138,19 +138,29 @@ cover:
 
 ## Разметка
 
-| Стиль                                                         |                Markdown |
-| :------------------------------------------------------------ | ----------------------: |
-| **Жирный**                                                    | `**text**` / `__text__` |
-| _Курсив_                                                      |     `*text*` / `_text_` |
-| ~~Перечеркнутый~~                                             |              `~~text~~` |
-| <u>Подчеркнутый</u>                                           |           `<u>text</u>` |
-| Sub<sub>Текст</sub>                                           |       `<sub>text</sub>` |
-| Sup<sup>Текст</sup>                                           |       `<sup>text</sup>` |
-| [Ссылка](typo)                                                |             `[text](#)` |
-| [Анонимная ссылка в новой вкладке](https://example.com/?nt)   |          `[text](#?nt)` |
-| [Анонимная ссылка в текущей вкладке](https://example.com/?sl) |          `[text](#?sl)` |
-| `inline code`                                                 |            `` `text` `` |
-| <mark>Выделение</mark>                                        |     `<mark>text</mark>` |
+| Стиль                                    |                Markdown |
+| :--------------------------------------- | ----------------------: |
+| **Жирный**                               | `**text**` / `__text__` |
+| _Курсив_                                 |     `*text*` / `_text_` |
+| ~~Перечеркнутый~~                        |              `~~text~~` |
+| <u>Подчеркнутый</u>                      |           `<u>text</u>` |
+| Sub<sub>Текст</sub>                      |       `<sub>text</sub>` |
+| Sup<sup>Текст</sup>                      |       `<sup>text</sup>` |
+| [Ссылка](typo)                           |             `[text](#)` |
+| [Белая ссылка](https://example.com/?sl)  |          `[text](#?sl)` |
+| [Черная ссылка](https://example.com/?nt) |          `[text](#?nt)` |
+| `inline code`                            |            `` `text` `` |
+| <mark>Выделение</mark>                   |     `<mark>text</mark>` |
+
+### О ссылках
+
+Белая ссылка, ссылка на доверенный сайт, открывается в текущей вкладке.
+
+Черная ссылка, ссылка на **не** доверенный сайт (`nofollow`), открывается в новой вкладке + используется маскировка рефера через анонимайзер ссылок.
+
+Белая и черная ссылка, имеют атрибуты для безопасности `noreferrer noopener`.
+
+Если ссылка введет не на этот сайт, то вместо обычной ссылки лучше использовать белую или черную.
 
 ## Списки
 
@@ -263,7 +273,7 @@ cover:
 
 {{< imgs/gallery "https://images.unsplash.com/photo-1721332149267-ef9b10eaacd9?q=80&w=1936" "tall" "https://images.unsplash.com/photo-1719937206158-cad5e6775044?q=80&w=1740" "wide" "https://images.unsplash.com/photo-1721333091029-c66bbb278a54?q=80&w=1935" "tall" "https://images.unsplash.com/photo-1721333089517-7cab0cfa07b7?q=80&w=1674" "big" "https://images.unsplash.com/photo-1720048169586-6750c7863d8c?q=80&w=1740" "" "https://images.unsplash.com/photo-1720048170016-751876b1dba0?q=80&w=1740" "" >}}
 
-<sup>**Photo by [Samsung Memory](https://unsplash.com/@samsungmemory?nt) / [Unsplash](https://unsplash.com/?nt)**</sup>
+<sup>**Photo by [Samsung Memory](https://unsplash.com/@samsungmemory?nt) / [Unsplash](https://unsplash.com/?sl)**</sup>
 
 ```md
 {{</* imgs/gallery "#" "tall" "#" "wide" "#" "big" "#" "" */>}}

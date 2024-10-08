@@ -26,7 +26,7 @@ UseHugoToc: true
 cover:
   # image: "@img/Obkhod-parolia-na-mashine.avif" # image path/url
   alt: "Обход пароля на машине - Cover" # alt text
-  caption: "Photo by [rc.xyz NFT gallery](https://unsplash.com/@moneyphotos?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  caption: "Photo by [rc.xyz NFT gallery](https://unsplash.com/@moneyphotos?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---

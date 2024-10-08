@@ -26,7 +26,7 @@ UseHugoToc: true
 cover:
   image: "@img/kak-sdelat-multibut-2k10-live-cover.avif" # image path/url
   alt: "Мультибут 2k10 Live - Cover" # alt text
-  caption: "Photo by [charlesdeluvio](https://unsplash.com/@charlesdeluvio?nt) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  caption: "Photo by [charlesdeluvio](https://unsplash.com/@charlesdeluvio?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---

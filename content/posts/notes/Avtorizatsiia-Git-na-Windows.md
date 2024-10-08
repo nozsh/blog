@@ -34,14 +34,14 @@ byai: true
 cover:
   image: "" # image path/url
   alt: "Cover" # alt text
-  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: true # only hide on current single page
 ---
 
 ## Git Bash
 
-Для начала нужно установить Git. Для Windows нужно скачать [Git Bash.](https://git-scm.com/download/win?nt)
+Для начала нужно установить Git. Для Windows нужно скачать [Git Bash.](https://git-scm.com/download/win?sl)
 
 Проверить установлен ли git можно командой:
 
@@ -65,7 +65,7 @@ git config --global user.name "<username>"
 git config --global user.email <email@example.com>
 ```
 
-Имя и почту можно ввести любую, но я обычно использую username с GitHub, и для почты "GitHub почту" - `<...>@users.noreply.github.com`. Посмотреть ее можно в настройках, на [странице](https://github.com/settings/emails?nt) **Emails**.
+Имя и почту можно ввести любую, но я обычно использую username с GitHub, и для почты "GitHub почту" - `<...>@users.noreply.github.com`. Посмотреть ее можно в настройках, на [странице](https://github.com/settings/emails?sl) **Emails**.
 
 Опция `--global` значит, что имя и почта будут использоваться для всех действий в Git.
 

@@ -37,34 +37,34 @@ authorURL: [""]
 cover:
   image: "@img/start-flux-model-local-cover.avif" # image path/url
   alt: "Запуск Flux моделей локально - Cover" # alt text
-  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
 
-Вероятней всего вы получаете ошибку **You do not have CLIP state dict!**, при попытки запуска Flux модели на том же [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?nt). И видимо именно поэтому вы это читаете.
+Вероятней всего вы получаете ошибку **You do not have CLIP state dict!**, при попытки запуска Flux модели на том же [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl). И видимо именно поэтому вы это читаете.
 
 {{< callout/warn >}}
 Это заметка о том как запустить **Flux** модель.<br> **А не о том как запустить локальную установку для генерации пикч.**
 {{< /callout/warn >}}
 
-На момент написания этой заметки Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?nt) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?nt), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?nt). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
+На момент написания этой заметки Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?sl) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?sl), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?sl). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
 
 {{< callout/note >}}
-**Оптимизированная версия** оригинальной модели Flux [отсюда](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?nt), может работать без текстовых энкодеров, лично у меня так.
+**Оптимизированная версия** оригинальной модели Flux [отсюда](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl), может работать без текстовых энкодеров, лично у меня так.
 {{< /callout/note >}}
 
 {{< details/1 "Модели" >}}
-Оригинальные модели **(не оптимизированные)** можно скачать [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt).
+Оригинальные модели **(не оптимизированные)** можно скачать [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
 
-**GGUF версии** можно скачать [отсюда](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?nt) или [отсюда](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?nt).
+**GGUF версии** можно скачать [отсюда](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?sl) или [отсюда](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?sl).
 {{< /details/1 >}}
 
 Но при запуске других моделей на основе Flux, возникает ошибка. Она возникает из-за отсутствия **text encoder**, так же это называют **CLIP**, хотя это немного разные вещи.
 
 Чтобы, все таки запустить Flux модель, нужно скачать энкодеры и VAE.
 
-Качаем **clip-l\*** и **t5\*** [здесь](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?nt).
+Качаем **clip-l\*** и **t5\*** [здесь](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?sl).
 
 {{< callout/note >}}
 Что использовать **fp8** или **fp16** зависит от вашего железа.
@@ -80,7 +80,7 @@ cover:
 Если в будущем появятся другие версии, думаю примерно прикинете что вам нужно.
 {{< /callout/hint >}}
 
-Качаем VAE, `vae/diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev?nt) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell?nt).
+Качаем VAE, `vae/diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
 
 VAE помещаем в `models\VAE`, энкодеры в `models\text_encoder` или `models\CLIP` (если вы используете Stability Matrix).
 
@@ -92,4 +92,4 @@ VAE помещаем в `models\VAE`, энкодеры в `models\text_encoder` 
 
 ---
 
-Подробнее так же можно [почитать](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/1050?nt) от разработчика WebUI Forge.
+Подробнее так же можно [почитать](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/1050?sl) от разработчика WebUI Forge.

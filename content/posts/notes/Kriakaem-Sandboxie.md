@@ -34,7 +34,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 cover:
   image: "" # image path/url
   alt: "Cover" # alt text
-  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?nt)" # display caption under cover
+  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: true # only hide on current single page
 ---
@@ -46,10 +46,10 @@ _**Проверено на версии Plus 1.13.4.**_
 
 
 {{< details/1 "Sandboxie" >}}
-Sandboxie - появился еще в 2004. Утилита, которая представляет собой средство для контроля за работой различных программ, а также повышения уровня безопасности, в том числе и при работе в Интернете. Программа предоставляет пользователям возможность запуска приложений в защищённой оболочке, иначе называемой «песочнице». [Википедия](https://ru.wikipedia.org/wiki/Sandboxie?nt).
+Sandboxie - появился еще в 2004. Утилита, которая представляет собой средство для контроля за работой различных программ, а также повышения уровня безопасности, в том числе и при работе в Интернете. Программа предоставляет пользователям возможность запуска приложений в защищённой оболочке, иначе называемой «песочнице». [Википедия](https://ru.wikipedia.org/wiki/Sandboxie?sl).
 {{< /details/1 >}}
 
-Мы имеем опен сурс [репозиторий](https://github.com/sandboxie-plus/Sandboxie?nt) на GitHub, где собственно и можем скачать софт.
+Мы имеем опен сурс [репозиторий](https://github.com/sandboxie-plus/Sandboxie?sl) на GitHub, где собственно и можем скачать софт.
 
 Но увы, это НЕ платная версия. И крутые платные фичи - недоступны.
 
