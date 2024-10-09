@@ -287,7 +287,7 @@ src="typo-cover.jpg" */>}}
 "https://images.unsplash.com/photo-1720048169586-6750c7863d8c?q=80&w=1740" ""
 "https://images.unsplash.com/photo-1720048170016-751876b1dba0?q=80&w=1740" "" >}}
 
-<sup>**Photo by [Samsung Memory](https://unsplash.com/@samsungmemory?nt) / [Unsplash](https://unsplash.com/?sl)**</sup>
+<sup>**Photo by [Samsung Memory](https://unsplash.com/@samsungmemory?sl) / [Unsplash](https://unsplash.com/?sl)**</sup>
 
 ```md
 {{</* imgs/gallery
