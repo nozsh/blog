@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Stable Diffusion"
 # url: ""
 description: "Stable Diffusion - Что это? Как работает? Как запустить? И другое."
@@ -9,7 +9,7 @@ date: 2023-03-09
 categories: ["AI"] # ["cat 1", "cat 2"]
 tags: ["Статьи"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
-authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
+# authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"
 # weight: 1
 # robotsNoIndex: true

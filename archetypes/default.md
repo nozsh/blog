@@ -9,7 +9,7 @@ date: 2001-01-29
 categories: [""] # ["cat 1", "cat 2"]
 tags: [""] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
-authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
+# authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"
 # CanonicalLinkText: "Источник:"
 # weight: 1
