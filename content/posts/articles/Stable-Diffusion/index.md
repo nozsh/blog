@@ -73,9 +73,7 @@ Stable Diffusion это тип ИИ модели для генерации из�
 "@img/pic-008-stable-diffusion-umiaimythologyandbabes.avif" ""
 "@img/pic-009-stable-diffusion-umiaimythologyandbabes.avif" ""
 "@img/pic-010-stable-diffusion-umiaimythologyandbabes.avif" ""
-"@img/pic-011-stable-diffusion-umiaimythologyandbabes.avif" ""
-
-> }}
+"@img/pic-011-stable-diffusion-umiaimythologyandbabes.avif" "" >}}
 
 <p><b>Модели:</b></p>
 
