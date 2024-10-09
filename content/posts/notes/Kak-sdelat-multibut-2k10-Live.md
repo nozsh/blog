@@ -25,6 +25,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
   image: "@img/kak-sdelat-multibut-2k10-live-cover.avif" # image path/url
+  width: "1608" # only for img from url; EX: 1920
+  height: "1176" # only for img from url; EX: 1080
   alt: "Мультибут 2k10 Live - Cover" # alt text
   caption: "Photo by [charlesdeluvio](https://unsplash.com/@charlesdeluvio?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

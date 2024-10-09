@@ -1,13 +1,13 @@
 {{- $ntlinks := resources.Get "js/ntlinks.js" }}
-<script src="{{ $ntlinks.RelPermalink }}?v=1.0.1" defer></script>
+<script src="{{ $ntlinks.RelPermalink }}?v=2" defer></script>
 
 {{/* Load Smooth Anchor Scroll script */}}
 {{- $anchorscroll := resources.Get "js/anchor-scroll.js" }}
-<script src="{{ $anchorscroll.RelPermalink }}?v=1.0.0" defer></script>
+<script src="{{ $anchorscroll.RelPermalink }}?v=1" defer></script>
 
 {{/* Load Lite YouTube Embed JS */}}
 {{- $liteytembedJS := resources.Get "js/lite-yt-embed.js" }}
-<script src="{{ $liteytembedJS.RelPermalink }}?v=1.0.0" defer></script>
+<script src="{{ $liteytembedJS.RelPermalink }}?v=0.3.3" defer></script>
 
 {{/* Load mediumZoom script */}}
 {{- if (.Param "EnableImageZoom") }}

@@ -25,6 +25,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
   image: "@img/udalenie-razdelov-nakopitelia-cover.avif" # image path/url
+  width: "2000" # only for img from url; EX: 1920
+  height: "1170" # only for img from url; EX: 1080
   alt: "Удаление разделов накопителя - Cover" # alt text
   caption: "Photo by [Drew DeArcos](https://href.li/?https://unsplash.com/@starvox?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: false # when using page bundles set this to true

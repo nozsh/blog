@@ -14,7 +14,7 @@
     {{ $src := index $params (mul $i 2) | safeURL }}
     {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
     <div class="gallery-item {{ if $class }}{{ $class }}{{ else }}{{ end }}">
-      <img src="{{ $newSrc }}" alt="" />
+      <img loading="lazy" src="{{ $newSrc }}" alt="" />
     </div>
     {{ end }}
   </div>

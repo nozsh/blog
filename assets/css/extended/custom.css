@@ -66,6 +66,10 @@
   color: var(--link-hover-color);
 }
 
+.post-content img {
+  border-radius: var(--radius);
+}
+
 .post-meta a.author-link {
   color: inherit;
   box-shadow: 0 1px;

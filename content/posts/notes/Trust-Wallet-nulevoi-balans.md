@@ -25,6 +25,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
   image: "@img/trust-wallet-nulievoi-balans-cover.avif" # image path/url
+  width: "1800" # only for img from url; EX: 1920
+  height: "1200" # only for img from url; EX: 1080
   alt: "Trust Wallet - Нулевой баланс - Cover" # alt text
   caption: "Photo by [Sajad Nori](https://unsplash.com/@sajadnorit?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

@@ -24,18 +24,18 @@ showToc: true
 # hideFooter: true
 # searchHidden: true
 # ShowCodeCopyButtons: false
-# ShowReadingTime: false
-# ShowWordCount: false
-# ShowBreadCrumbs: false
+ShowReadingTime: false
+ShowWordCount: false
+ShowBreadCrumbs: false
 # ShowPostNavLinks: fales
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
 # CanonicalLinkText: "Источник:"
 # UseHugoToc: false
-# hideAuthor: true
+hideAuthor: true
 # byai: true
 cover:
-  image: "@img/typo-cover.jpg" # image path/url
+  image: "@img/typo-cover.avif" # image path/url
   alt: "Typo Cover" # alt text
   caption: "Photo by [camilo jimenez](https://unsplash.com/@camstejim?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -247,7 +247,7 @@ cover:
 
 ## Изображения
 
-![Type - Cover](typo-cover.jpg)
+![Type - Cover](@img/typo-cover.jpg)
 
 ```md
 ![alt](typo-cover.jpg)
@@ -255,7 +255,7 @@ cover:
 
 ### Другой размер
 
-{{< imgs/img "Type - Cover" "50%" "typo-cover.jpg" >}}
+{{< imgs/img "Type - Cover" "50%" "@img/typo-cover.jpg" >}}
 
 ```md
 {{</* imgs/img "alt" "50%" "typo-cover.jpg" */>}}
@@ -263,21 +263,148 @@ cover:
 
 ### С подписью
 
-{{< imgs/imgc width="" caption="Это подпись" alt="Type - Cover" src="typo-cover.jpg" >}}
+{{< imgs/imgc
+width=""
+caption="Это подпись"
+alt="Type - Cover"
+src="@img/typo-cover.jpg"
+
+> }}
 
 ```md
-{{</* imgs/imgc width="" caption="Текст" alt="alt" src="typo-cover.jpg" */>}}
+{{</* imgs/imgc
+width=""
+caption="Текст"
+alt="alt"
+src="typo-cover.jpg"
+*/>}}
 ```
 
 ### Галерея
 
-{{< imgs/gallery "https://images.unsplash.com/photo-1721332149267-ef9b10eaacd9?q=80&w=1936" "tall" "https://images.unsplash.com/photo-1719937206158-cad5e6775044?q=80&w=1740" "wide" "https://images.unsplash.com/photo-1721333091029-c66bbb278a54?q=80&w=1935" "tall" "https://images.unsplash.com/photo-1721333089517-7cab0cfa07b7?q=80&w=1674" "big" "https://images.unsplash.com/photo-1720048169586-6750c7863d8c?q=80&w=1740" "" "https://images.unsplash.com/photo-1720048170016-751876b1dba0?q=80&w=1740" "" >}}
+{{< imgs/gallery
+"https://images.unsplash.com/photo-1721332149267-ef9b10eaacd9?q=80&w=1936" "tall"
+"https://images.unsplash.com/photo-1719937206158-cad5e6775044?q=80&w=1740" "wide"
+"https://images.unsplash.com/photo-1721333091029-c66bbb278a54?q=80&w=1935" "tall"
+"https://images.unsplash.com/photo-1721333089517-7cab0cfa07b7?q=80&w=1674" "big"
+"https://images.unsplash.com/photo-1720048169586-6750c7863d8c?q=80&w=1740" ""
+"https://images.unsplash.com/photo-1720048170016-751876b1dba0?q=80&w=1740" ""
+
+> }}
 
 <sup>**Photo by [Samsung Memory](https://unsplash.com/@samsungmemory?nt) / [Unsplash](https://unsplash.com/?sl)**</sup>
 
 ```md
-{{</* imgs/gallery "#" "tall" "#" "wide" "#" "big" "#" "" */>}}
+{{</* imgs/gallery
+"#" "tall"
+"#" "wide"
+"#" "big"
+"#" ""
+*/>}}
 ```
+
+## Видео
+
+{{< vids/vid
+width="100%"
+align="center"
+attr="controls loop muted"
+controlslist="nodownload nofullscreen noremoteplayback"
+webm="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+mp4="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+preload="metadata"
+poster="@img/typo-cover.avif"
+
+> }}
+
+```md
+{{</* vids/vid
+width="100%"
+align="center"
+attr="controls loop muted"
+controlslist="nodownload nofullscreen noremoteplayback"
+webm="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+mp4="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+preload="metadata"
+poster="typo-cover.avif"
+*/>}}
+```
+
+```md
+{{</* vids/vid
+width=""
+align=""
+attr="controls"
+controlslist=""
+webm=""
+mp4=""
+preload="metadata"
+poster=""
+*/>}}
+```
+
+### Параметры
+
+`width` - Ширина видео.
+
+`align` - Выравнивание видео на странице: `center`, `right`. По умолчанию без _значения_ видео выравнивается по левому краю.
+
+`attr` - Атрибуты видео.
+
+`controlslist` - Атрибут `controlslist`, если он указан, помогает браузеру выбрать, какие элементы управления будут отображаться для видео всякий раз, когда браузер показывает свой собственный набор элементов управления (т. е. когда указан атрибут `controls`).
+
+- `nodownload` - Убирает кнопку загрузки видео. Пользователи не смогут скачать видеофайл на свои устройства с помощью элементов управления.
+- `nofullscreen` - Убирает возможность перехода в полноэкранный режим. Пользователи не смогут развернуть видео на весь экран.
+- `noremoteplayback` - Запрещает пользователям отправлять видео на удалённые устройства (например, на телевизоры через Chromecast или другие медиаплееры).
+
+`webm` - Ссылка на видео в формате webm.
+
+`mp4` - Ссылка на видео в формате mp4.
+
+`preload` - Этот атрибут предназначен для того, чтобы предоставить браузеру подсказку о том, что, по мнению автора, приведет к наилучшему пользовательскому опыту в отношении того, какой контент загружается перед воспроизведением видео. Он может иметь одно из следующих значений:
+
+- `none`: Указывает, что видео не должно быть предварительно загружено.
+- `metadata`: Указывает, что загружаются только метаданные видео (например, длина).
+- `auto`: Указывает, что видеофайл может быть загружен целиком, даже если пользователь не должен его использовать.
+- _пустая строка_: синоним значения `auto`.
+
+Значение по умолчанию отличается для каждого браузера. В спецификации рекомендуется установить значение `metadata`.
+
+`poster` - URL-адрес изображения, которое будет отображаться во время загрузки видео. Если этот атрибут не указан, ничего не отображается до тех пор, пока не станет доступен первый кадр, а затем первый кадр отображается как кадр плаката.
+
+#### Атрибуты
+
+Атрибуты указываются в `attr`.
+
+`autoplay` - Булев атрибут; Если указано, видео автоматически начнет воспроизводиться, как только сможет, без остановки для завершения загрузки данных.
+
+{{< callout/note >}}
+Современные браузеры блокируют автовоспроизведение аудио (или видео с включенной звуковой дорожкой), так как сайты, которые автоматически воспроизводят аудио, могут доставлять неприятные ощущения пользователям.
+{{< /callout/note >}}
+
+`controls` - Если этот атрибут присутствует, браузер предложит элементы управления, позволяющие пользователю управлять воспроизведением видео, включая громкость, поиск и паузу/возобновление воспроизведения.
+
+`controlslist`
+
+`disablepictureinpicture` - В некоторых случаях запрещает браузеру предлагать контекстное меню «Картинка в картинке» или автоматически запрашивать «Картинка в картинке».
+
+`loop` - Булев атрибут; Если указано, браузер автоматически вернется к началу по достижении конца видео.
+
+`muted` - Логический атрибут, указывающий настройку отключения звука по умолчанию, содержащуюся в видео. Если этот параметр установлен, звук будет изначально отключен от звука. Его значением по умолчанию является `false`, что означает, что звук будет воспроизводиться при воспроизведении видео.
+
+`playsinline` - Логический атрибут, указывающий на то, что видео должно воспроизводиться «в строке», то есть в пределах области воспроизведения элемента. Обратите внимание, что отсутствие этого атрибута не означает, что видео всегда будет воспроизводиться в полноэкранном режиме.
+
+{{< callout/note >}}
+
+<ul style="margin-bottom: 0;">
+<li>
+Атрибут <code>autoplay</code> имеет приоритет над <code>preload</code>. Если указано <code>autoplay</code>, то браузеру, очевидно, потребуется начать загрузку видео для воспроизведения.
+</li>
+<li>
+Спецификация не заставляет браузер следовать значению этого атрибута; Это всего лишь намек.
+</li>
+</ul>
+{{< /callout/note >}}
 
 ## Таблицы
 

@@ -25,6 +25,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
   image: "@img/piratim-nintendo-switch-cover.avif" # image path/url
+  width: "1920" # only for img from url; EX: 1920
+  height: "1080" # only for img from url; EX: 1080
   alt: "Пиратим Nintendo Switch (Prince of Persia: The Lost Crown) - Cover" # alt text
   caption: "Prince of Persia: The Lost Crown" # display caption under cover
   relative: true # when using page bundles set this to true

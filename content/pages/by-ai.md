@@ -21,15 +21,15 @@ robotsNoIndex: true
 # hideFooter: true
 # searchHidden: true
 # ShowCodeCopyButtons: false
-# ShowReadingTime: false
-# ShowWordCount: false
-# ShowBreadCrumbs: false
+ShowReadingTime: false
+ShowWordCount: false
+ShowBreadCrumbs: false
 # ShowPostNavLinks: fales
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
 # CanonicalLinkText: ""
 # UseHugoToc: false
-# hideAuthor: true
+hideAuthor: true
 byai: true
 cover:
   image: "" # image path/url

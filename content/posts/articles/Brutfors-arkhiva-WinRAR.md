@@ -25,6 +25,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
   image: "@img/brutfors-arkhiva-winrar-cover.avif" # image path/url
+  width: "1500" # only for img from url; EX: 1920
+  height: "1080" # only for img from url; EX: 1080
   alt: "Брутфорс архива WinRAR - Cover" # alt text
   caption: "" # display caption under cover
   relative: true # when using page bundles set this to true

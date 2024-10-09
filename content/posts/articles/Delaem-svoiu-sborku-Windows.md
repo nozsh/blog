@@ -33,6 +33,8 @@ showToc: true
 # byai: true
 cover:
   image: "@img/delaem-svoiu-sborku-windows-cover.avif" # image path/url
+  width: "1920" # only for img from url; EX: 1920
+  height: "1080" # only for img from url; EX: 1080
   alt: "Делаем свою сборку Windows - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

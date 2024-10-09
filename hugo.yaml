@@ -56,6 +56,8 @@ params:
     safari_pinned_tab: "fav/favicon.svg"
     assetsURL: "https://assets.nozsh.su/img/blog/"
     assetsPATH: "@img/"
+    assetsURL_VID: "https://assets.nozsh.su/vid/blog/"
+    assetsPATH_VID: "@vid/"
 
   label:
     # text: "AnotherSiteTitle"

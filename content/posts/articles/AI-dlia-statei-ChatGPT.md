@@ -33,6 +33,8 @@ TocOpen: true
 byai: true
 cover:
   image: "@img/ai-dlia-statei-chatgpt-cover.avif" # image path/url
+  width: "1107" # only for img from url; EX: 1920
+  height: "931" # only for img from url; EX: 1080
   alt: "AI для статей: ChatGPT - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

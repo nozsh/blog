@@ -42,7 +42,6 @@
   grid-row: span 2;
 }
 
-/* Медиа-запрос для адаптации под меньшие экраны */
 @media (max-width: 670px) {
   .gallery-grid-wrapper {
     grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));

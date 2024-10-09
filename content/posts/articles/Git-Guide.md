@@ -34,6 +34,8 @@ showToc: true
 # byai: true
 cover:
   image: "@img/git-guide-cover.avif" # image path/url
+  width: "1920" # only for img from url; EX: 1920
+  height: "1272" # only for img from url; EX: 1080
   alt: "Гайд на Git - Cover" # alt text
   caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

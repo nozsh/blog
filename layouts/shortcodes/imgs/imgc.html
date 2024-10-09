@@ -3,14 +3,15 @@
 
 {{- $src := .Get "src" | safeURL -}}
 
+
 <figure>
   {{- if hasPrefix $src $imgPATH -}}
     {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
     {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
     {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-    <img alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ $newSrc }}'>
+    <img loading="lazy" alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ $newSrc }}'>
   {{- else -}}
-    <img alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ .Get "src" }}'>
+    <img loading="lazy" alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ .Get "src" }}'>
   {{- end -}}
 
   <figcaption>{{.Get "caption" | markdownify}}</figcaption>

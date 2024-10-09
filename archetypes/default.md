@@ -1,6 +1,6 @@
 ---
 draft: true
-title: "IDK"
+# title: "IDK"
 # url: ""
 description: "Desc"
 summary: "Desc"
@@ -11,6 +11,7 @@ tags: [""] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"
+# CanonicalLinkText: "Источник:"
 # weight: 1
 # robotsNoIndex: true
 
@@ -26,16 +27,17 @@ showToc: true
 # ShowCodeCopyButtons: false
 # ShowReadingTime: false
 # ShowWordCount: false
+# hideAuthor: true
 # ShowBreadCrumbs: false
 # ShowPostNavLinks: fales
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
-# CanonicalLinkText: "Источник:"
 # UseHugoToc: false
-# hideAuthor: true
 # byai: true
 cover:
   # image: "article/image" # image path/url
+  # width: "" # only for img from url; EX: 1920
+  # height: "" # only for img from url; EX: 1080
   alt: "article - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

@@ -26,6 +26,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
   image: "@img/kak-kompanii-otslezhivaiut-nas-v-internete-cover.avif" # image path/url
+  width: "1200" # only for img from url; EX: 1920
+  height: "771" # only for img from url; EX: 1080
   alt: "Cover" # alt text
   caption: "" # display caption under cover
   relative: true # when using page bundles set this to true
