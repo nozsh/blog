@@ -1,7 +1,7 @@
 ---
 draft: true
-# title: "IDK"
-# url: ""
+title: "IDK"
+# url: "" # slug
 description: "Desc"
 summary: "Desc"
 date: 2001-01-29

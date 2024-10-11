@@ -1,3 +1,7 @@
+body {
+  font-size: var(--font-size);
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -63,7 +67,7 @@
 }
 
 .post-content a:hover {
-  color: var(--link-hover-color);
+  color: var(--accent);
 }
 
 .post-content img {
@@ -105,6 +109,24 @@
   overflow-x: hidden;
   word-break: keep-all;
   white-space: nowrap;
+}
+
+kbd {
+  background: color-mix(in srgb, var(--theme) 5%, transparent);
+  color: var(--kbd-color);
+  border-top: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+  border-left: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
+  border-bottom: 4px solid var(--accent);
+  border-radius: 4px;
+  padding: 1px 6px;
+  margin: 0 2px;
+  font-size: calc(var(--font-size) * 0.95);
+}
+
+mark {
+  background-color: var(--accent);
+  color: var(--mark-color);
 }
 
 /* Medium Zoom*/

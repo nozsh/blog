@@ -28,7 +28,7 @@ cover:
   width: "2000" # only for img from url; EX: 1920
   height: "1170" # only for img from url; EX: 1080
   alt: "Удаление разделов накопителя - Cover" # alt text
-  caption: "Photo by [Drew DeArcos](https://href.li/?https://unsplash.com/@starvox?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
+  caption: "Photo by [Drew DeArcos](https://unsplash.com/@starvox?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: false # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---

@@ -57,7 +57,7 @@ cover:
 {{< /callout/note >}}
 
 {{< details/1 "Модели" >}}
-Оригинальные модели **(не оптимизированные)** можно скачать [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
+Оригинальные модели можно скачать [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
 
 **GGUF версии** можно скачать [отсюда](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?sl) или [отсюда](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?sl).
 {{< /details/1 >}}
@@ -66,7 +66,7 @@ cover:
 
 Чтобы, все таки запустить Flux модель, нужно скачать энкодеры и VAE.
 
-Качаем **clip-l\*** и **t5\*** [здесь](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?sl).
+Качаем энкодеры, **clip-l\*** и **t5\*** [здесь](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?sl).
 
 {{< callout/note >}}
 Что использовать **fp8** или **fp16** зависит от вашего железа.
@@ -82,7 +82,7 @@ cover:
 Если в будущем появятся другие версии, думаю примерно прикинете что вам нужно.
 {{< /callout/hint >}}
 
-Качаем VAE, `vae/diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
+Качаем VAE, `vae/diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main?sl) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell/tree/main?sl).
 
 VAE помещаем в `models\VAE`, энкодеры в `models\text_encoder` или `models\CLIP` (если вы используете Stability Matrix).
 

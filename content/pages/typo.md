@@ -36,6 +36,8 @@ hideAuthor: true
 # byai: true
 cover:
   image: "@img/typo-cover.avif" # image path/url
+  # width: "" # only for img from url; EX: 1920
+  # height: "" # only for img from url; EX: 1080
   alt: "Typo Cover" # alt text
   caption: "Photo by [camilo jimenez](https://unsplash.com/@camstejim?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
@@ -151,6 +153,7 @@ cover:
 | [Черная ссылка](https://example.com/?nt) |          `[text](#?nt)` |
 | `inline code`                            |            `` `text` `` |
 | <mark>Выделение</mark>                   |     `<mark>text</mark>` |
+| <kbd>Клавиша</kbd>                       |       `<kbd>text</kbd>` |
 
 ### О ссылках
 
@@ -245,9 +248,21 @@ cover:
 > -- Джек Доусон
 ```
 
+## Сноски
+
+Сноска[^Сноска]
+
+[^Сноска]: Это сноска.
+
+```md
+Сноска[^1]
+
+[^1]: Это сноска.
+```
+
 ## Изображения
 
-![Type - Cover](@img/typo-cover.jpg)
+![Type - Cover](@img/typo-cover.avif)
 
 ```md
 ![alt](typo-cover.jpg)
@@ -255,7 +270,7 @@ cover:
 
 ### Другой размер
 
-{{< imgs/img "Type - Cover" "50%" "@img/typo-cover.jpg" >}}
+{{< imgs/img "Type - Cover" "50%" "@img/typo-cover.avif" >}}
 
 ```md
 {{</* imgs/img "alt" "50%" "typo-cover.jpg" */>}}
@@ -267,7 +282,7 @@ cover:
 width=""
 caption="Это подпись"
 alt="Type - Cover"
-src="@img/typo-cover.jpg" >}}
+src="@img/typo-cover.avif" >}}
 
 ```md
 {{</* imgs/imgc
@@ -318,7 +333,7 @@ controlslist="nodownload nofullscreen noremoteplayback"
 webm="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
 mp4="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 preload="metadata"
-poster="typo-cover.avif" */>}}
+poster="typo-cover.jpg" */>}}
 ```
 
 ```md

@@ -34,9 +34,12 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   # CanonicalLinkText: "Источник:"
+  # ShowAllPagesInArchive: true
+  ShowPageNums: true
   disableSpecial1stPost: true
   disableScrollToTop: false
   comments: false
+  # images: ["images/papermod-cover.png"]
   hidemeta: false
   hideSummary: false
   UseHugoToc: true
