@@ -63,7 +63,7 @@ params:
     assetsPATH_VID: "@vid/"
 
   label:
-    # text: "AnotherSiteTitle"
+    text: "nozsh"
     icon: logo-256px.avif
     iconHeight: 35px
 
