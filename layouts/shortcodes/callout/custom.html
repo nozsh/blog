@@ -1,0 +1,8 @@
+{{- $color1 := .Get 1 | default "inherit" | safeCSS -}}
+{{- $color2 := .Get 2 | default "transparent" | safeCSS -}}
+{{- $color3 := .Get 3 | default "none" | safeCSS -}}
+<div class="kg-card kg-callout-card"
+  style="color: {{ $color1 }};background-color: {{ $color2 }};background-image: {{ $color3 }};">
+  <div class="kg-callout-emoji">{{ .Get 0 }}</div>
+  <div class="kg-callout-text">{{ .Inner | markdownify }}</div>
+</div>

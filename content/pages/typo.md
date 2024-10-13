@@ -22,7 +22,7 @@ showToc: true
 # disableShare: true
 # hideSummary: true
 # hideFooter: true
-# searchHidden: true
+searchHidden: true
 # ShowCodeCopyButtons: false
 ShowReadingTime: false
 ShowWordCount: false
@@ -50,34 +50,52 @@ cover:
 Это **заметка**.
 {{< /callout/note >}}
 
-```bash
+```md
 {{</* callout/note */>}}
 Это **заметка**.
 {{</* /callout/note */>}}
 ```
 
----
+<br>
 
 {{< callout/hint >}}
 Это **подсказка**.
 {{< /callout/hint >}}
 
-```bash
+```md
 {{</* callout/hint */>}}
 Это **подсказка**.
 {{</* /callout/hint */>}}
 ```
 
----
+<br>
 
 {{< callout/warn >}}
 Это **предупреждение**.
 {{< /callout/warn >}}
 
-```bash
+```md
 {{</* callout/warn */>}}
 Это **предупреждение**.
 {{</* /callout/warn */>}}
+```
+
+<br>
+
+{{< callout/custom "☕" "#000" "#8BC6EC" "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)" >}}
+Это **кастомный**.
+{{< /callout/custom >}}
+
+```md
+{{</* callout/custom "☕" "#000" "#8BC6EC" "linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%)" */>}}
+Это **кастомный**.
+{{</* /callout/custom */>}}
+```
+
+```md
+{{</* callout/custom "" "" "" "" */>}}
+Это **кастомный**.
+{{</* /callout/custom */>}}
 ```
 
 ## Ахтунг

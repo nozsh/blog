@@ -19,7 +19,7 @@ robotsNoIndex: true
 # disableShare: true
 # hideSummary: true
 # hideFooter: true
-# searchHidden: true
+searchHidden: true
 # ShowCodeCopyButtons: false
 ShowReadingTime: false
 ShowWordCount: false

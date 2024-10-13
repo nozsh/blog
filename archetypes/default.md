@@ -1,7 +1,7 @@
 ---
 draft: true
-title: "IDK"
 # url: "" # slug
+title: "IDK"
 description: "Desc"
 summary: "Desc"
 date: 2001-01-29
@@ -36,8 +36,8 @@ showToc: true
 # byai: true
 cover:
   # image: "article/image" # image path/url
-  # width: "" # only for img from url; EX: 1920
-  # height: "" # only for img from url; EX: 1080
+  # width: "1920" # only for img from url; EX: 1920
+  # height: "1080" # only for img from url; EX: 1080
   alt: "article - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true

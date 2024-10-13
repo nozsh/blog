@@ -151,14 +151,18 @@ menu:
       name: 🏷️ Теги
       url: /tags/
       weight: 300
-    - identifier: Knowledge Base
-      name: 🧠 Knowledge Base
-      url: ../kb/
-      weight: 350
-    - identifier: contact
-      name: ☕ Контакт
-      url: ../contact/
-      weight: 400
+    - identifier: nozshub
+      name: 🌀 hub
+      url: ../
+      weight: 340
+    # - identifier: Knowledge Base
+    #   name: 🧠 Knowledge Base
+    #   url: ../kb/
+    #   weight: 350
+    # - identifier: contact
+    #   name: ☕ Контакт
+    #   url: ../contact/
+    #   weight: 400
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
