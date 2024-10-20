@@ -66,6 +66,10 @@ body {
   margin: 1rem 0 5px 0;
 }
 
+.post-content img:not(.gallery img) {
+  border: 1px solid rgba(124, 139, 154, 0.25);
+}
+
 .post-content a:hover {
   color: var(--accent);
 }
@@ -127,20 +131,4 @@ kbd {
 mark {
   background-color: var(--accent);
   color: var(--mark-color);
-}
-
-/* Medium Zoom*/
-.medium-zoom-overlay {
-  background: var(--theme) !important;
-  /* background: transparent !important; */
-  /* backdrop-filter: blur(6px); */
-  z-index: 2;
-}
-
-.medium-zoom-image--opened {
-  z-index: 3;
-}
-
-.medium-zoom-image {
-  object-fit: contain;
 }

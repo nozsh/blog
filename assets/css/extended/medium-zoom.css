@@ -1,0 +1,16 @@
+.medium-zoom-overlay {
+  background: var(--theme) !important;
+  /* background: transparent !important; */
+  /* backdrop-filter: blur(6px); */
+  z-index: 2;
+}
+
+.medium-zoom-image--opened {
+  z-index: 3;
+  border-radius: var(--radius);
+  border: 1px solid rgba(124, 139, 154, 0.25);
+}
+
+.medium-zoom-image {
+  object-fit: contain;
+}

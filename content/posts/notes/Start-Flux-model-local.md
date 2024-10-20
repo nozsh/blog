@@ -5,7 +5,7 @@ title: "Запуск Flux моделей локально"
 description: "You do not have CLIP state dict!"
 summary: "You do not have CLIP state dict!"
 date: 2024-09-14
-# lastmod: 2001-01-29
+lastmod: 2024-10-20
 categories: ["AI"] # ["cat 1", "cat 2"]
 tags: ["Заметки"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
@@ -44,16 +44,24 @@ cover:
   hidden: false # only hide on current single page
 ---
 
-Вероятней всего вы получаете ошибку **You do not have CLIP state dict!**, при попытки запуска Flux модели на том же [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl). И видимо именно поэтому вы это читаете.
+Вероятней всего вы получаете шум или пустоту, вместо красивой картинки, при попытки генерации используя Flux модель на том же [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl).
+
+Или ошибку **You do not have CLIP state dict!** используя Flux модель на другой панели.
+
+И видимо именно поэтому вы это читаете.
 
 {{< callout/warn >}}
 Это заметка о том как запустить **Flux** модель.<br> **А не о том как запустить локальную установку для генерации пикч.**
 {{< /callout/warn >}}
 
+Если вы получаете шум или пустоту, значит панель не поддерживает Flux модели.
+
 На момент написания этой заметки Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?sl) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?sl), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?sl). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
 
 {{< callout/note >}}
-**Оптимизированная версия** оригинальной модели Flux [отсюда](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl), может работать без текстовых энкодеров, лично у меня так.
+**Оптимизированная версия** оригинальной модели Flux [отсюда](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl), может работать сразу на WebUI Forge.
+
+Так как все необходимые энкодеры и VAE уже [встроены](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981?sl) в панель.
 {{< /callout/note >}}
 
 {{< details/1 "Модели" >}}
@@ -62,7 +70,13 @@ cover:
 **GGUF версии** можно скачать [отсюда](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?sl) или [отсюда](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?sl).
 {{< /details/1 >}}
 
-Но при запуске других моделей на основе Flux, возникает ошибка. Она возникает из-за отсутствия **text encoder**, так же это называют **CLIP**, хотя это немного разные вещи.
+При запуске Flux моделей (и соответственно других моделей на основе Flux), возникает ошибка:
+
+```
+You do not have CLIP state dict!
+```
+
+Она возникает из-за отсутствия **text encoder**, так же это называют **CLIP**, хотя это немного разные вещи.
 
 Чтобы, все таки запустить Flux модель, нужно скачать энкодеры и VAE.
 
