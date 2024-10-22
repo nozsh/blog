@@ -11,6 +11,12 @@
   border: 1px solid rgba(124, 139, 154, 0.25);
 }
 
+img.medium-zoom-image--opened[loading="eager"],
+img.gallery-image.medium-zoom-image--opened {
+  border-radius: 0;
+  border: none;
+}
+
 .medium-zoom-image {
   object-fit: contain;
 }

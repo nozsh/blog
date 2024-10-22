@@ -85,6 +85,7 @@
   height: 22px !important;
   margin-right: 8px !important;
   width: 22px !important;
+  border: none !important;
 }
 
 .post-content .embed-post-content img {
@@ -111,6 +112,7 @@ figure.embed-post-card img {
 }
 
 .embed-post-cover img {
+  border: none !important;
   border-radius: 0 var(--radius) var(--radius) 0;
   height: 100% !important;
   left: 0;

@@ -39,6 +39,14 @@ cover:
   hidden: true # only hide on current single page
 ---
 
+{{< callout/warn >}}
+Git **НЕ равно** GitHub.
+
+Авторизация будет описана на примере GitHub.
+
+Для других платформ получение данные для авторизации может отличаться!
+{{< /callout/warn >}}
+
 ## Git Bash
 
 Для начала нужно установить Git. Для Windows нужно скачать [Git Bash.](https://git-scm.com/download/win?sl)

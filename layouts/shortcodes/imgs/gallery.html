@@ -6,7 +6,7 @@
     {{ $class := index $params (mul $i 2 | add 1) }}
     {{ $src := index $params (mul $i 2) }}
     <div class="gallery-item {{ if $class }}{{ $class }}{{ else }}{{ end }}">
-      <img loading="lazy" src="{{ $src }}" alt="" />
+      <img loading="lazy" src="{{ $src }}" alt="" class="gallery-image" />
     </div>
     {{ end }}
   </div>

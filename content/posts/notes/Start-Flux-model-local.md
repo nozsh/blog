@@ -54,6 +54,8 @@ cover:
 Это заметка о том как запустить **Flux** модель.<br> **А не о том как запустить локальную установку для генерации пикч.**
 {{< /callout/warn >}}
 
+{{< embedPost "local-ai-image-generation-stability-matrix">}}
+
 Если вы получаете шум или пустоту, значит панель не поддерживает Flux модели.
 
 На момент написания этой заметки Flux работает в [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?sl) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?sl), которые так же имеются в [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?sl). И еще, на текущий момент с Flux идеально работают только видеокарты NVIDIA.
