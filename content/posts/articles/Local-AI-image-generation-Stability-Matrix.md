@@ -149,7 +149,7 @@ poster="" >}}
 local URL:  http://127.0.0.1:7860
 ```
 
-![Запуск панели WebUI](@img/008-local-ai-image-generation-stability-zapusk-paneli.avif)
+![Запуск панели WebUI](@img/008-local-ai-image-generation-stability-matrix-zapusk-paneli.avif)
 
 Если этот URL не открылся в браузере автоматически, перейдите по URL или скопируйте вручную.
 
@@ -157,7 +157,7 @@ local URL:  http://127.0.0.1:7860
 width=""
 caption="WebUI by AUTOMATIC1111"
 alt="Stable Diffusion WebUI by AUTOMATIC1111"
-src="@img/009-local-ai-image-generation-stability-stable-diffusion-webui-automatic1111.avif" >}}
+src="@img/009-local-ai-image-generation-stability-matrix-stable-diffusion-webui-automatic1111.avif" >}}
 
 Узнать как пользоваться WebUI от AUTOMATIC1111 можно в статье про [Stable Diffusion](../stable-diffusion/#как-пользоваться-stable-diffusion-webui).
 
