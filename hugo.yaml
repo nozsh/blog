@@ -2,7 +2,7 @@ baseURL: https://nozsh.su/blog/
 languageCode: ru
 defaultContentLanguage: ru
 title: "nozsh"
-paginate: 10
+paginate: 6
 theme: ["PaperMod"]
 
 enableRobotsTXT: false
@@ -109,7 +109,7 @@ params:
     responsiveImages: true # More one size of cover
     linkFullImages: false # Clicable cover
     # hidden: false # hide everywhere but not in structured data
-    hiddenInList: true # hide on list pages and home
+    hiddenInList: false # hide on list pages and home
     # hiddenInSingle: false # hide on single page
 
   editPost:
