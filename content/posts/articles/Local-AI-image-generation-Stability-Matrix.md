@@ -35,7 +35,7 @@ showToc: true
 # UseHugoToc: false
 # byai: true
 cover:
-  image: "@img/local-ai-image-generation-stability-matrix-cover.avif" # image path/url
+  image: "@img/local-ai-image-generation-stability-matrix-cover.webp" # image path/url
   width: "1920" # only for img from url; EX: 1920
   height: "1080" # only for img from url; EX: 1080
   alt: "article - Cover" # alt text
