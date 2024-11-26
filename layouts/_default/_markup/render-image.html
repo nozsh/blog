@@ -1,3 +1,19 @@
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $src = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $src = printf "%s?%s" $src . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $src = printf "%s#%s" $src . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* CUSTOM */}}
 {{- $imgURL := site.Params.assets.assetsURL -}}
 {{- $imgPATH := site.Params.assets.assetsPATH -}}
 
@@ -7,7 +23,14 @@
   {{- $urlWithoutHash := $.Page.Permalink | replaceRE "#.*$" "" -}}
   {{- $lastPart := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" -}}
   {{- $newUrl := $url | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $lastPart) -}}
-  <img loading="lazy" src="{{ $newUrl }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
-{{- else -}}
-  <img loading="lazy" src="{{ $url }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+  {{- $src = $newUrl -}}
 {{- end -}}
+{{/* CUSTOM */}}
+
+{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
+<img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}}>
