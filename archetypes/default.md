@@ -39,7 +39,7 @@ cover:
   # width: "1920" # only for img from url; EX: 1920
   # height: "1080" # only for img from url; EX: 1080
   alt: "article - Cover" # alt text
-  # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
+  # caption: "Photo by [Sajad Nori](#?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: true # only hide on current single page
 ---
