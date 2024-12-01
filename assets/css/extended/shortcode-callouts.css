@@ -27,7 +27,6 @@
   display: flex;
   padding: 1.2em 1.6em;
   border-radius: var(--radius);
-  backdrop-filter: blur(6px);
 }
 
 .kg-callout-card div.kg-callout-emoji {
