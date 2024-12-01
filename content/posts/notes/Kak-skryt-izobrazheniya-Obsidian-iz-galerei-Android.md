@@ -68,7 +68,7 @@ src="@img/001-skryt-izobrazheniya-mediafayly-obsidian-galerei-android-total-comm
 
 Файл `.nomedia` можно создать как через USB, так и прямо на телефоне с помощью текстового редактора, например, «Editor» ([F-Droid](https://f-droid.org/packages/org.billthefarmer.editor/?sl) / [GitHub](https://github.com/billthefarmer/editor?sl)).
 
-Скорее всего, вы не увидите файл `.nomedia` в "проводнике", потому что такие файлы скрытые ([dotfiles](https://wikipedia.org/wiki/Hidden_file_and_hidden_directory)).
+Скорее всего, вы не увидите файл `.nomedia` в "классическом проводнике", потому что такие файлы скрытые ([dotfiles](https://wikipedia.org/wiki/Hidden_file_and_hidden_directory)).
 
 Но после создания файла `.nomedia` в корне хранилища Obsidian, все изображения должны исчезнуть из галереи.
 
