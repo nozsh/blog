@@ -1,11 +1,11 @@
 ---
 draft: false
-title: "Мультибут 2k10 Live"
+title: "Мультибут 2k10 Live. Windows"
 description: "Инструкция как сделать мультизагрузочную флешку/диск c 2k10 Live."
 summary: "Инструкция как сделать мультизагрузочную флешку/диск c 2k10 Live."
 date: 2024-05-19
-tags: ["Windows", "Заметки"] # ['tag 1', 'tag 2']
-categories: ["Система"] # ["cat 1", "cat 2"]
+categories: ["Short Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Windows"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 

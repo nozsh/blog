@@ -4,8 +4,8 @@ title: "Делаем свою сборку Windows"
 description: "Всегда хотелось сделать сборку как у васи 777? Я покажу как."
 summary: "Всегда хотелось сделать сборку как у васи 777? Я покажу как."
 date: 2022-09-05
-tags: ["Windows", "Статьи"] # ['tag 1', 'tag 2']
-categories: ["Система"] # ["cat 1", "cat 2"]
+categories: ["Long Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Windows"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1

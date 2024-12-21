@@ -5,8 +5,8 @@ description: "Как создать SSH ключ."
 summary: "Как создать SSH ключ."
 date: 2022-11-27
 lastmod: 2024-08-09
-categories: ["Система"] # ["cat 1", "cat 2"]
-tags: ["Linux", "Заметки"] # ['tag 1', 'tag 2']
+categories: ["Short Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Linux"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1

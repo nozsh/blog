@@ -5,8 +5,8 @@ description: "Наконец-то гайд на Git или самое время
 summary: "Наконец-то гайд на Git или самое время научиться этим пользоваться."
 date: 2001-01-29
 # lastmod: 2001-01-29
-categories: ["Dev"] # ["cat 1", "cat 2"]
-tags: ["Статьи"] # ['tag 1', 'tag 2']
+categories: ["Long Read", "Dev"] # ["cat 1", "cat 2"]
+tags: ["Git"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1
@@ -33,11 +33,11 @@ showToc: true
 # hideAuthor: true
 # byai: true
 cover:
-  image: "@img/git-guide-cover.avif" # image path/url
-  width: "1920" # only for img from url; EX: 1920
-  height: "1272" # only for img from url; EX: 1080
+  image: "git-guide/git-guide-cover.webp" # image path/url
+  width: "1050" # only for img from url; EX: 1920
+  height: "700" # only for img from url; EX: 1080
   alt: "Гайд на Git - Cover" # alt text
-  caption: "Photo by [Yancy Min](https://unsplash.com/@yancymin?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
+  caption: "Photo by [RealToughCandy](https://www.pexels.com/@realtoughcandy/?sl) / [Pexels](https://www.pexels.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   # hidden: true # only hide on current single page
 ---

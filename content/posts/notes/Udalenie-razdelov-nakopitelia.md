@@ -1,11 +1,11 @@
 ---
 draft: false
-title: "Удаление разделов накопителя"
+title: "Удаление разделов накопителя. Windows"
 description: "Как удалить разделы флешки, диска, etc."
 summary: "Как удалить разделы флешки, диска, etc."
 date: 2021-11-20
-tags: ["Windows", "Заметки"] # ['tag 1', 'tag 2']
-categories: ["Система"] # ["cat 1", "cat 2"]
+categories: ["Short Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Windows"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 

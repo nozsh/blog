@@ -6,8 +6,8 @@ description: "Простой способ запустить локальную 
 summary: "Простой способ запустить локальную установку AI для генерации изображений."
 date: 2024-10-22
 # lastmod: 2001-01-29
-categories: ["AI"] # ["cat 1", "cat 2"]
-tags: ["Windows", "Linux", "macOS", "Статьи"] # ['tag 1', 'tag 2']
+categories: ["Long Read", "AI"] # ["cat 1", "cat 2"]
+tags: ["AI Image Gen"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"

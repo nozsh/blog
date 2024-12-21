@@ -1,11 +1,11 @@
 ---
 draft: true
-title: "Обход пароля на машине"
+title: "Обход пароля на машине Windows и Linux"
 description: "Забыли пароль? Украли ноутбук? Не проблема."
 summary: "Забыли пароль? Украли ноутбук? Не проблема."
 date: 2024-05-15
-tags: ["Windows", "Linux", "Статьи"] # ['tag 1', 'tag 2']
-categories: ["Хакинг"] # ["cat 1", "cat 2"]
+categories: ["Long Read", "Hacking"] # ["cat 1", "cat 2"]
+tags: ["Windows", "Linux"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 

@@ -6,8 +6,8 @@ description: "Stable Diffusion - Что это? Как работает? Как 
 summary: "Stable Diffusion - Что это? Как работает? Как запустить? И другое."
 date: 2023-03-09
 # lastmod: 2001-01-29
-categories: ["AI"] # ["cat 1", "cat 2"]
-tags: ["Статьи"] # ['tag 1', 'tag 2']
+categories: ["Long Read", "AI"] # ["cat 1", "cat 2"]
+tags: [] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"

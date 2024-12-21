@@ -6,8 +6,8 @@ description: "Как убрать изображения Obsidian из гале�
 summary: "Как убрать изображения Obsidian из галереи на Android."
 date: 2024-11-30
 # lastmod: 2001-01-29
-categories: ["Система", ""] # ["cat 1", "cat 2"]
-tags: ["Андроид", "Заметки"] # ['tag 1', 'tag 2']
+categories: ["Short Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Android"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"

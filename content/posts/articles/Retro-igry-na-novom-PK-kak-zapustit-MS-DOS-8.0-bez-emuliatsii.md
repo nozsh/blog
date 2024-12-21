@@ -4,8 +4,8 @@ title: "Ретро-игры на новом ПК: как запустить MS-D
 description: "Демонстрация обратной совместимости x86 через запуск MS-DOS на современном оборудовании."
 summary: "Демонстрация обратной совместимости x86 через запуск MS-DOS на современном оборудовании."
 date: 2024-08-09
-categories: ["Система"] # ["cat 1", "cat 2"]
-tags: ["Статьи"] # ['tag 1', 'tag 2']
+categories: ["Long Read", "System"] # ["cat 1", "cat 2"]
+tags: [] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 canonicalURL: "https://www.securitylab.ru/news/550839.php?sl"
 # weight: 1

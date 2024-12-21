@@ -6,8 +6,8 @@ description: "You do not have CLIP state dict!"
 summary: "You do not have CLIP state dict!"
 date: 2024-09-14
 lastmod: 2024-10-20
-categories: ["AI"] # ["cat 1", "cat 2"]
-tags: ["Заметки"] # ['tag 1', 'tag 2']
+categories: ["Short Read", "AI"] # ["cat 1", "cat 2"]
+tags: [] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 authorURL: [""]
 # canonicalURL: "yourself"

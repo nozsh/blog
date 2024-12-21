@@ -4,8 +4,8 @@ title: "Symlink - Windows и Linux"
 description: "О том как сделать символическую ссылку в Windows и Linux"
 summary: "О том как сделать символическую ссылку в Windows и Linux"
 date: 2024-07-13
-categories: ["Система"] # ["cat 1", "cat 2"]
-tags: ["Windows", "Linux", "Заметки"] # ['tag 1', 'tag 2']
+categories: ["Short Read", "System"] # ["cat 1", "cat 2"]
+tags: ["Windows", "Linux"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1

@@ -4,8 +4,8 @@ title: "Маскировка ссылок на сайте через href.li"
 description: "Заметка о том как можно маскировать ссылки на сайте."
 summary: "Заметка о том как можно маскировать ссылки на сайте."
 date: 2024-05-14
-tags: ["Заметки"] # ['tag 1', 'tag 2']
-categories: ["Веб"] # ["cat 1", "cat 2"]
+categories: ["Short Read", "Dev"] # ["cat 1", "cat 2"]
+tags: ["Web"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 
