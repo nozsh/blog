@@ -1,9 +1,9 @@
 ---
 draft: false
 # url: "" # slug
-title: "Как запустить Tails с флешки или диска"
-description: "..."
-summary: "..."
+title: "Не запускается Tails с флешки или диска"
+description: "Что делать если не запускается Tails с USB-флешки или диска."
+summary: "Что делать если не запускается Tails с USB-флешки или диска."
 date: 2024-12-24
 # lastmod: 2001-01-29
 categories: ["Short Read", "System"] # ["cat 1", "cat 2"]
@@ -44,7 +44,11 @@ cover:
   hidden: true # only hide on current single page
 ---
 
-У вас не запускается **Tails** с флешки или например внешнего SSD диска.
+У вас не запускается **Tails** с флешки или например внешнего SSD диска, вы получаете что-то вроде:
+
+```text
+(initramfs) Unable to find a medium containing a live file system
+```
 
 Это из-за того, что вы используете **диск**, или "неправильную" флешку, которая "является" **диском**.
 
@@ -66,6 +70,6 @@ live-media=removable
 
 Нажмите <kbd>ENTER</kbd>, чтобы загрузиться.
 
-Делать это придется при каждом запуске Tails.
+Делать это нужно при каждом запуске Tails.
 
 
