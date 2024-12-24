@@ -44,7 +44,7 @@ cover:
   hidden: true # only hide on current single page
 ---
 
-У вас не запускается **Tails** с флешки или например внешнего SSD диска, вы получаете что-то вроде:
+У вас не запускается **[Tails](https://tails.net/?sl)** с флешки или например внешнего SSD диска, вы получаете что-то вроде:
 
 ```text
 (initramfs) Unable to find a medium containing a live file system
