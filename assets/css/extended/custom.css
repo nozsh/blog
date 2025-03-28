@@ -120,6 +120,8 @@ kbd {
   padding: 1px 6px;
   margin: 0 2px;
   font-size: calc(var(--font-size) * 0.95);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
 }
 
 mark {
