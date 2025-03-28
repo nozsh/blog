@@ -14,6 +14,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 # CanonicalLinkText: "Источник:"
 # weight: 1
 # robotsNoIndex: true
+comments: true
 
 # showToc: true
 # TocOpen: false

@@ -7,7 +7,7 @@ summary: "Stable Diffusion - Что это? Как работает? Как за
 date: 2023-03-09
 # lastmod: 2001-01-29
 categories: ["Long Read", "AI"] # ["cat 1", "cat 2"]
-tags: [] # ['tag 1', 'tag 2']
+tags: ["AI Image Gen"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # authorURL: [""] # ['link author 1', 'link author 2'], ex. ['', 'https://example.com']
 # canonicalURL: "yourself"
