@@ -32,6 +32,7 @@
   const themeKey = "pref-theme";
   const giscusScriptId = "giscus-script";
   const themeUrl = "https://assets.nozsh.su/css/blog/giscus-theme-";
+  const fv = 1;
   const switchButtonId = "theme-toggle";
   const swithDelay = 100;
 
@@ -43,7 +44,7 @@
         : "light";
     }
 
-    const themeURL = `${themeUrl}${theme}.css`;
+    const themeURL = `${themeUrl}${theme}.css?v=${fv}`;
 
     const giscusScript = document.getElementById(giscusScriptId);
     giscusScript.setAttribute("data-theme", themeURL);
