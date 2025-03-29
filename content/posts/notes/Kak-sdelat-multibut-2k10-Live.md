@@ -12,7 +12,6 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 showToc: true
 # TocOpen: false
 hidemeta: false
-comments: false
 disableHLJS: false
 disableShare: false
 hideSummary: false

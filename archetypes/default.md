@@ -20,7 +20,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 showToc: true
 # TocOpen: false
 # hidemeta: true
-# comments: true
+# comments: false
 # disableHLJS: true
 # disableShare: true
 # hideSummary: true

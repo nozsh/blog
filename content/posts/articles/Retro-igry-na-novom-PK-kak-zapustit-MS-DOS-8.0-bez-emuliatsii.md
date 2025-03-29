@@ -14,7 +14,7 @@ canonicalURL: "https://www.securitylab.ru/news/550839.php?sl"
 showToc: true
 # TocOpen: true
 # hidemeta: true
-# comments: true
+comments: false
 # disableHLJS: true
 # disableShare: true
 # hideSummary: true
