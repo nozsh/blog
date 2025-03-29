@@ -38,7 +38,7 @@ params:
   ShowPageNums: true
   disableSpecial1stPost: true
   disableScrollToTop: false
-  comments: false
+  comments: true
   # images: ["images/papermod-cover.png"]
   hidemeta: false
   hideSummary: false

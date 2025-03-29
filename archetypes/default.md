@@ -15,6 +15,8 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 # weight: 1
 # robotsNoIndex: true
 
+# sha1: "" # for giscus
+
 showToc: true
 # TocOpen: false
 # hidemeta: true
