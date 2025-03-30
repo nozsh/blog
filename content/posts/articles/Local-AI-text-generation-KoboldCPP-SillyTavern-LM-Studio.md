@@ -1,10 +1,10 @@
 ---
-draft: true
+draft: false
 # url: "" # slug
 title: "Локальная AI генерация текста. KoboldCPP & SillyTavern. LM Studio"
 description: "Как запустить установку AI для генерации текста у себя на ПК."
 summary: "Как запустить установку AI для генерации текста у себя на ПК."
-date: 2025-03-29
+date: 2025-03-30
 # lastmod: 2001-01-29
 categories: ["Long Read", "AI"] # ["cat 1", "cat 2"]
 tags: ["AI Text Gen"] # ['tag 1', 'tag 2']
