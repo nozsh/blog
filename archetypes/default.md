@@ -31,7 +31,7 @@ showToc: true
 # ShowWordCount: false
 # hideAuthor: true
 # ShowBreadCrumbs: false
-# ShowPostNavLinks: fales
+# ShowPostNavLinks: false
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
 # UseHugoToc: false
