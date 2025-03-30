@@ -12,13 +12,11 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 showToc: false
 TocOpen: false
 hidemeta: false
-disableHLJS: false
 disableShare: false
 hideSummary: false
 searchHidden: false
 ShowReadingTime: true
 ShowWordCount: true
-ShowBreadCrumbs: true
 ShowPostNavLinks: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true

@@ -30,7 +30,7 @@ showToc: true
 # ShowReadingTime: false
 # ShowWordCount: false
 # hideAuthor: true
-# ShowBreadCrumbs: false
+# ShowBreadCrumbs: true
 # ShowPostNavLinks: false
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
