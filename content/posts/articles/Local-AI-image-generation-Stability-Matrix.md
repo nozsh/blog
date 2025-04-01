@@ -38,14 +38,14 @@ cover:
   image: "@img/local-ai-image-generation-stability-matrix-cover.webp" # image path/url
   width: "1920" # only for img from url; EX: 1920
   height: "1080" # only for img from url; EX: 1080
-  alt: "article - Cover" # alt text
+  alt: "Локальная AI генерация изображений. Stability Matrix - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
 
 {{< callout/custom "🚀" "#000" "#FBAB7E" "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);" >}}
-В этой статье вы узнаете, как легко запустить локальную установку для генерации изображений на вашем компьютере - **без каких-либо технических знаний**.
+В этой статье вы узнаете, как легко запустить локальную установку для генерации изображений на вашем компьютере -- **без каких-либо технических знаний**.
 {{< /callout/custom >}}
 
 ## ✨ Введение: О Stability Matrix
@@ -93,13 +93,11 @@ src="@img/003-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 Далее выбираем путь куда установить или используем **Portable Mode**:
 
-
 {{< imgs/img "Установка Stability Matrix" "100%" "@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 {{< details/1 "О Portable Mode" >}}
 В Portable Mode все данные и настройки будут храниться в той же директории, что и приложение. Вы сможете перенести приложение с папкой "Data" в другое место или на другой компьютер.
 {{< /details/1 >}}
-
 
 В конце установки Stability Matrix предложит сразу же установить какую-нибудь панель.
 
@@ -235,7 +233,6 @@ Inference - обновленный интерфейс для Stable Diffusion, �
 ### Checkpoint Manager
 
 Если **Packages** это менеджер пакетами, то **Checkpoint Manager** это менеджер всех ваших установленных моделей, лора, экнодеров и тд.
-
 
 ### Model Browser
 

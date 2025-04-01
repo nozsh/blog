@@ -1,35 +1,53 @@
 {{- $ntlinks := resources.Get "js/ntlinks.js" }}
 <script src="{{ $ntlinks.RelPermalink }}?v=2" defer></script>
 
-{{/* Load Smooth Anchor Scroll script */}}
-{{- $anchorscroll := resources.Get "js/anchor-scroll.js" }}
+{{/* Load Smooth Anchor Scroll script */}} {{- $anchorscroll := resources.Get
+"js/anchor-scroll.js" }}
 <script src="{{ $anchorscroll.RelPermalink }}?v=1" defer></script>
 
-{{/* Load Lite YouTube Embed JS */}}
-{{- $liteytembedJS := resources.Get "js/lite-yt-embed.js" }}
+{{/* Load Lite YouTube Embed JS */}} {{- $liteytembedJS := resources.Get
+"js/lite-yt-embed.js" }}
 <script src="{{ $liteytembedJS.RelPermalink }}?v=0.3.3" defer></script>
 
-{{/* Load mediumZoom script */}}
-{{- if (.Param "EnableImageZoom") }}
-{{- $imagezoom := resources.Get "js/medium-zoom.min.js" }}
-<script src="{{ $imagezoom.RelPermalink }}?v=1.0.6" {{- if site.Params.assets.disableFingerprinting }}
-  integrity="{{ $imagezoom.Data.Integrity }}" {{- end }}></script>
+{{/* Load mediumZoom script */}} {{- if (.Param "EnableImageZoom") }} {{-
+$imagezoom := resources.Get "js/medium-zoom.min.js" }}
+<script
+  src="{{ $imagezoom.RelPermalink }}?v=1.0.6"
+  {{-
+  if
+  site.Params.assets.disableFingerprinting
+  }}
+  integrity="{{ $imagezoom.Data.Integrity }}"
+  {{-
+  end
+  }}
+></script>
 <script>
-  mediumZoom('.entry-cover img');
-  mediumZoom('.post-content img:not([no-zoom])');
+  mediumZoom(".entry-cover img");
+  mediumZoom(".post-content img:not([no-zoom])");
 </script>
-{{- end }}
-
-{{/* XMAS */}}
-{{/* <style>
-  .xny-bg { animation: 1s xnyBgAnim; opacity: 0.3; }
-  @keyframes xnyBgAnim { from { opacity: 0; } to { opacity: 0.3; } }
-  .kg-callout-card {backdrop-filter: blur(6px);}
+{{- end }} {{/* XMAS */}} {{/*
+<style>
+  .xny-bg {
+    animation: 1s xnyBgAnim;
+    opacity: 0.3;
+  }
+  @keyframes xnyBgAnim {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.3;
+    }
+  }
+  .kg-callout-card {
+    backdrop-filter: blur(6px);
+  }
 </style>
 <!-- xmas Settings -->
 <script>
   const xnySettings = {
-    bgUrl: "https://assets.nozsh.su/img/loose/new-year-bg-light.svg", // BG URL at top page
+    bgUrl: "https://assets.nozsh.com/img/loose/new-year-bg-light.svg", // BG URL at top page
     maxFlakes: 12, // Max flakes
     funIcons: ["⛄", "🎁", "🦌", "☃", "🍪"], // (❄️≧◡≦❄️)
     funChance: 0.025, // More chance, More fun
@@ -37,12 +55,20 @@
     speed2: 10000, // Less number, More speed
     life: 100, // More life, More speed
     initialOpacity: 0.2, // Opacity on born
-    opacityThreshold: 0.5 // Opacity on start dying
+    opacityThreshold: 0.5, // Opacity on start dying
   };
-</script> */}}
+</script>
+*/}}
 
 <!-- Load xmas.js -->
-{{/* <script src="https://assets.nozsh.su/js/loose/xmas.min.js?v={{ time.Now.Unix }}" defer></script> */}}
-
-{{/* GoatCounter */}}
-<script data-goatcounter="https://saladvisor-blog.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{/*
+<script
+  src="https://assets.nozsh.com/js/loose/xmas.min.js?v={{ time.Now.Unix }}"
+  defer
+></script>
+*/}} {{/* GoatCounter */}}
+<script
+  data-goatcounter="https://saladvisor-blog.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>

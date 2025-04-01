@@ -21,7 +21,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme=""
-    data-lang="ru"
+    data-lang=""
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -31,7 +31,7 @@
 <script>
   const themeKey = "pref-theme";
   const giscusScriptId = "giscus-script";
-  const themeUrl = "https://assets.nozsh.su/css/blog/giscus-theme-";
+  const themeUrl = "https://assets.nozsh.com/css/blog/giscus-theme-";
   const fv = 3;
   const switchButtonId = "theme-toggle";
   const swithDelay = 100;
@@ -47,6 +47,7 @@
     const themeURL = `${themeUrl}${theme}.css?v=${fv}`;
 
     const giscusScript = document.getElementById(giscusScriptId);
+
     giscusScript.setAttribute("data-theme", themeURL);
 
     const giscusFrame = document.querySelector("iframe.giscus-frame");
@@ -58,7 +59,16 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", updateGiscusTheme);
+  function updateGiscusLang() {
+    const htmlLang = document.documentElement.getAttribute("lang") || "ru";
+    const giscusScript = document.getElementById(giscusScriptId);
+    giscusScript.setAttribute("data-lang", htmlLang);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateGiscusTheme();
+    updateGiscusLang();
+  });
 
   const toggleButton = document.getElementById(switchButtonId);
   if (toggleButton) {

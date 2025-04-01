@@ -94,17 +94,13 @@ You do not have CLIP state dict!
 Если у вас всего много, особенно VRAM 20Gb+, то смело используйте **fp16**.
 {{< /callout/note >}}
 
-{{< callout/hint >}}
-Если в будущем появятся другие версии, думаю примерно прикинете что вам нужно.
-{{< /callout/hint >}}
-
 Качаем VAE, `vae/diffusion_pytorch_model.safetensors` и `ae.safetensors` [здесь](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main?sl) или [здесь](https://huggingface.co/black-forest-labs/FLUX.1-schnell/tree/main?sl).
 
 VAE помещаем в `models\VAE`, энкодеры в `models\text_encoder` или `models\CLIP` (если вы используете Stability Matrix).
 
 Осталось только загрузить VAE и энкодеры в соответствующем списке.
 
-![](@img/001-start-flux-model-local-load-vae-text-encoder-clip.avif)
+![Меню загрузки VAE & Text Encoder](@img/001-start-flux-model-local-load-vae-text-encoder-clip.avif)
 
 Загружать их можно в любом порядке.
 

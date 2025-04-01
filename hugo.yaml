@@ -1,6 +1,9 @@
 baseURL: https://nozsh.su/blog/
 languageCode: ru
 defaultContentLanguage: ru
+defaultContentLanguageInSubdir: false
+disableDefaultLanguageRedirect: false
+
 title: "nozsh"
 paginate: 6
 theme: ["PaperMod"]
@@ -57,9 +60,9 @@ params:
     favicon16x16: "fav/favicon-16px.png"
     apple_touch_icon: "fav/favicon-180px.png"
     safari_pinned_tab: "fav/favicon.svg"
-    assetsURL: "https://assets.nozsh.su/img/blog/"
+    assetsURL: "https://assets.nozsh.com/img/blog/"
     assetsPATH: "@img/"
-    assetsURL_VID: "https://assets.nozsh.su/vid/blog/"
+    assetsURL_VID: "https://assets.nozsh.com/vid/blog/"
     assetsPATH_VID: "@vid/"
 
   label:
@@ -131,10 +134,6 @@ params:
 
 menu:
   main:
-    # - identifier: links
-    #   name: Ссылки
-    #   url: /links/
-    #   weight: 10
     - identifier: search
       name: 🔎 Поиск
       url: /search/
@@ -192,8 +191,41 @@ languages:
     languageDirection: ltr
     languageName: Русский
     weight: 10
+
+  en:
+    languageCode: en
+    languageDirection: ltr
+    languageName: English
+    weight: 50
+
     params:
-      transliterate: true
+      description: "Notes. Ideas. Guides."
+      keywords: [Blog, notes, ideas, guides, nozsh]
+      editPost:
+        Text: "Suggest changes"
+
+    menu:
+      main:
+        - identifier: search
+          name: 🔎 Search
+          url: search/
+          weight: 10
+        - identifier: archives
+          name: 🗄️ Archive
+          url: archives/
+          weight: 100
+        - identifier: categories
+          name: 📂 Categories
+          url: categories/
+          weight: 200
+        - identifier: tags
+          name: 🏷️ Tags
+          url: tags/
+          weight: 300
+        - identifier: nozshub
+          name: 🌀 hub
+          url: ../
+          weight: 340
 
 outputs:
   home:
