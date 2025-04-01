@@ -152,7 +152,7 @@ menu:
       weight: 300
     - identifier: nozshub
       name: 🌀 hub
-      url: ../
+      url: https://nozsh.com/
       weight: 340
     # - identifier: Knowledge Base
     #   name: 🧠 Knowledge Base
@@ -224,7 +224,7 @@ languages:
           weight: 300
         - identifier: nozshub
           name: 🌀 hub
-          url: ../
+          url: https://nozsh.com/
           weight: 340
 
 outputs:
