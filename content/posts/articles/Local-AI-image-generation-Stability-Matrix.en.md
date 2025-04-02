@@ -44,17 +44,19 @@ cover:
   hidden: false # only hide on current single page
 ---
 
+{{< ahtung/badEn >}}
+
 {{< callout/custom "🚀" "#000" "#FBAB7E" "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);" >}}
 In this article, you'll learn how to easily set up a local installation for generating images on your computer -- **without any technical knowledge**.
 {{< /callout/custom >}}
 
 ## ✨ Introduction: What is Stability Matrix?
 
-We'll be using [**Stability Matrix**](https://github.com/LykosAI/StabilityMatrix?sl), a cross-platform package manager for Stable Diffusion that works on Windows, Linux, and macOS. Additionally, Stability Matrix supports installing various interfaces for managing image generation, including those that work with Flux models.
+We'll be using [**Stability Matrix**](https://github.com/LykosAI/StabilityMatrix?sl), a cross-platform package manager for Stable Diffusion that works on Windows, Linux, and macOS. Additionally, Stability Matrix supports installing various panels for managing image generation, including those that work with Flux models.
 
 Stability Matrix handles everything for you, so you don't need to install multiple dependencies separately and manually. This is convenient because all necessary dependencies are kept in one place and won’t interfere with your operating system.
 
-For example, if you already have a specific version of Python installed, Stability Matrix will still install the required version and use only that one without modifying yours. If you don’t have Python installed at all, it won’t appear in your system after installing a interface via Stability Matrix -- the version installed by Stability Matrix will be used exclusively within it.
+For example, if you already have a specific version of Python installed, Stability Matrix will still install the required version and use only that one without modifying yours. If you don’t have Python installed at all, it won’t appear in your system after installing a panel via Stability Matrix -- the version installed by Stability Matrix will be used exclusively within it.
 
 ## 🖼️ Pictures
 
@@ -68,19 +70,19 @@ For example, if you already have a specific version of Python installed, Stabili
 "@img/pic-007-flux1-dev-bnb-nf4-v2.avif" "big"
 "@img/pic-008-flux1-dev-bnb-nf4-v2.avif" "big" >}}
 
-The images were generated using the [flux1-dev-bnb-nf4-v2](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl) model.
+Images generated using [flux1-dev-bnb-nf4-v2](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl) model.
 
 ## ⚙️ Installing Stability Matrix
 
-Head over to the GitHub page of the [Stability Matrix repository](https://github.com/LykosAI/StabilityMatrix?sl) and download it either from the [Releases page](https://github.com/LykosAI/StabilityMatrix/releases?sl):
+Go to GitHub page of [Stability Matrix repository](https://github.com/LykosAI/StabilityMatrix?sl) and download it from [Releases page](https://github.com/LykosAI/StabilityMatrix/releases?sl):
 
 ![Downloading Stability Matrix from GitHub - Releases](@img/001-local-ai-image-generation-stability-matrix-skachivaniye-s-github-releases.avif)
 
-Or from the buttons in the README section:
+Or from the buttons in the README:
 
 ![Downloading Stability Matrix from GitHub - README](@img/002-local-ai-image-generation-stability-matrix-skachivaniye-s-github-readme.avif)
 
-You can either install Stability Matrix or run it without installation (portable mode). I recommend the second option. To do this, simply create a folder for Stability Matrix and run the executable file from that folder.
+You can install Stability Matrix or run it without installation (portable mode). I recommend the second option. To do this, simply create a folder for Stability Matrix and run the executable file from that folder.
 
 Of course, agree to the license agreement -- without even reading it:
 
@@ -94,33 +96,33 @@ Next, choose the installation path or use **Portable Mode**:
 
 {{< imgs/img "Installing Stability Matrix" "100%" "@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
-At the end of the installation, Stability Matrix will suggest you to install a interface right away.
+At the end of installation, Stability Matrix will suggest you to install panel right away.
 
 If you're not sure what you need, click **Skip first-time setup**:
 
 {{< imgs/img "Installation Complete - Stability Matrix" "100%" "@img/005-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
-## 🚀 Installing and Launching Your First interface
+## 🚀 Installing and Launching first panel
 
-Interfaces can be installed from the **Packages** tab:
+Panels can be installed from the **Packages** tab:
 
-![Stability Matrix - Installing a interface (Packages)](@img/006-local-ai-image-generation-stability-matrix-packages.avif)
+![Stability Matrix - Installing a panel (Packages)](@img/006-local-ai-image-generation-stability-matrix-packages.avif)
 
 Click **Add Package**:
 
-![Stability Matrix - Installing a interface (Packages)](@img/007-local-ai-image-generation-stability-matrix-packages.avif)
+![Stability Matrix - Installing a panel (Packages)](@img/007-local-ai-image-generation-stability-matrix-packages.avif)
 
-Here, you'll find a list of interfaces available for download and installation. Each interface specifies its compatibility: CPU, NVIDIA, DirectML, AMD (Linux), macOS, and more.
+Here, you'll find a list of panels available for download and installation. Each panel specifies its compatibility: CPU, NVIDIA, DirectML, AMD (Linux), macOS, etc.
 
 If this is your first time, I recommend "Stable Diffusion WebUI" by AUTOMATIC1111 or "Stable Diffusion WebUI Forge" by lllyasviel.
 
-In terms of interface, "Stable Diffusion WebUI" and "Stable Diffusion WebUI Forge" are very similar.
+Both panels, "Stable Diffusion WebUI" and "Stable Diffusion WebUI Forge" are very similar.
 
-However, the Forge version offers more features and supports not only SD (Stable Diffusion) models but also Flux.
+However, Forge version offers more features and supports not only SD (Stable Diffusion) models, also Flux.
 
 {{< embedPost "start-flux-model-local">}}
 
-When you've selected the interface you need, click **Install**:
+When you've chose the panel you need, click **Install**:
 
 {{< vids/vid
 width=""
@@ -132,19 +134,21 @@ mp4="@vid/local-ai-image-generation-stability-matrix-ustanovka-paneli.mp4"
 preload="metadata"
 poster="" >}}
 
-The installation may take a significant amount of time, depending on the interface.
+Installation may take a lot of time, depending on the panel.
 
-Once the installation is complete, click **🚀 Launch**. The interface startup may also take some time.
+When installation is complete, click **🚀 Launch**. The panel startup may also take some time.
 
-If everything runs successfully and there are no critical errors, the output should look something like this:
+If everything runs good and there are no critical errors, output should look something like this:
 
 ```
+...
 local URL:  http://127.0.0.1:7860
+...
 ```
 
-![Launching WebUI interface](@img/008-local-ai-image-generation-stability-matrix-zapusk-paneli.avif)
+![Launching WebUI panel](@img/008-local-ai-image-generation-stability-matrix-zapusk-paneli.avif)
 
-If this URL does not open automatically in your browser, navigate to it manually or copy and paste it into your browser.
+If this URL does not open automatically in your browser, click to it manually or copy and paste it into your browser.
 
 {{< imgs/imgc
 width=""
@@ -152,16 +156,16 @@ caption="WebUI by AUTOMATIC1111"
 alt="Stable Diffusion WebUI by AUTOMATIC1111"
 src="@img/009-local-ai-image-generation-stability-matrix-stable-diffusion-webui-automatic1111.avif" >}}
 
-You can learn how to use WebUI by AUTOMATIC1111 in the article about [Stable Diffusion](../stable-diffusion/#как-пользоваться-stable-diffusion-webui).
+~You can learn how to use WebUI by AUTOMATIC1111 in the article about. [Stable Diffusion](../../stable-diffusion/#как-пользоваться-stable-diffusion-webui)~ (Text in Russian)
 
-Or watch a video on YouTube:
+Or watch video on YouTube:
 
 {{< iframes/yt nJlHJZo66UA "How to use Stable Diffusion. Automatic1111 Tutorial" "" >}}
 
 {{< callout/hint >}}
 WebUI and WebUI Forge very similar. Learning one means you'll understand the other as well.  
 
-Except for some features that are exclusive to Forge.
+Except for some features which are only support in Forge.
 {{< /callout/hint >}}
 
 ### Low VRAM Warning
@@ -175,19 +179,19 @@ Except for some features that are exclusive to Forge.
 [Low VRAM Warning] Make sure that you know what you are testing.
 ```
 
-In some cases, you may receive a **Low VRAM Warning**.
+In some cases, you may get **Low VRAM Warning** warning.
 
 This warning indicates that you have allocated too much video memory to the panel, which may cause the generation speed to degrade over time.
 
-**Solution**: Reduce the allocated memory by 500–1500 MB. For example, if you have 12 GB of VRAM, allocate 11 GB to the panel.
+**Solution**: Reduce the allocated memory by 500-1500 MB. For example, if you have 12 GB of VRAM, allocate 11 GB for the panel.
 
-How to do this depends on the panel, but here’s how it’s done in WebUI Forge:
+How to do this depends of the panel, but here’s how it’s done in WebUI Forge:
 
 ![Low VRAM Warning - Fix WebUI Forge](@img/local-ai-image-generation-stability-matrix-low-vram-warning-fix-webui-forge.avif)
 
 ## 🔍 Stability Matrix Overview
 
-### How to Install Models
+### How to install models
 
 Models, LoRAs, encoders, VAEs, and everything else for **all** panels are located in `/Data/Models`. The main directories are:
 
@@ -198,9 +202,9 @@ Models, LoRAs, encoders, VAEs, and everything else for **all** panels are locate
 
 ### Packages
 
-The **Packages** tab, as you’ve probably guessed, exists solely for managing packages (panels). This includes installation, updates, removal, launching, and more.
+The **Packages** tab, as you’ve probably guessed, here only for managing packages (panels). This includes installation, updates, removal, launching, etc.
 
-The **Inference** sub-tab (inside **Add Package**) is used for installing panels primarily meant for running models.
+The **Inference** sub-tab (inside **Add Package**) is used for installing panels primarily designed for running models.
 
 The **Training** sub-tab (inside **Add Package**) is for installing panels designed for training models.
 
@@ -211,29 +215,29 @@ Inference is a redesigned interface for Stable Diffusion, built into Stability M
 {{< details/1 "From the Stability Matrix Repository" >}}  
 From the [Stability Matrix repository](https://github.com/LykosAI/StabilityMatrix/blob/main/README.md#-inference---a-reimagined-interface-for-stable-diffusion-built-in-to-stability-matrix?sl):
 
-- Powerful autocomplete and syntax highlighting using a formal grammar  
-- Workspaces open in tabs, which can be saved and loaded from `.smproj` project files  
+- Powerful auto-completion and syntax highlighting using a formal language grammar
+- Workspaces open in tabs that save and load from `.smproj` project files
 
 ![Stability Matrix Inference Preview](@img/local-ai-image-generation-stability-matrix-inference-preview.avif)  
 
-- Customizable dockable and floating panels  
-- Generated images include Inference Project metadata, ComfyUI Nodes, and A1111-compatible metadata  
-- Drag and drop gallery images or files to load states  
+- Customizable dockable and float panels
+- Generated images contain Inference Project, ComfyUI Nodes, and A1111-compatible metadata
+- Drag and drop gallery images or files to load states
 
 ![Stability Matrix Inference Animated Preview](@img/local-ai-image-generation-stability-matrix-inference-preview-animated.avif)  
 {{< /details/1 >}}  
 
-Some might find it useful, but personally, I prefer using the stock interface of the installed panel.
+Some might find it useful, but self, I prefer using the stock interface of the installed panel.
 
 ### Checkpoint Manager
 
-If **Packages** is a package manager, then **Checkpoint Manager** is a manager for all your installed models, LoRAs, encoders, and more.
+If **Packages** is a package (panels) manager, then **Checkpoint Manager** is a manager for all your installed models, LoRAs, encoders, etc.
 
 ### Model Browser
 
 In **Model Browser**, you can browse models and download them directly from Hugging Face.
 
-Additionally, you can link your Civitai account (Settings → Accounts) to browse and download models, LoRAs, and other assets from Civitai directly within Stability Matrix.
+Additionally, you can link your Civitai account (Settings - Accounts) to browse and download models, LoRAs, and other resources from Civitai directly from Stability Matrix.
 
 ### Output Browser
 
@@ -245,20 +249,20 @@ It's hard to say exactly what **Workflows** are since I haven't used them myself
 
 **Workflows** can represent predefined processes or scenarios that simplify specific tasks. They act as a set of instructions or automated steps that users can follow to interact with models or tools more efficiently. Essentially, they are additional tools designed to streamline workflows.
 
-## 📦 Where to Find Models
+## 📦 Where to find models
 
 Probably the best website for finding models is [Civitai](https://civitai.com/?sl).
 
-Civitai not only offers a huge selection of models but also allows creators to publish images. Users can also upload images generated with these models, making it easy to see what results you can expect.
+Civitai not only offers a big pick of models but also allows creators to publish images. Users can also upload images generated with these models, making it easy to see what you can got.
 
 You can also find models on [Hugging Face](https://huggingface.co/models?sl).
 
-And of course, you can find models across the internet.
+And of course, you can find models in the internet.
 
 {{< callout/warn >}}  
 Be careful when running models in the **ckpt** format, especially from unverified sources!  
 
-Running **ckpt** models is as risky as running an executable file.  
+Running **ckpt** models is risky as running an executable file.  
 
 It's safer to use the **safetensors** format instead.  
 

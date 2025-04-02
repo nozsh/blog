@@ -113,6 +113,14 @@ cover:
 {{</* ahtung/1 */>}}
 ```
 
+<br>
+
+{{< ahtung/badEn >}}
+
+```md
+{{</* ahtung/badEn */>}}
+```
+
 ## Спойлер
 
 {{< details/1 "Заголовок" open >}}
