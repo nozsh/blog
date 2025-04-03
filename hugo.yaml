@@ -72,7 +72,7 @@ params:
 
   # homeInfoParams:
   #   Title: nozsh
-  #   Content: Заметки. Идеи. Гайды.
+  #   Content: "Заметки. Идеи. Гайды. <br> abc"
 
   # socialIcons: # optional
   #   - name: "GitHub"
@@ -82,7 +82,7 @@ params:
     enabled: false # needs to be explicitly set
     title: nozsh
     subtitle: "Заметки. Идеи. Гайды."
-    imageUrl: "logo.jpg"
+    imageUrl: "logo-256px.jpg"
     imageWidth: 120
     imageHeight: 120
     imageTitle: Cowboy Bebop

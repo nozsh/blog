@@ -32,13 +32,13 @@ CanonicalLinkText: "Источник:"
 # hideAuthor: true
 # byai: true
 cover:
-  image: "@img/retro-igry-na-novom-pk-kak-zapustit-ms-dos-8.0-bez-emuliatsii-cover.avif" # image path/url
+  # image: "@img/retro-igry-na-novom-pk-kak-zapustit-ms-dos-8.0-bez-emuliatsii-cover.avif" # image path/url
   width: "1200" # only for img from url; EX: 1920
   height: "686" # only for img from url; EX: 1080
   alt: "Ретро-игры на новом ПК: как запустить MS-DOS 8.0 без эмуляции - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
-  hidden: false # only hide on current single page
+  hidden: true # only hide on current single page
 ---
 
 Автор [YouTube-канала Inkbox](https://www.youtube.com/watch?v=BXNHHUmVZh8?sl) показал, как запустить легендарную операционную систему [MS-DOS](https://ru.wikipedia.org/wiki/MS-DOS?sl) и классические игры на современном компьютере без всякой эмуляции.
