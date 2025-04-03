@@ -44,6 +44,8 @@ cover:
   hidden: false # only hide on current single page
 ---
 
+a
+
 Вероятней всего вы получаете шум или пустоту, вместо красивой картинки, при попытки генерации используя Flux модель на том же [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl).
 
 Или ошибку **You do not have CLIP state dict!** используя Flux модель на другой панели.
