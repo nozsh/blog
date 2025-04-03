@@ -7,7 +7,26 @@
 </script>
 {{- end }}
 
-<div class="comments"></div>
+<div class="comments">
+  <script
+    id="giscus-script"
+    src="https://giscus.app/client.js"
+    data-repo="nozsh/blog"
+    data-repo-id="R_kgDOL6MjOw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOL6MjO84CokGc"
+    data-mapping="pathname"
+    data-strict="1"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme=""
+    data-lang=""
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>
 
 <script>
   const themeKey = "pref-theme";
@@ -17,51 +36,19 @@
   const switchButtonId = "theme-toggle";
   const swithDelay = 100;
 
-  function getCurrentTheme() {
+  function updateGiscusTheme() {
     let theme = localStorage.getItem(themeKey);
     if (!theme) {
       theme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
     }
-    return theme;
-  }
 
-  function createGiscusScript() {
-    const script = document.createElement("script");
-    script.id = giscusScriptId;
-    script.src = "https://giscus.app/client.js";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    script.setAttribute("data-loading", "lazy");
-
-    script.dataset.repo = "nozsh/blog";
-    script.dataset.repoId = "R_kgDOL6MjOw";
-    script.dataset.category = "Announcements";
-    script.dataset.categoryId = "DIC_kwDOL6MjO84CokGc";
-    script.dataset.mapping = "pathname";
-    script.dataset.strict = "1";
-    script.dataset.reactionsEnabled = "1";
-    script.dataset.emitMetadata = "0";
-    script.dataset.inputPosition = "top";
-
-    const htmlLang = document.documentElement.lang || "ru";
-    script.dataset.lang = htmlLang;
-
-    const theme = getCurrentTheme();
-    script.dataset.theme = `${themeUrl}${theme}.css?v=${fv}`;
-
-    document.querySelector(".comments").appendChild(script);
-  }
-
-  function updateGiscusTheme() {
-    const theme = getCurrentTheme();
     const themeURL = `${themeUrl}${theme}.css?v=${fv}`;
 
     const giscusScript = document.getElementById(giscusScriptId);
-    if (giscusScript) {
-      giscusScript.dataset.theme = themeURL;
-    }
+
+    giscusScript.setAttribute("data-theme", themeURL);
 
     const giscusFrame = document.querySelector("iframe.giscus-frame");
     if (giscusFrame) {
@@ -72,9 +59,15 @@
     }
   }
 
-  // init
+  function updateGiscusLang() {
+    const htmlLang = document.documentElement.getAttribute("lang") || "ru";
+    const giscusScript = document.getElementById(giscusScriptId);
+    giscusScript.setAttribute("data-lang", htmlLang);
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
-    createGiscusScript();
+    updateGiscusTheme();
+    updateGiscusLang();
   });
 
   const toggleButton = document.getElementById(switchButtonId);
