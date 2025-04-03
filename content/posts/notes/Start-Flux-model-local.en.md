@@ -35,7 +35,7 @@ authorURL: [""]
 # hideAuthor: true
 # byai: true
 cover:
-  image: "@img/start-flux-model-local-cover.avif" # image path/url
+  image: "@img/start-flux-model-local-cover.webp" # image path/url
   width: "1500" # only for img from url; EX: 1920
   height: "1080" # only for img from url; EX: 1080
   alt: "Starting Flux models locally - Cover" # alt text
