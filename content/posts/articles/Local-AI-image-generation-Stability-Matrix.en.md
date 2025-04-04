@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 # url: "" # slug
 title: "Local AI image generation. Stability Matrix"
 description: "An easy way to run local AI installation to generate images."
@@ -47,16 +47,16 @@ cover:
 {{< ahtung/badEn >}}
 
 {{< callout/custom "🚀" "#000" "#FBAB7E" "linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);" >}}
-In this article, you'll learn how to easily set up a local installation for generating images on your computer -- **without any technical knowledge**.
+In this article, you'll know how to easily set up a local installation for generating images on your computer -- **without any technical knowledge**.
 {{< /callout/custom >}}
 
-## ✨ Introduction: What is Stability Matrix?
+## ✨ Introduction: About Stability Matrix
 
 We'll be using [**Stability Matrix**](https://github.com/LykosAI/StabilityMatrix?sl), a cross-platform package manager for Stable Diffusion that works on Windows, Linux, and macOS. Additionally, Stability Matrix supports installing various panels for managing image generation, including those that work with Flux models.
 
-Stability Matrix handles everything for you, so you don't need to install multiple dependencies separately and manually. This is convenient because all necessary dependencies are kept in one place and won’t interfere with your operating system.
+Stability Matrix handles everything for you, so you don't need to install multiple dependencies separately and manually. This is nice because all necessary dependencies are kept in one place and won't interfere with your operating system.
 
-For example, if you already have a specific version of Python installed, Stability Matrix will still install the required version and use only that one without modifying yours. If you don’t have Python installed at all, it won’t appear in your system after installing a panel via Stability Matrix -- the version installed by Stability Matrix will be used exclusively within it.
+For example, if you already have a specific version of Python installed, Stability Matrix will install the required version anyway and use only that one without modifying yours. If you don't have Python installed, it won't appear in your system after installing a panel via Stability Matrix -- the version installed by Stability Matrix will be used exclusively within it.
 
 ## 🖼️ Pictures
 
@@ -82,9 +82,9 @@ Or from the buttons in the README:
 
 ![Downloading Stability Matrix from GitHub - README](@img/002-local-ai-image-generation-stability-matrix-skachivaniye-s-github-readme.avif)
 
-You can install Stability Matrix or run it without installation (portable mode). I recommend the second option. To do this, simply create a folder for Stability Matrix and run the executable file from that folder.
+You can install Stability Matrix or run it without installation (portable). I recommend portable. To do this, simply create a folder for Stability Matrix and run the executable file from that folder.
 
-Of course, agree to the license agreement -- without even reading it:
+Of course, agree the license agreement -- without even reading it:
 
 {{< imgs/imgc
 width=""
@@ -96,7 +96,7 @@ Next, choose the installation path or use **Portable Mode**:
 
 {{< imgs/img "Installing Stability Matrix" "100%" "@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
-At the end of installation, Stability Matrix will suggest you to install panel right away.
+At the end of installation, Stability Matrix will suggest you install panel right away.
 
 If you're not sure what you need, click **Skip first-time setup**:
 
@@ -112,7 +112,7 @@ Click **Add Package**:
 
 ![Stability Matrix - Installing a panel (Packages)](@img/007-local-ai-image-generation-stability-matrix-packages.avif)
 
-Here, you'll find a list of panels available for download and installation. Each panel specifies its compatibility: CPU, NVIDIA, DirectML, AMD (Linux), macOS, etc.
+Here, you'll find a list of panels available for installation. Each panel specifies its compatibility: CPU, NVIDIA, DirectML, AMD (Linux), macOS, etc.
 
 If this is your first time, I recommend "Stable Diffusion WebUI" by AUTOMATIC1111 or "Stable Diffusion WebUI Forge" by lllyasviel.
 
@@ -134,11 +134,11 @@ mp4="@vid/local-ai-image-generation-stability-matrix-ustanovka-paneli.mp4"
 preload="metadata"
 poster="" >}}
 
-Installation may take a lot of time, depending on the panel.
+Installation may take a lot of time, depending of the panel.
 
 When installation is complete, click **🚀 Launch**. The panel startup may also take some time.
 
-If everything runs good and there are no critical errors, output should look something like this:
+If everything runs good and there are no critical errors, output should look something like:
 
 ```
 ...
@@ -148,7 +148,7 @@ local URL:  http://127.0.0.1:7860
 
 ![Launching WebUI panel](@img/008-local-ai-image-generation-stability-matrix-zapusk-paneli.avif)
 
-If this URL does not open automatically in your browser, click to it manually or copy and paste it into your browser.
+If this URL does not open automatically in your browser, click manually or copy and paste into your browser.
 
 {{< imgs/imgc
 width=""
@@ -163,7 +163,7 @@ Or watch video on YouTube:
 {{< iframes/yt nJlHJZo66UA "How to use Stable Diffusion. Automatic1111 Tutorial" "" >}}
 
 {{< callout/hint >}}
-WebUI and WebUI Forge very similar. Learning one means you'll understand the other as well.  
+WebUI and WebUI Forge very similar. Know one means you'll understand the other as well.  
 
 Except for some features which are only support in Forge.
 {{< /callout/hint >}}
@@ -179,13 +179,13 @@ Except for some features which are only support in Forge.
 [Low VRAM Warning] Make sure that you know what you are testing.
 ```
 
-In some cases, you may get **Low VRAM Warning** warning.
+In some cases, you may get **Low VRAM Warning**.
 
-This warning indicates that you have allocated too much video memory to the panel, which may cause the generation speed to degrade over time.
+This warning indicates that you have allocated too much video memory to the panel, which may cause the generation speed degrade over time.
 
-**Solution**: Reduce the allocated memory by 500-1500 MB. For example, if you have 12 GB of VRAM, allocate 11 GB for the panel.
+**Solution**: Reduce allocated memory by 500-1500 MB. For example, if you have 12 GB of VRAM, allocate 11 GB for panel.
 
-How to do this depends of the panel, but here’s how it’s done in WebUI Forge:
+How to do this depends of the panel, but here's how it's make in WebUI Forge:
 
 ![Low VRAM Warning - Fix WebUI Forge](@img/local-ai-image-generation-stability-matrix-low-vram-warning-fix-webui-forge.avif)
 
@@ -195,14 +195,14 @@ How to do this depends of the panel, but here’s how it’s done in WebUI Forge
 
 Models, LoRAs, encoders, VAEs, and everything else for **all** panels are located in `/Data/Models`. The main directories are:
 
-- `/StableDiffusion/` - Models (any, not just SD)  
+- `/StableDiffusion/` - Models (any, not only SD)  
 - `/Lora/` - LoRAs  
 - `/CLIP/` - Encoders  
 - `/VAE/` - VAEs  
 
 ### Packages
 
-The **Packages** tab, as you’ve probably guessed, here only for managing packages (panels). This includes installation, updates, removal, launching, etc.
+The **Packages** tab, as you've probably guessed, here only for managing packages (panels). This includes installation, updates, removal, launching, etc.
 
 The **Inference** sub-tab (inside **Add Package**) is used for installing panels primarily designed for running models.
 
@@ -235,9 +235,9 @@ If **Packages** is a package (panels) manager, then **Checkpoint Manager** is a 
 
 ### Model Browser
 
-In **Model Browser**, you can browse models and download them directly from Hugging Face.
+In **Model Browser**, you can browse models and download them from Hugging Face.
 
-Additionally, you can link your Civitai account (Settings - Accounts) to browse and download models, LoRAs, and other resources from Civitai directly from Stability Matrix.
+Additionally, you can link your Civitai account (Settings - Accounts) to browse and download models, LoRAs, and other resources from Civitai from Stability Matrix.
 
 ### Output Browser
 
@@ -245,9 +245,7 @@ In **Output Browser**, you can view all generated images.
 
 ### Workflows
 
-It's hard to say exactly what **Workflows** are since I haven't used them myself. But here’s an explanation from ChatGPT:
-
-**Workflows** can represent predefined processes or scenarios that simplify specific tasks. They act as a set of instructions or automated steps that users can follow to interact with models or tools more efficiently. Essentially, they are additional tools designed to streamline workflows.
+**Workflow** ready-made processes and scenarios to simplify making of some tasks.
 
 ## 📦 Where to find models
 
@@ -260,11 +258,11 @@ You can also find models on [Hugging Face](https://huggingface.co/models?sl).
 And of course, you can find models in the internet.
 
 {{< callout/warn >}}  
-Be careful when running models in the **ckpt** format, especially from unverified sources!  
+Be careful running **ckpt** models, especially from untrusted sources!
 
-Running **ckpt** models is risky as running an executable file.  
+Running **ckpt** models is risky as running an executable file.
 
-It's safer to use the **safetensors** format instead.  
+It's safer to use the **safetensors** instead.
 
-You can read more about **safetensors** [here](https://huggingface.co/docs/safetensors/index?sl).  
+You can read more about **safetensors** [here](https://huggingface.co/docs/safetensors/index?sl).
 {{< /callout/warn >}}

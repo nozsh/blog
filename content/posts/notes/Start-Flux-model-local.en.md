@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Starting Flux models locally"
 # url: ""
 description: "You do not have CLIP state dict!"
@@ -44,32 +44,33 @@ cover:
   hidden: false # only hide on current single page
 ---
 
-Most likely, you're getting noise or just a blank image instead of a beautiful picture when trying to generate with the Flux model in [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl).
+{{< ahtung/badEn >}}
 
-Or maybe you're seeing the error **"You do not have CLIP state dict!"** when using the Flux model on a different interface.
+Most likely, you're getting noise or just a blank instead of a beautiful image when trying to generate with the Flux model in [Stable Diffusion web UI by AUTOMATIC1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl).
 
-And that’s probably why you’re reading this.
+Or maybe you're get error **"You do not have CLIP state dict!"** when using the Flux model on another panel.
+
+And that's probably why you're reading this.
 
 {{< callout/warn >}}
-This is a guide on how to run the **Flux** model.<br>  
-**Not a tutorial on setting up a local installation for image generation.**
+This is note about how to run the **Flux** model.<br>  
+**Not tutorial on setting up local installation for image generation.**
 {{< /callout/warn >}}
 
 {{< embedPost "local-ai-image-generation-stability-matrix">}}
 
-If you're getting noise or a blank image, that means your interface doesn’t support Flux models.
+If you're getting noise or blank image, that means your panel doesn't support Flux models.
 
 As of the time of writing, Flux works in [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge?sl) and [ComfyUI](https://github.com/comfyanonymous/ComfyUI?sl), both of which are listed in the [Stability Matrix](https://github.com/LykosAI/StabilityMatrix?sl). Also, for now, Flux models work best with NVIDIA GPUs.
 
 {{< callout/note >}}
-The **optimized version** of the original Flux model, available [here](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl),  
-can run out of the box on WebUI Forge.
+The **optimized version** of the original Flux model, available [here](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl), can run out of the box on WebUI Forge.
 
-All the necessary encoders and VAE are already [built-in](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981?sl).
+Because, all the necessary encoders and VAE are already [built-in](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981?sl).
 {{< /callout/note >}}
 
 {{< details/1 "Models" >}}
-You can download the original models from [here](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) or [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
+You can download original models from [here](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) or [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
 
 **GGUF versions** are available [here](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?sl) or [here](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?sl).
 {{< /details/1 >}}
@@ -80,15 +81,14 @@ When running Flux models (or any other models based on Flux), you might run into
 You do not have CLIP state dict!
 ```
 
+This happens because the **text encoder** is missing. Someone refer to it as **CLIP**, though technically they're slightly different things.
 
-This happens because the **text encoder** is missing. Someone refer to it as **CLIP**, though technically they’re slightly different things.
+To make Flux model running, you'll need to download the encoders and VAE.
 
-To get the Flux model running, you'll need to download the encoders and VAE.
-
-Download the encoders, **clip-l\*** and **t5\*** [from here](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?sl).
+Download encoders, **clip-l\*** and **t5\*** [from here](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main?sl).
 
 {{< callout/note >}}
-Whether you should use **fp8** or **fp16** depends on your hardware:
+Whether you should use **fp8** or **fp16** depends on your hardware.
 
 If you have low VRAM (4-8GB) and limited RAM (8-16GB), use **fp8**.
 
@@ -99,9 +99,9 @@ If you have plenty of everything, especially VRAM (20GB+), just go with **fp16**
 
 Now, download the VAE files: `vae/diffusion_pytorch_model.safetensors` and `ae.safetensors` from [here](https://huggingface.co/black-forest-labs/FLUX.1-dev/tree/main?sl) or [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/tree/main?sl).
 
-Place the VAE files into `models\VAE`, and the encoders into `models\text_encoder` or `models\CLIP` (if you’re using Stability Matrix).
+Place VAE into `models\VAE`, and encoders into `models\text_encoder` or `models\CLIP` (if you're using Stability Matrix).
 
-Now all that’s left is to load the VAE and encoders from the appropriate menu.
+Now all that's left is to load the VAE and encoders from the menu.
 
 ![Load VAE & Text Encoder Menu](@img/001-start-flux-model-local-load-vae-text-encoder-clip.avif)
 
