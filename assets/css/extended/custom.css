@@ -99,7 +99,8 @@ body {
   pointer-events: inherit;
 }
 
-.entry-footer {
+.entry-footer,
+.archive-meta {
   overflow-x: hidden;
   word-break: keep-all;
   white-space: nowrap;
