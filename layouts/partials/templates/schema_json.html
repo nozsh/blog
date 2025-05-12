@@ -82,26 +82,25 @@
     {{- if (ne .Params.cover.relative true) -}}
     {{ .Params.cover.image | absURL }},
     {{- else -}}
-
-{{/* CUSTOM */}}
+    
+    {{/*  CUSTOM  */}}
     {{- $imgURL := site.Params.assets.assetsURL -}}
     {{- $imgPATH := site.Params.assets.assetsPATH -}}
   
     {{- $src := .Params.cover.image | safeURL -}}
-
     {{- if hasPrefix $src $imgPATH -}}
       {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
       {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
       {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
       {{ $newSrc }},
     {{- else -}}
-      {{/* ORIGINAL */}} {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},{{/* ORIGINAL */}}
+      {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
     {{- end -}}
-{{/* CUSTOM */}}
+    {{/*  CUSTOM  */}}
 
     {{- end}}
   {{- else }}
-    {{- $images := partial "partials/templates/_funcs/get-page-images" . -}}
+    {{- $images := partial "templates/_funcs/get-page-images" . -}}
     {{- with index $images 0 -}}
   "image": {{ .Permalink }},
     {{- end }}

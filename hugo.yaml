@@ -5,8 +5,11 @@ defaultContentLanguageInSubdir: false
 disableDefaultLanguageRedirect: false
 
 title: "nozsh"
-paginate: 6
 theme: ["PaperMod"]
+
+pagination:
+  disableAliases: false
+  pagerSize: 6
 
 enableRobotsTXT: false
 buildDrafts: false
@@ -234,5 +237,5 @@ outputs:
     - JSON # necessary for search
 
 permalinks:
-  posts: "/:filename" # convert = /posts/post1 => /post1, https://gohugo.io/content-management/urls/
-  pages: "/:filename"
+  posts: "/:contentbasename" # convert = /posts/post1 => /post1, https://gohugo.io/content-management/urls/
+  pages: "/:contentbasename"
