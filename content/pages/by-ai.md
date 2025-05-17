@@ -14,7 +14,7 @@ robotsNoIndex: true
 # showToc: true
 # TocOpen: true
 # hidemeta: true
-# comments: true
+comments: false
 # disableHLJS: true
 # disableShare: true
 # hideSummary: true
