@@ -46,10 +46,6 @@ cover:
   hidden: false # only hide on current single page
 ---
 
-{{< embedPost "asd" >}}
-
-{{< sourcePost title="The dark truth behind images and convolutional neural networks." desc="You’ve probably watched sci-fi detective movies and seen characters use futuristic technology to detect human faces in an image and sometimes draw a square around their heads or bodies to help in…" cover="@img/local-ai-text-generation-koboldcpp-sillytavern-lm-studio-cover.webp" url="https://example.com/" >}}
-
 {{< callout/custom "🔥" "#000" "#DAE2F8" "linear-gradient(62deg, #DAE2F8 0%, #D6A4A4 100%);" >}}
 В этой статье вы узнаете, как запустить локальную установку для генерации текста на вашем компьютере -- **с минимальными техническими знаниями**.
 {{< /callout/custom >}}
