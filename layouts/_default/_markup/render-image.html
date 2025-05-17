@@ -1,5 +1,8 @@
 {{- $u := urls.Parse .Destination -}}
+{{/*  CUSTOM  */}}
 {{- $src := $u.String -}}
+{{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page)  -}}
+{{/*  CUSTOM  */}}
 {{- if not $u.IsAbs -}}
   {{- $path := strings.TrimPrefix "./" $u.Path }}
   {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
@@ -12,20 +15,6 @@
     {{- end -}}
   {{- end -}}
 {{- end -}}
-
-{{/* CUSTOM */}}
-{{- $imgURL := site.Params.assets.assetsURL -}}
-{{- $imgPATH := site.Params.assets.assetsPATH -}}
-
-{{- $url := .Destination | safeURL -}}
-
-{{- if hasPrefix $url $imgPATH -}}
-  {{- $urlWithoutHash := $.Page.Permalink | replaceRE "#.*$" "" -}}
-  {{- $lastPart := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" -}}
-  {{- $newUrl := $url | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $lastPart) -}}
-  {{- $src = $newUrl -}}
-{{- end -}}
-{{/* CUSTOM */}}
 
 {{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
 <img

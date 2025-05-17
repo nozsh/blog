@@ -58,15 +58,16 @@ Stability Matrix делает все за вас, и вам не нужно ус
 
 ## 🖼️ Пикчи
 
-{{< imgs/gallerya
-"@img/pic-001-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-002-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-003-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-004-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-005-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-006-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-007-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-008-flux1-dev-bnb-nf4-v2.avif" "big" >}}
+{{< imgs/gallery >}}
+@img/pic-001-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-002-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-003-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-004-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-005-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-006-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-007-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-008-flux1-dev-bnb-nf4-v2.avif | big
+{{< /imgs/gallery >}}
 
 Изображения сгенерированы моделью [flux1-dev-bnb-nf4-v2](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl).
 
@@ -95,9 +96,9 @@ src="@img/003-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 {{< imgs/img "Установка Stability Matrix" "100%" "@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
-{{< details/1 "О Portable Mode" >}}
+{{% details/1 "О Portable Mode" %}}
 В Portable Mode все данные и настройки будут храниться в той же директории, что и приложение. Вы сможете перенести приложение с папкой "Data" в другое место или на другой компьютер.
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 В конце установки Stability Matrix предложит сразу же установить какую-нибудь панель.
 
@@ -213,7 +214,7 @@ WebUI и WebUI Forge похожи. Поэтому узнав одно вы уз�
 
 Inference - обновленный интерфейс для Stable Diffusion, встроенный в Stability Matrix.
 
-{{< details/1 "Из репозитория Stability Matrix" >}}
+{{% details/1 "Из репозитория Stability Matrix" %}}
 Из [репозитория Stability Matrix](https://github.com/LykosAI/StabilityMatrix/blob/main/README.md#-inference---a-reimagined-interface-for-stable-diffusion-built-in-to-stability-matrix?sl):
 
 - Мощное автозаполнение и подсветка синтаксиса с использованием формальной грамматики языка
@@ -226,7 +227,7 @@ Inference - обновленный интерфейс для Stable Diffusion, �
 - Перетаскивание изображений галереи или файлов для загрузки состояний
 
 ![Stability Matrix Inference Animated Preview](@img/local-ai-image-generation-stability-matrix-inference-preview-animated.avif)
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 Возможно кому-то будет полезно, но лично я предпочитаю использовать стоковый интерфейс установленной панели.
 

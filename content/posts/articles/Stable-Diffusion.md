@@ -62,18 +62,19 @@ Stable Diffusion это тип ИИ модели для генерации из�
 
 [Выпуск Stable Diffusion](https://stability.ai/news/stable-diffusion-public-release?sl) стал важной вехой в этом развитии, поскольку высокопроизводительная модель оказалась доступной широкой публике (производительная с точки зрения качества изображения, скорости и относительно низких требований к ресурсам).
 
-{{< details/1html "Пикчи" >}}
-{{< imgs/gallerya
-"@img/pic-001-stable-diffusion-djz-ink-punk-v21-grid.avif" ""
-"@img/pic-002-stable-diffusion-inkpunk-diffusion-v2-grid.avif" ""
-"@img/pic-003-stable-diffusion-djz-dieselpunk-city-v21-grid.avif" ""
-"@img/pic-004-stable-diffusion-djz-dieselpunk-city-v21.avif" "big"
-"@img/pic-005-stable-diffusion-umiaimythologyandbabes.avif" "big"
-"@img/pic-006-stable-diffusion-umiaimythologyandbabes.avif" ""
-"@img/pic-008-stable-diffusion-umiaimythologyandbabes.avif" ""
-"@img/pic-009-stable-diffusion-umiaimythologyandbabes.avif" ""
-"@img/pic-010-stable-diffusion-umiaimythologyandbabes.avif" ""
-"@img/pic-011-stable-diffusion-umiaimythologyandbabes.avif" "" >}}
+{{< details/1 "Пикчи" >}}
+{{< imgs/gallery >}}
+@img/pic-001-stable-diffusion-djz-ink-punk-v21-grid.avif | 
+@img/pic-002-stable-diffusion-inkpunk-diffusion-v2-grid.avif | 
+@img/pic-003-stable-diffusion-djz-dieselpunk-city-v21-grid.avif | 
+@img/pic-004-stable-diffusion-djz-dieselpunk-city-v21.avif | big
+@img/pic-005-stable-diffusion-umiaimythologyandbabes.avif | big
+@img/pic-006-stable-diffusion-umiaimythologyandbabes.avif | 
+@img/pic-008-stable-diffusion-umiaimythologyandbabes.avif | 
+@img/pic-009-stable-diffusion-umiaimythologyandbabes.avif | 
+@img/pic-010-stable-diffusion-umiaimythologyandbabes.avif | 
+@img/pic-011-stable-diffusion-umiaimythologyandbabes.avif | 
+{{< /imgs/gallery >}}
 
 <p><b>Модели:</b></p>
 
@@ -91,7 +92,7 @@ Stable Diffusion это тип ИИ модели для генерации из�
 <a href="https://civitai.com/models/6077/umi-ai-mythology-and-babes-by-dutchalex?sl">Umi AI Mythology and Babes by DutchAlex</a>
 </li>
 </ul>
-{{< /details/1html >}}
+{{< /details/1 >}}
 
 ## Техническая часть
 
@@ -389,7 +390,7 @@ CLIP - это сочетание кодировщика изображений �
 
 Далее переходим на [HuggingFace](https://huggingface.co/stabilityai/stable-diffusion-2-1?sl). Там вам нужно будет скачать саму модель в формате ckpt или safetensors, не имеет значения в каком.
 
-{{< details/1 "В чем отличие: ckpt, safetensors; ema, noema; 512, 768;" >}}
+{{% details/1 "В чем отличие: ckpt, safetensors; ema, noema; 512, 768;" %}}
 **ckpt** от **safetensors**
 
 Они одинаковы, но **ckpt** может содержать вредоносный код, **safetensors** нет.
@@ -407,7 +408,7 @@ CLIP - это сочетание кодировщика изображений �
 Это размеры картинок, на которых обучалась модель. На практике 768 работает лучше.
 
 Сравнение можно посмотреть [здесь](https://huggingface.co/stabilityai/stable-diffusion-2/discussions/22?sl).
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 Далее скачайте [v2-inference-v.yaml](https://github.com/Stability-AI/stablediffusion/tree/main/configs/stable-diffusion?sl).
 

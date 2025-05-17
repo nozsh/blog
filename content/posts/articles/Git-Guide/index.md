@@ -12,7 +12,7 @@ author: ["nozsh"] # ['Me', 'You'] multiple authors
 # weight: 1
 # robotsNoIndex: true
 
-showToc: true
+# showToc: true
 # TocOpen: true
 # hidemeta: true
 # comments: true
@@ -33,7 +33,8 @@ showToc: true
 # hideAuthor: true
 # byai: true
 cover:
-  image: "git-guide/git-guide-cover.webp" # image path/url
+  image: "@img/git-guide-cover.avif" # image path/url
+  # image: "defav.jpg" # image path/url
   width: "1050" # only for img from url; EX: 1920
   height: "700" # only for img from url; EX: 1080
   alt: "Гайд на Git - Cover" # alt text

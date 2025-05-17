@@ -1,18 +1,4 @@
-{{- $imgURL := site.Params.assets.assetsURL -}}
-{{- $imgPATH := site.Params.assets.assetsPATH -}}
-
-{{- $src := .Get "src" | safeURL -}}
-
-
 <figure>
-  {{- if hasPrefix $src $imgPATH -}}
-    {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
-    {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
-    {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-    <img loading="lazy" alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ $newSrc }}'>
-  {{- else -}}
-    <img loading="lazy" alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ .Get "src" }}'>
-  {{- end -}}
-
+  <img loading="lazy" alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ partial "utils/getAsset" (dict "src" (.Get "src") "page" .Page) }}'>
   <figcaption>{{.Get "caption" | markdownify}}</figcaption>
 </figure>

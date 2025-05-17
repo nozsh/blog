@@ -227,7 +227,7 @@ pause
 exit
 ```
 
-{{< details/1 "Полный код скрипта" >}}
+{{% details/1 "Полный код скрипта" %}}
 
 ```batch
 @echo off
@@ -317,7 +317,7 @@ if /I %errorlevel% EQU 0 (
 )
 ```
 
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 ## Улучшения
 
@@ -431,7 +431,7 @@ if /I "%yesornot%"=="y" (
 
 А перед кодом, где начинается брут пишем: `:startbruting`.
 
-{{< details/1 "Код" >}}
+{{% details/1 "Код" %}}
 
 ```batch
 @echo off
@@ -558,7 +558,7 @@ if /I %errorlevel% EQU 0 (
 )
 ```
 
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 ---
 

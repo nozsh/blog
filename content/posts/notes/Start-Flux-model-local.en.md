@@ -69,11 +69,11 @@ The **optimized version** of the original Flux model, available [here](https://h
 Because, all the necessary encoders and VAE are already [built-in](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981?sl).
 {{< /callout/note >}}
 
-{{< details/1 "Models" >}}
+{{% details/1 "Models" %}}
 You can download original models from [here](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) or [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
 
 **GGUF versions** are available [here](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?sl) or [here](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?sl).
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 When running Flux models (or any other models based on Flux), you might run into this error:
 

@@ -1,0 +1,23 @@
+{{- $context := . -}}
+{{- $src := $context.src | safeURL -}}
+{{- $page := $context.page -}}
+
+{{- $imgPATH := site.Params.assets.assetsPATH -}}
+{{- $imgURL := site.Params.assets.assetsURL -}}
+{{- $vidPATH := site.Params.assets.assetsPATH_VID -}}
+{{- $vidURL := site.Params.assets.assetsURL_VID -}}
+
+{{- if or (hasPrefix $src $imgPATH) (hasPrefix $src $vidPATH) -}}
+  {{- $urlWithoutHash := $page.RelPermalink | replaceRE "#.*$" "" -}}
+  {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
+
+  {{- if hasPrefix $src $imgPATH -}}
+    {{- $src = $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
+  {{- end -}}
+
+  {{- if hasPrefix $src $vidPATH -}}
+    {{- $src = $src | replaceRE (printf "^%s" $vidPATH) (printf "%s%s/" $vidURL $articleName) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $src -}}

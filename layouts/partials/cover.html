@@ -47,27 +47,10 @@
         {{- end }}
     {{- else }}
         {{- /* For absolute urls and external links, no img processing here */}}
-
-        {{/*  CUSTOM  */}}
-        {{- $imgURL := site.Params.assets.assetsURL -}}
-        {{- $imgPATH := site.Params.assets.assetsPATH -}}
-        
-        {{- $src := .Params.cover.image | safeURL -}}
-        
-        {{- if hasPrefix $src $imgPATH -}}
-          {{- $urlWithoutHash := .RelPermalink | replaceRE "#.*$" "" -}}
-          {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
-          {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-          <img loading="{{$loading}}" src="{{ $newSrc }}" alt="{{ $alt }}"
-          {{- if .Params.Cover.Width -}}width="{{ .Params.Cover.Width }}px"{{- end -}}
-          {{- if .Params.Cover.Height -}}height="{{ .Params.Cover.Height }}px"{{- end -}}>
-        {{- else -}}
-          <img loading="{{$loading}}" src="{{ $imgdl }}" alt="{{ $alt }}"
-          {{- if .Params.Cover.Width -}}width="{{ .Params.Cover.Width }}px"{{- end -}}
-          {{- if .Params.Cover.Height -}}height="{{ .Params.Cover.Height }}px"{{- end -}}>
-        {{- end -}}
-        {{/*  CUSTOM  */}}
-
+        {{/*  CUSTOM  */}}
+        {{- $src := .Params.cover.image -}}
+        <img loading="{{ $loading }}" src='{{ partial "utils/getAsset" (dict "src" $src "page" .Page) }}' alt="{{ $alt }}" {{- if .Params.Cover.Width -}}width="{{ .Params.Cover.Width }}px"{{- end -}} {{- if .Params.Cover.Height -}}height="{{ .Params.Cover.Height }}px"{{- end -}}>
+        {{/*  CUSTOM  */}}
     {{- end }}
 
     {{- if $addLink }}

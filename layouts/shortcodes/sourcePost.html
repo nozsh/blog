@@ -1,0 +1,48 @@
+{{ $url := .Get "url" | safeURL }}
+{{ $title := .Get "title" }}
+{{ $desc := .Get "desc" }}
+{{ $cover := .Get "cover" | safeURL }}
+
+{{- $imgURL := site.Params.assets.assetsURL -}}
+{{- $imgPATH := site.Params.assets.assetsPATH -}}
+
+{{- $src := $cover -}}
+
+<figure class="embed-post-card">
+  <a class="embed-post-container" href="{{ $url }}">
+    <div class="embed-post-content">
+      <div class="embed-post-title">Some title</div>
+      <div class="embed-post-description">
+        <span>
+          Some Description
+        </span>
+      </div>
+      <div class="embed-post-metadata">
+        <div class="embed-post-meta">
+          <img class="embed-post-icon" src='#' alt="icon" no-zoom>
+          <span class="embed-post-author">
+            Author
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="embed-post-cover">
+
+      {{- if hasPrefix $src $imgPATH -}}
+        {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
+        {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
+        {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
+        <img loading="lazy" src='{{ $newSrc }}' alt="Cover" no-zoom>
+      {{- else -}}
+        <img loading="lazy" src='{{ .Get "url" }}' alt="Cover" no-zoom>
+      {{- end -}}
+      
+    </div>
+  </a>
+</figure>
+
+<h1>URL: {{ $url }}</h1>
+<h1>TITLE: {{ $title }}</h1>
+<h1>DESC: {{ $desc }}</h1>
+<h1>COVER: {{ $cover }}</h1>

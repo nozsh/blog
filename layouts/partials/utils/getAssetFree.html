@@ -1,0 +1,2 @@
+{{- $assetsUrl := printf "https://%s" (urls.Parse site.Params.Assets.assetsURL).Host -}}
+{{- return $assetsUrl -}}

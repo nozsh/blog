@@ -60,15 +60,16 @@ For example, if you already have a specific version of Python installed, Stabili
 
 ## 🖼️ Pictures
 
-{{< imgs/gallerya
-"@img/pic-001-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-002-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-003-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-004-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-005-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-006-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-007-flux1-dev-bnb-nf4-v2.avif" "big"
-"@img/pic-008-flux1-dev-bnb-nf4-v2.avif" "big" >}}
+{{< imgs/gallery >}}
+@img/pic-001-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-002-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-003-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-004-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-005-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-006-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-007-flux1-dev-bnb-nf4-v2.avif | big
+@img/pic-008-flux1-dev-bnb-nf4-v2.avif | big
+{{< /imgs/gallery >}}
 
 Images generated using [flux1-dev-bnb-nf4-v2](https://huggingface.co/lllyasviel/flux1-dev-bnb-nf4?sl) model.
 
@@ -212,7 +213,7 @@ The **Training** sub-tab (inside **Add Package**) is for installing panels desig
 
 Inference is a redesigned interface for Stable Diffusion, built into Stability Matrix.
 
-{{< details/1 "From the Stability Matrix Repository" >}}  
+{{% details/1 "From the Stability Matrix Repository" %}}  
 From the [Stability Matrix repository](https://github.com/LykosAI/StabilityMatrix/blob/main/README.md#-inference---a-reimagined-interface-for-stable-diffusion-built-in-to-stability-matrix?sl):
 
 - Powerful auto-completion and syntax highlighting using a formal language grammar
@@ -225,7 +226,7 @@ From the [Stability Matrix repository](https://github.com/LykosAI/StabilityMatri
 - Drag and drop gallery images or files to load states
 
 ![Stability Matrix Inference Animated Preview](@img/local-ai-image-generation-stability-matrix-inference-preview-animated.avif)  
-{{< /details/1 >}}  
+{{% /details/1 %}}  
 
 Some might find it useful, but self, I prefer using the stock interface of the installed panel.
 

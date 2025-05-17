@@ -3,21 +3,10 @@
 {{- if (ne $.Params.cover.relative true) }}
 <meta name="twitter:image" content="{{ .Params.cover.image | absURL }}">
 {{- else }}
-
   {{/*  CUSTOM  */}}
-  {{- $imgURL := site.Params.assets.assetsURL -}}
-  {{- $imgPATH := site.Params.assets.assetsPATH -}}
-  {{- $src := .Params.cover.image | safeURL -}}
-  {{- if hasPrefix $src $imgPATH -}}
-    {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
-    {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
-    {{- $newSrc := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-    <meta name="twitter:image" content="{{ $newSrc }}">
-  {{- else -}}
-    <meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
-  {{- end -}}
+  {{- $src := .Params.cover.image -}}
+  <meta name="twitter:image" content='{{ partial "utils/getAsset" (dict "src" $src "page" .Page) }}'>
   {{/*  CUSTOM  */}}
-
 {{- end}}
 {{- else }}
 {{- $images := partial "templates/_funcs/get-page-images" . -}}

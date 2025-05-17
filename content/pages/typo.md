@@ -123,17 +123,27 @@ cover:
 
 ## Спойлер
 
-{{< details/1 "Заголовок" open >}}
-Контент
-{{< /details/1 >}}
+### Markdown
 
-{{< details/1 "Заголовок" >}}
-Контент
+{{% details/1 "Заголовок" open %}}
+**Контент**
+{{% /details/1 %}}
+
+```md
+{{%/* details/1 "Заголовок" open */%}}
+**Контент**
+{{%/* /details/1 */%}}
+```
+
+### html
+
+{{< details/1 "Заголовок" open >}}
+<strong>Контент</strong>
 {{< /details/1 >}}
 
 ```md
 {{</* details/1 "Заголовок" open */>}}
-Контент
+<strong>Контент</strong>
 {{</* /details/1 */>}}
 ```
 
@@ -329,22 +339,24 @@ src="typo-cover.jpg" */>}}
 
 ### Галерея
 
-{{< imgs/gallery
-"https://images.unsplash.com/photo-1721332149267-ef9b10eaacd9?q=80&w=1936" "tall"
-"https://images.unsplash.com/photo-1719937206158-cad5e6775044?q=80&w=1740" "wide"
-"https://images.unsplash.com/photo-1721333091029-c66bbb278a54?q=80&w=1935" "tall"
-"https://images.unsplash.com/photo-1721333089517-7cab0cfa07b7?q=80&w=1674" "big"
-"https://images.unsplash.com/photo-1720048169586-6750c7863d8c?q=80&w=1740" ""
-"https://images.unsplash.com/photo-1720048170016-751876b1dba0?q=80&w=1740" "" >}}
+{{< imgs/gallery >}}
+https://images.unsplash.com/photo-1721332149267-ef9b10eaacd9?q=80&w=1936 | tall
+https://images.unsplash.com/photo-1719937206158-cad5e6775044?q=80&w=1740 | wide
+https://images.unsplash.com/photo-1721333091029-c66bbb278a54?q=80&w=1935 | tall
+https://images.unsplash.com/photo-1721333089517-7cab0cfa07b7?q=80&w=1674 | big
+https://images.unsplash.com/photo-1720048169586-6750c7863d8c?q=80&w=1740 | 
+https://images.unsplash.com/photo-1720048170016-751876b1dba0?q=80&w=1740 | 
+{{< /imgs/gallery >}}
 
 <sup>**Photo by [Samsung Memory](https://unsplash.com/@samsungmemory?sl) / [Unsplash](https://unsplash.com/?sl)**</sup>
 
 ```md
-{{</* imgs/gallery
-"#" "tall"
-"#" "wide"
-"#" "big"
-"#" "" */>}}
+{{</* imgs/gallery */>}}
+src | tall
+src | wide
+src | big
+src |
+{{</* /imgs/gallery */>}}
 ```
 
 ## Видео

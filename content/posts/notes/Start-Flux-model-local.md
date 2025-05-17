@@ -66,11 +66,11 @@ cover:
 Так как все необходимые энкодеры и VAE уже [встроены](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/981?sl) в панель.
 {{< /callout/note >}}
 
-{{< details/1 "Модели" >}}
+{{% details/1 "Модели" %}}
 Оригинальные модели можно скачать [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-dev?sl) или [отсюда](https://huggingface.co/black-forest-labs/FLUX.1-schnell?sl).
 
 **GGUF версии** можно скачать [отсюда](https://huggingface.co/lllyasviel/FLUX.1-dev-gguf?sl) или [отсюда](https://huggingface.co/lllyasviel/FLUX.1-schnell-gguf?sl).
-{{< /details/1 >}}
+{{% /details/1 %}}
 
 При запуске Flux моделей (и соответственно других моделей на основе Flux), возникает ошибка:
 

@@ -1,56 +1,39 @@
-{{- $imgURL := site.Params.assets.assetsURL -}}
-{{- $imgPATH := site.Params.assets.assetsPATH -}}
-{{- $vidURL := site.Params.assets.assetsURL_VID -}}
-{{- $vidPATH := site.Params.assets.assetsPATH_VID -}}
-
-<div class="video-container {{ if .Get "align" }}{{ .Get "align" }}{{ end }}">
+<div class='video-container {{ if .Get "align" }}{{ .Get "align" }}{{ end }}'>
   <video
-  {{ if .Get "width" }}width="{{ .Get "width" }}"{{ end }}
+  {{ if .Get "width" }}
+    width='{{ .Get "width" }}'
+  {{ end }}
+
   {{ .Get "attr" | safeHTMLAttr }}
-  {{if .Get "controlslist" }}controlslist="{{ .Get "controlslist" | safeHTMLAttr }}"{{ end }}
-  {{ if .Get "preload" }}preload="{{ .Get "preload" }}"{{ end }}
+
+  {{ if .Get "controlslist" }}
+    controlslist='{{ .Get "controlslist" | safeHTMLAttr }}'
+  {{ end }}
+
+  {{ if .Get "preload" }}
+    preload='{{ .Get "preload" }}'
+  {{ end }}
+
   {{ if .Get "poster" }}
     {{- $src := .Get "poster" | safeURL -}}
-    {{- if hasPrefix $src $imgPATH -}}
-      {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
-      {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
-      {{- $newPoster := $src | replaceRE (printf "^%s" $imgPATH) (printf "%s%s/" $imgURL $articleName) -}}
-      poster="{{ $newPoster }}"
-    {{- else -}}
-      poster="{{ .Get "poster" }}"
-    {{- end -}}
+    poster='{{ partial "utils/getAsset" (dict "src" $src "page" .Page) }}'
   {{ end }}
   >
 
     {{ if .Get "webm" }}
       {{- $src := .Get "webm" | safeURL -}}
-      {{- if hasPrefix $src $vidPATH -}}
-        {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
-        {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
-        {{- $newSrc := $src | replaceRE (printf "^%s" $vidPATH) (printf "%s%s/" $vidURL $articleName) -}}
-        <source src="{{ $newSrc }}" type="video/webm">
-        <a href="{{ $newSrc }}">Скачать WEBM</a>
-      {{- else -}}
-        <source src="{{ .Get "webm" }}" type="video/webm">
-        <a href="{{ .Get "webm" }}">Скачать WEBM</a>
-      {{- end -}}
+      {{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page) -}}
+      <source src='{{ $src }}' type="video/webm">
+      <a href='{{ $src }}'>Download WEBM</a>
     {{ end }}
 
     {{ if .Get "mp4" }}
       {{- $src := .Get "mp4" | safeURL -}}
-      {{- if hasPrefix $src $vidPATH -}}
-        {{- $urlWithoutHash := .Page.RelPermalink | replaceRE "#.*$" "" -}}
-        {{- $articleName := $urlWithoutHash | replaceRE "^.*/([^/]+)/$" "$1" | urlize -}}
-        {{- $newSrc := $src | replaceRE (printf "^%s" $vidPATH) (printf "%s%s/" $vidURL $articleName) -}}
-        <source src="{{ $newSrc }}" type="video/mp4">
-        <a href="{{ $newSrc }}">Скачать MP4</a>
-      {{- else -}}
-        <source src="{{ .Get "mp4" }}" type="video/mp4">
-        <a href="{{ .Get "mp4" }}">Скачать MP4</a>
-      {{- end -}}
+      {{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page) -}}
+      <source src='{{ $src }}' type="video/mp4">
+      <a href='{{ $src }}'>Download MP4</a>
     {{ end }}
 
-    Ваш браузер не поддерживает видео.
-
+    Your browser does not support video.
   </video>
 </div>
