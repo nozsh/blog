@@ -56,7 +56,7 @@ In this article, you'll learn how to set up a local text generation system on yo
 
 **[KoboldCPP](https://github.com/LostRuins/koboldcpp?sl)** is a user-friendly tool for running text generation models in GGML and GGUF formats, built on top of [llama.cpp](https://github.com/ggml-org/llama.cpp?sl).
 
-**llama.cpp** is written **pure in C/C++** and has **no external dependencies**, which allows it to run with high performance.
+**llama.cpp** is written **purely in C/C++** and has **no external dependencies**, which allows it to run with high performance.
 
 KoboldCPP is especially useful for running local LLMs on systems with limited VRAM, as it can utilize the CPU instead of relying solely on the GPU.
 
