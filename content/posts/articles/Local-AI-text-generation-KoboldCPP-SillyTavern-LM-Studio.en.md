@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 # url: "" # slug
 title: "Local AI text generation. KoboldCPP & SillyTavern. LM Studio"
 description: "How to run local AI text generation installation on your PC."
