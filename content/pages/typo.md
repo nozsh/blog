@@ -2,8 +2,8 @@
 draft: false
 title: "📝 Typo"
 # url: ""
-description: "Как правильно писать"
-summary: "Как правильно писать"
+description: "Как правильно писать."
+summary: "Как правильно писать."
 # date: 2001-01-29
 # lastmod: 2001-01-29
 categories: [""] # ["cat 1", "cat 2"]
@@ -113,7 +113,15 @@ cover:
 {{</* ahtung/1 */>}}
 ```
 
-<br>
+---
+
+{{< ahtung/2 >}}
+
+```md
+{{</* ahtung/2 */>}}
+```
+
+---
 
 {{< ahtung/badEn >}}
 
@@ -157,10 +165,26 @@ cover:
 
 ## Ссылка на пост
 
-{{< embedPost "typo" >}}
+{{< embedPost url="typo" >}}
 
 ```md
-{{</* embedPost "typo"*/>}}
+{{</* embedPost url="typo" */>}}
+```
+
+<br>
+
+{{< embedPost url="https://example.com?sl" title="Example Title" desc="Some description" cover="@img/typo-cover.avif" author="Author" site="Website" >}}
+
+```md
+{{</* embedPost url="https://example.com" title="Example Title" desc="Some description" cover="typo-cover.jpg" author="Author" site="Website" */>}}
+```
+
+<br>
+
+{{< embedPost source=true url="https://example.com" title="Example Title" desc="Some description" cover="@img/typo-cover.avif" author="Author" site="Website" >}}
+
+```md
+{{</* embedPost source=true ...
 ```
 
 ## Заголовки

@@ -121,7 +121,7 @@ Both panels, "Stable Diffusion WebUI" and "Stable Diffusion WebUI Forge" are ver
 
 However, Forge version offers more features and supports not only SD (Stable Diffusion) models, also Flux.
 
-{{< embedPost "start-flux-model-local">}}
+{{< embedPost url="start-flux-model-local">}}
 
 When you've chose the panel you need, click **Install**:
 

@@ -95,7 +95,7 @@ NodeJS нужен для запуска SillyTavern, если вы не соби
 
 Рекомендую использовать LTS версию.
 
- Запускаем установщик, жмем «Далее», **убираем** галочку в конце «Automatically install the necessary tools...», и устанавливаем.
+Запускаем установщик, жмем «Далее», **убираем** галочку в конце «Automatically install the necessary tools...», и устанавливаем.
 
 #### Linux
 
@@ -476,7 +476,6 @@ caption="LM Studio - Настройки приложения"
 alt="LM Studio - Настройки приложения"
 src="@img/lm-studio-app-settings.avif" >}}
 
-
 - «User Interface Complexity Level» - «Power User»
 - «Show side button labels» - Включить (для понятности)
 - «Model loading guardrails», на ваше усмотрение, лично я использую «Relaxed»
@@ -664,4 +663,4 @@ LM Studio, напротив, предлагает простоту и удобс
 
 Читайте также:
 
-{{< embedPost "local-ai-image-generation-stability-matrix">}}
+{{< embedPost url="local-ai-image-generation-stability-matrix">}}

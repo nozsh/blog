@@ -1,8 +1,3 @@
-{{- $imgURL := site.Params.assets.assetsURL -}}
-{{- $imgPATH := site.Params.assets.assetsPATH -}}
-
-{{- $src := .Get 2 | safeURL -}}
-
 <p>
   <img loading="lazy" alt='{{ .Get 0 }}' width='{{ .Get 1 }}' src='{{ partial "utils/getAsset" (dict "src" (.Get 2) "page" .Page) }}'>
 </p>

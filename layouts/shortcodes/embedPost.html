@@ -1,56 +1,133 @@
-{{ $url := .Get 0 }}
+{{ $url := .Get "url" }}
+{{ $parsedUrl  := urls.Parse $url }}
+{{ $isExternal := and $parsedUrl (or (eq $parsedUrl.Scheme "http") (eq $parsedUrl.Scheme "https")) }}
+
+{{ $title := .Get "title" }}
+{{ $desc := .Get "desc" }}
+{{ $authors := .Get "author" }}
+{{ $webSite := .Get "site" }}
+
+{{ $src := .Get "cover" }}
+{{ $img := partial "utils/getAsset" (dict "src" ($src | safeURL) "page" .Page) }}
+
 {{ $page := .Site.GetPage $url }}
 
-{{ if $page }}
-<figure class="embed-post-card">
-  <a class="embed-post-container" href="{{ $page.Permalink }}">
-    <div class="embed-post-content">
-      <div class="embed-post-title">{{ $page.Title }}</div>
-      <div class="embed-post-description">
-        <span>
-          {{ $page.Description }}
-        </span>
-      </div>
-      <div class="embed-post-metadata">
-        <div class="embed-post-meta">
-          <img class="embed-post-icon" src='{{ .Site.Params.assets.safari_pinned_tab | absURL }}' alt="icon" no-zoom>
-          <span class="embed-post-author">
-            {{ range $index, $author := $page.Params.author }}{{ if $index }}, {{ end }}{{ $author }}{{ end }}
+{{ $source := .Get "source" }}
+{{ $sourceErr := false }}
+{{ $sourceLocal := false }}
+
+{{ $svgStyles := "" }}
+
+{{ if $source }}
+  {{ if not (or $isExternal $page) }}
+    {{ $sourceErr = true }}
+  {{ else if $page }}
+    {{ $title = $page.Title }}
+    {{ $desc = $page.Description }}
+    {{ $url = $page.Permalink }}
+    {{ $src = $page.Params.cover.image }}
+    {{ $img = partial "utils/getAsset" (dict "src" $src "page" $page) }}
+  {{ end }}
+{{ else }}
+  {{ if $isExternal }}
+    {{/*  default params (look up)  */}}
+    {{ $svgStyles = "fill: var(--content);" | safeCSS }}
+  {{ else if not (or $page $isExternal) }}
+    {{ $sourceErr = true }}
+  {{ else }}
+    {{ $title = $page.Title }}
+    {{ $desc = $page.Description }}
+    {{ $url = $page.Permalink }}
+    {{ $src = $page.Params.cover.image }}
+    {{ $img = partial "utils/getAsset" (dict "src" $src "page" $page) }}
+  {{ end }}
+{{ end }}
+
+{{ if $sourceErr }}
+  <figure class="embed-post-card" style="cursor: default;">
+    <div class="embed-post-container">
+      <div class="embed-post-content">
+        <div class="embed-post-title">Error 404</div>
+        <div class="embed-post-description">
+          <span>
+            Page not found ¯\_(ツ)_/¯
           </span>
         </div>
-        <!-- <div class="embed-post-date">
-          <svg class="embed-post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><defs><style>.fa-secondary{opacity:.4}</style></defs><path class="fa-secondary" d="M0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192z"/><path class="fa-primary" d="M160 32c0-17.7-14.3-32-32-32S96 14.3 96 32l0 32L48 64C21.5 64 0 85.5 0 112l0 80 448 0 0-80c0-26.5-21.5-48-48-48l-48 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L160 64l0-32z"/></svg>
-          <span>
-            {{ $date := $page.Date }}
-            {{ $date | time.Format (default "January 2, 2006" site.Params.DateFormat) }}
-          </span>
-        </div> -->
+      </div>
+
+      <div class="embed-post-cover">
+        <img loading="lazy" src='{{- partialCached "utils/getAssetFree" . -}}/img/loose/no-signal.avif' alt="Page not found" no-zoom>
       </div>
     </div>
-
-    <div class="embed-post-cover">
-      {{- $src := $page.Params.cover.image -}}
-      <img loading="lazy" src='{{ partial "utils/getAsset" (dict "src" $src "page" $page) }}' alt="{{ $page.Title }} - Cover" no-zoom>
-    </div>
-  </a>
-</figure>
+  </figure>
 {{ else }}
+  <figure class="embed-post-card {{ if $source }}source-post-card{{ end }}">
 
-<figure class="embed-post-card">
-  <div class="embed-post-container">
-    <div class="embed-post-content">
-      <div class="embed-post-title">Error 404</div>
-      <div class="embed-post-description">
-        <span>
-          Увы, но эта запись не найдена...
-        </span>
+    {{ if $source }}
+      <a href="{{ .Site.BaseURL }}source-by-original/">
+        <div class="source-post-line">
+          <img src='{{- partial "utils/getAssetFree" . -}}/img/loose/sourcePostBG.avif' alt="Srouce Post Background" no-zoom>
+          <div class="source-post-line-bg"></div>
+          <div class="source-post-line-content">
+            <div class="marquee">
+              <div class="marquee__group">
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+              </div>
+              <div class="marquee__group" aria-hidden="true">
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+                <span>SOURCE // BY // ORIGINAL //&nbsp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    {{ end }}
+
+    <a class="embed-post-container" href="{{ $url }}">
+      <div class="embed-post-content">
+        <div class="embed-post-title">{{ $title }}</div>
+        <div class="embed-post-description">
+          <span>
+            {{ $desc }}
+          </span>
+        </div>
+        <div class="embed-post-metadata">
+          <div class="embed-post-meta" {{ if or ($isExternal) (and ($source) (not $page))}}style="display: inline;"{{ end }}>
+            {{ if or ($isExternal) (and ($source) (not $page)) }}
+              {{ if $authors }}
+                <div class="embed-post-meta__item">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="embed-post-icon" {{if $svgStyles }}style="{{ $svgStyles }}"{{ end }}><path d="m408.256 119.46l-37.7 52.165l19.57 44.426l34.8-37.214l-16.67-59.375zm86.074 12.513L384.44 249.498L334.01 135.02l-75.162 132.947l-86.948-131.78l-33.334 114.122L17.922 132.83l39.3 127.6c1.945-.348 3.94-.54 5.98-.54c18.812 0 34.26 15.452 34.26 34.262c0 13.823-8.346 25.822-20.235 31.22l5.337 17.33c12.425 25.466 71.863 45.152 176.582 47.206c110.805 2.174 178.12-17.54 189.854-47.207h-.002l4.357-20.26c-16.836-2.114-30.02-16.612-30.02-33.986c0-18.81 15.45-34.262 34.263-34.262c3.513 0 6.91.54 10.11 1.54l26.622-123.762zm-391.77 2.04l1.22 56.337l25.56 24.89l9.592-32.842l-36.37-48.386zm150.585 2.91l-24.483 51.36l28.955 43.885l24.922-44.08l-29.395-51.166zm204.453 135.962c-8.712 0-15.575 6.862-15.575 15.572s6.863 15.574 15.575 15.574s15.572-6.863 15.572-15.573s-6.86-15.572-15.572-15.572zM63.2 278.58c-8.71 0-15.573 6.864-15.573 15.574s6.862 15.573 15.574 15.573s15.573-6.862 15.573-15.573s-6.86-15.574-15.572-15.574zm130.33 17.842c18.812 0 34.26 15.45 34.26 34.262c0 18.81-15.448 34.26-34.26 34.26c-18.813 0-34.262-15.45-34.262-34.26s15.45-34.262 34.26-34.262zm131.234 0c18.812 0 34.26 15.45 34.26 34.262c0 18.81-15.448 34.26-34.26 34.26c-18.813 0-34.262-15.45-34.262-34.26s15.45-34.262 34.262-34.262m-131.235 18.69c-8.713 0-15.573 6.86-15.573 15.572c0 8.71 6.86 15.574 15.572 15.574c8.71 0 15.572-6.864 15.572-15.574s-6.86-15.573-15.573-15.573zm131.234 0c-8.712 0-15.573 6.86-15.573 15.572c0 8.71 6.862 15.574 15.574 15.574s15.574-6.864 15.574-15.574s-6.862-15.573-15.574-15.573z"/></svg>
+                  <span class="embed-post-author">{{ $authors }}</span>
+                </div>
+              {{ end }}
+              {{ if $webSite }}
+                <div class="embed-post-meta__item">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="embed-post-icon" {{if $svgStyles }}style="{{ $svgStyles }}"{{ end }}><path d="m241.844 28.625l-21.188 5.063L33.25 78.53l-9.594 2.282l2.813 9.47l54.718 184.03l6.156 20.782l10.875-18.75l36.624-63.125l39.344 22.655l9.375-16.188l-47.47-27.312L128 187.72l-4.656 8.06l-30.406 52.47l-45.75-153.844l156.625-37.47l-30.344 52.345l-4.69 8.126l8.126 4.656L332.75 211.75l-17.594 30.344l16.22 9.312l22.25-38.375l4.687-8.124l-8.125-4.656l-155.844-89.688l36.594-63.093zm-28.25 176.47l-57.438 99.31l155.22 89.5l8.093 4.658l-4.69 8.093l-44.06 76.25l218.81-52.5l-63.874-215.47l-44.094 76.25l-4.656 8.064l-8.094-4.656l-155.218-89.5z"/></svg>
+                  <span class="embed-post-author">{{ $webSite }}</span>
+                </div>
+              {{ end }}
+            {{ else }}
+              <div class="embed-post-meta__item">
+                <img class="embed-post-icon" src='{{ .Site.Params.assets.safari_pinned_tab | absURL }}' alt="icon" no-zoom>
+                <span class="embed-post-author">
+                  {{ range $index, $author := $page.Params.author }}{{ if $index }}, {{ end }}{{ $author }}{{ end }}
+                </span>
+              </div>
+            {{ end }}
+          </div>
+        </div>
       </div>
-    </div>
 
-    <div class="embed-post-cover">
-      <img loading="lazy" src='{{- partialCached "utils/getAssetFree" . -}}/img/loose/no-signal.avif' alt="Ошибка, запись не найдена" no-zoom>
-    </div>
-  </div>
-</figure>
-
+      {{ if $img }}
+        <div class="embed-post-cover">
+          <img loading="lazy" src='{{ $img }}' alt="{{ $title }} - Cover" no-zoom>
+        </div>
+      {{ end }}
+    </a>
+  </figure>
 {{ end }}

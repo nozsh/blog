@@ -46,80 +46,84 @@ cover:
   hidden: false # only hide on current single page
 ---
 
+{{< ahtung/badEn >}}
+
 {{< callout/custom "🔥" "#000" "#DAE2F8" "linear-gradient(62deg, #DAE2F8 0%, #D6A4A4 100%);" >}}
-В этой статье вы узнаете, как запустить локальную установку для генерации текста на вашем компьютере -- **с минимальными техническими знаниями**.
+In this article, you'll learn how to set up a local text generation system on your computer -- **with minimal technical knowledge required**.
 {{< /callout/custom >}}
 
 ## Introduction: About KoboldCPP & SillyTavern, LM Studio
 
-**[KoboldCPP](https://github.com/LostRuins/koboldcpp?sl)** -- это простое в использовании ПО для запуска текстовых моделей в форматах GGML и GGUF, основанное на [llama.cpp](https://github.com/ggml-org/llama.cpp?sl).
+**[KoboldCPP](https://github.com/LostRuins/koboldcpp?sl)** is a user-friendly tool for running text generation models in GGML and GGUF formats, built on top of [llama.cpp](https://github.com/ggml-org/llama.cpp?sl).
 
-**llama.cpp** написан **на чистом C/C++** и **не имеет внешних зависимостей**, что обеспечивает высокую производительность.
+**llama.cpp** is written **pure in C/C++** and has **no external dependencies**, which allows it to run with high performance.
 
-KoboldCPP очень полезный инструмент для запуска локальных LLM если у вас мало видеопамяти, так как KoboldCPP может использовать процессор.
+KoboldCPP is especially useful for running local LLMs on systems with limited VRAM, as it can utilize the CPU instead of relying solely on the GPU.
 
-KoboldCPP будет медленнее других бэкендов которые загружают модели исключительно в VRAM, но зато KoboldCPP позволяет запускать большие LLM на не очень мощных машинах.
+While KoboldCPP may be slower than other backends that load models exclusively into VRAM, it makes it possible to run large LLMs on less powerful machines.
 
-KoboldCPP предоставляет собственный интерфейс (UI), но он не такой гибкий, функциональный и (по мнению автора) удобный как SillyTavern.
+KoboldCPP includes its own interface (UI), but it's not as flexible, feature-rich, or (in the author's opinion) as comfortable to use as SillyTavern.
 
-**[SillyTavern](https://github.com/SillyTavern/SillyTavern?sl)** -- это интерфейс (UI) для взаимодействия с текстовыми моделями через API (KoboldAI/CPP, OpenAI, OpenRouter и др.).
+**[SillyTavern](https://github.com/SillyTavern/SillyTavern?sl)** is a UI designed for interacting with text generation models via API (KoboldAI/CPP, OpenAI, OpenRouter, and others).
 
-Интегрируется с генераторами изображений в чате, такими как [WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl) от [A1111](https://github.com/AUTOMATIC1111?sl) и [ComfyUI](https://github.com/comfyanonymous/ComfyUI?sl), а также поддерживает TTS, может работать либо сам по себе от системы (не AI), либо через API для генерации (AI) голоса.
+It integrates with in-chat image generation tools like [WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui?sl) from [A1111](https://github.com/AUTOMATIC1111?sl) and [ComfyUI](https://github.com/comfyanonymous/ComfyUI?sl), and also supports TTS. It can work either as a standalone system (non-AI) or generate voice using AI through APIs.
 
-SillyTavern обладает сильно настраиваемым интерфейсом, включает крутые функции лорбуков (lorebook и world info), поддерживает автоматический перевод сообщений с помощью сервисов Google, DeepL и других, а также предоставляет множество дополнительных опций и расширений от сообщества пользователей.
+SillyTavern features a highly customizable interface, includes powerful tools like lorebooks (lorebook and world info), supports automatic message translation via Google, DeepL, and other services, and offers a wide range of community-created extensions and add-ons.
 
-KoboldCPP + SillyTavern универсальное и гибко настраиваемое решение, подходящие для всего в т.ч. сильного RP.
+KoboldCPP + SillyTavern is a versatile, flexible setup that's suitable for just about anything -- including immersive RP.
 
-**[LM Studio](https://lmstudio.ai/?sl)** -- очень простой и дружелюбный инструмент, установили, запустили и все работает.
+**[LM Studio](https://lmstudio.ai/?sl)** is an incredibly simple and user-friendly tool -- install it, launch it, and you're good to go.
 
-Есть поддержка моделей с "reasoning" из коробки и без настройки.
+It comes with built-in support for models with "reasoning" capabilities, no setup required.
 
-LM Studio отлично подходит для теста моделей, технических и простых вопросов, таких как код, ответы на вопросы, написание текста, рерайт и тд. и тп. В качестве бэкенда LM Studio менее гибкий, чем KoboldCPP. И в качестве фронтенда не такой настраиваемый как SillyTavern, но минималистичный и приятный.
+LM Studio is great for testing models and handling both technical and general tasks like coding, answering questions, writing, rewriting, and more. 
+
+As a backend, LM Studio is less flexible than KoboldCPP. And as a frontend, it's not as customizable as SillyTavern -- but it's minimalist and pleasant to use.
 
 {{< callout/hint >}}
-В этой статье описан процесс как для Windows, так и для Linux (Debian/Arch).
+This article covers the setup process for both Windows and Linux (Debian/Arch).
 {{< /callout/hint >}}
 
 
-## Установка Git (Bash), NodeJS и Python
+## Installing Git (Bash), NodeJS and Python
 
 ### NodeJS
 
 {{< callout/note >}}
-NodeJS нужен для запуска SillyTavern, если вы не собирайтесь использовать SillyTavern, NodeJS вам не нужен.
+NodeJS is required to run SillyTavern. If you don't plan to use SillyTavern, you won't need NodeJS.
 {{< /callout/note >}}
 
 #### Windows
 
-Для Windows [качаем установщик](https://nodejs.org/en/download?sl) для вашей архитектуры.
+For Windows, [download the installer](https://nodejs.org/en/download?sl) for your system architecture.
 
-Рекомендую использовать LTS версию.
+I recommend using the LTS version.
 
- Запускаем установщик, жмем «Далее», **убираем** галочку в конце «Automatically install the necessary tools...», и устанавливаем.
+Run the installer, click "Next" through the steps, **uncheck** the box at the end that says "Automatically install the necessary tools...", and complete the installation.
 
 #### Linux
 
-Для Linux, можно установить через Volta или [другим](https://nodejs.org/en/download?sl) удобным вам способом.
+On Linux, you can install NodeJS using Volta or [any other](https://nodejs.org/en/download?sl) method you prefer.
 
 {{< callout/note >}}
-В пакетных менеджерах (apt, pacman и др.) версия Node может быть устаревшей.
+The version of Node available in package managers (like apt, pacman, etc.) may be outdated.
 {{< /callout/note >}}
 
-Установка Volta:
+Installing Volta:
 
 ```bash
 curl https://get.volta.sh | bash
 ```
 
-Установка NodeJS и NPM:
+Installing NodeJS and NPM:
 
 ```bash
 volta install node@x
 ```
 
-Где "x" мажорная версия node которую вы хотите установить, можно посмотреть на [главной странице NodeJS](https://nodejs.org/?sl).
+Where "x" is the major version of Node you want to install, which you can check on the [NodeJS homepage](https://nodejs.org/?sl).
 
-Например, Node.js LTS v<u>**22**</u>.14.0:
+For example, Node.js LTS v<u>**22**</u>.14.0:
 
 ```bash
 volta install node@22
@@ -128,16 +132,16 @@ volta install node@22
 ### Git
 
 {{< callout/note >}}
-Git нужен для клонирования репозитория SillyTavern и удобного обновления, но репозиторий так же можно скачать вручную.
+Git is needed to clone the SillyTavern repository and for easy updates, but you can also download the repository manually.
 {{< /callout/note >}}
 
 #### Windows
 
-Для Windows нужно [скачать git](https://git-scm.com/downloads/win?sl), "Standalone" - установщик или "Portable" - портативную версию. Я советую портативную версию, но нужно будет вручную обновить переменные среды, об этом дальше.
+For Windows, you need to [download Git](https://git-scm.com/downloads/win?sl), either the "Standalone" installer or the "Portable" version. I recommend the portable version, but you'll have to update your environment variables manually -- more on that later.
 
 #### Linux
 
-Если вы пользователь Linux, вероятно git у вас уже установлен, проверить можно командой `git -v`, если нет:
+If you're a Linux user, Git is probably already installed. You can check by running `git -v`. If it's not installed:
 
 **Debian:**
 
@@ -156,53 +160,53 @@ pacman -S git
 ### Python
 
 {{< callout/note >}}
-Для запуска "распакованного" KoboldCPP требуется Python.
+To run the "unpacked" version of KoboldCPP, Python is required.
 
-Я рекомендую установить Python и использовать "распакованный" KoboldCPP -- это улучшит производительность.
+I recommend installing Python and using the "unpacked" KoboldCPP -- this will improve performance.
 
-Подробнее об этом будет позже.
+More details on this will come later.
 {{< /callout/note >}}
 
 {{< callout/note >}}
-На момент написания этой статьи я использую [Python 3.11.9](https://www.python.org/downloads/release/python-3119/?sl).
+At the time of writing this article, I'm using [Python 3.11.9](https://www.python.org/downloads/release/python-3119/?sl).
 {{< /callout/note >}}
 
 {{< callout/hint >}}
-Если вы используете последнюю версию Python и что-то не работает, понижайте минорную версию -- x.<u>**x**</u>.x.
+If you're using the latest Python version and something isn't working, try downgrading the minor version -- x.<u>**x**</u>.x.
 {{< /callout/hint >}}
 
 #### Windows
 
-Для Windows нужно скачать и установить [Python](https://www.python.org/downloads/windows/?sl).
+For Windows, you need to download and install [Python](https://www.python.org/downloads/windows/?sl).
 
-Скачайте «Windows Installer» нужной версии Python для вашей архитектуры из столбца «Stable Releases». *Если вам не нужна конкретная версия, просто качайте последнюю.*
+Download the «Windows Installer» for the Python version you want from the «Stable Releases» column. *If you don't need a specific version, just get the latest one.*
 
-Во время установки Python, нажмите «Customize installation» и поставьте галочки на «pip», «tcl/tk» и «Add Python to environment variables»:
+During the installation, click «Customize installation» and check the boxes for «pip», «tcl/tk», and «Add Python to environment variables»:
 
-![Окно установщика Python](@img/windows-python-installing.avif)
+![Python installer window](@img/windows-python-installing.avif)
 
-Место установки на ваше усмотрение.
+You can choose the installation location as you prefer.
 
 #### Linux
 
-Так же как и в случае с git, Python обычно уже установлен в дистрибутив Linux, но возможно старая версии, проверить можно командой:
+Just like with Git, Python is usually already installed on Linux distros, but it might be an older version. You can check by running:
 
 ```bash
 python -V
-# ИЛИ
+# OR
 python2 -V
-# ИЛИ
+# OR
 python3 -V
 ```
 
-Python 2 -- старая версия. Если Python нету, или версия не та, то:
+Python 2 is an old version. If you don't have Python installed, or the version is outdated, then:
 
 **Debian:**
 
 ```bash
 apt update
 apt install python3
-apt install python3-pip # Возможно понадобится
+apt install python3-pip # Might need to
 ```
 
 **Arch:**
@@ -210,73 +214,73 @@ apt install python3-pip # Возможно понадобится
 ```bash
 pacman -Syu
 pacman -S python
-pacman -S python-pip # Возможно понадобится
+pacman -S python-pip # Might need to
 ```
 
-### Настройка переменных среды
+### Setting up environment variables
 
-После установки Git, NodeJS и Python нужно добавить их в переменные среды (если требуется). Это позволит запускать их без указания полного пути к бинарным файлам. Программы тоже смогут использовать их по простым командам, таким как `python`, `node` и `git`.
+After installing Git, NodeJS, and Python, you may need to add them to your environment variables. This lets you run them without specifying the full path to their binaries. Programs will also be able to use simple commands like `python`, `node`, and `git`.
 
-Обычно установщики Python и NodeJS автоматически обновляют переменные среды, если вы не отключали эту опцию. То же самое касается Git, если вы устанавливали его через установщик, а не использовали portable-версию.
+Usually, the Python and NodeJS installers update the environment variables automatically -- unless you disabled that option. The same goes for Git if you installed it via the installer instead of using the portable version.
 
 #### Windows
 
 {{< callout/hint >}}
-Если вы установили Python и NodeJS через установщик, как описано в статье, а Git скачали в портативной версии, в переменные среды нужно добавить только Git.
+If you installed Python and NodeJS using their installers as described earlier, but downloaded Git as a portable version, you only need to add Git to your environment variables.
 {{< /callout/hint >}}
 
 1. <kbd>Win</kbd> + <kbd>R</kbd>
 2. `systempropertiesadvanced`
-3. Environment Variables (Переменные среды)
-4. User variables (Переменные среды пользователя)
+3. Environment Variables
+4. User variables
 5. Path
-6. New (Создать)
+6. New
 
-- Git: `path\to\git\bin\` и `path\to\git\cmd\`
+- Git: `path\to\git\bin\` and `path\to\git\cmd\`
 - NodeJS: `path\to\nodejs\`
-- Python: `path\to\python\` и `path\to\python\Scripts\`
+- Python: `path\to\python\` and `path\to\python\Scripts\`
 
-***Одна строка - один путь!***
+***One line -- one path!***
 
 #### Linux
 
-Если вы устанавливали Git и Python через пакетный менеджер (apt, pacman и др.) или они уже были в системе, а NodeJS устанавливали способом с официального сайта (в т.ч через Volta), то все должно быть в порядке.
+If you installed Git and Python through a package manager (apt, pacman, etc.) or they were already on your system, and NodeJS was installed via the official site (including through Volta), everything should be fine.
 
-Но, если это не так:
+But if that's not the case:
 
-Открыть `.bashrc` в редакторе nano:
+Open `.bashrc` in the nano editor:
 
 ```bash
 nano ~/.bashrc
 ```
 
-В конце файла добавить:
+At the end of the file add:
 
 ```bash
 export PATH=$PATH:/path/to
 ```
 
-Обновить `.bashrc`:
+Update `.bashrc`:
 
 ```bash
 source ~/.bashrc
 ```
 
-Обычно пути такие:
+Usually the paths are:
 
 - Git: `/usr/bin/git`
 - NodeJS: `/usr/bin/node`
-- Python: `/usr/bin/python` или `/usr/bin/python3`
+- Python: `/usr/bin/python` or `/usr/bin/python3`
 
-Но могут оказаться другими.
+But they might be different.
 
-Можно попробовать выполнить команду, чтобы узнать где находится программа:
+You can try running this command to find out where the program is located:
 
 ```bash
 which <...>
 ```
 
-Пример `.bashrc` файла:
+Example of `.bashrc`:
 
 ```bash
 ...
@@ -286,9 +290,9 @@ export PATH=$PATH:/usr/bin/node
 export PATH=$PATH:/usr/bin/python3
 ```
 
-#### Проверка
+#### Check
 
-Введите в терминале:
+Type the following in the terminal:
 
 ```bash
 $ git -v
@@ -304,7 +308,7 @@ $ python -V
 Python 3.11.9
 ```
 
-Если вы получаете версию, а **не ошибку** по типу:
+If you get the version number **instead of an error** like this:
 
 ```text
 'x' is not recognized as an internal or external command,
@@ -315,56 +319,41 @@ operable program or batch file.
 -bash: x: command not found
 ```
 
-Значит все работает.
+That means everything is working.
 
 
-## Установка и запуск KoboldCPP + SillyTavern & LM Studio
+## Installing and Running KoboldCPP + SillyTavern & LM Studio
 
-Для начала советую задуматься над директориями, что куда ложить, и сделать что-то типо этого:
+To start, I recommend thinking about your directories where to put what and set up something like this:
 
 ```bash
-| - AI                <== Корень
+| - AI                <== Root
 |
-| - - Backend         <== Бэкенд
-| - - - LM Studio     <== Тут установка LM Studio
-| - - - KoboldCPP     <== Директория с KoboldCPP
-| - - - - Loose       <== Распакованный KoboldCPP
-| - - - - Settings    <== Конфиги KoboldCPP (.kcpps)
-| - - - - .exe        <== Бинарный файл KoboldCPP
+| - - Backend         <== Backend
+| - - - LM Studio     <== Installation of LM Studio
+| - - - KoboldCPP     <== KoboldCPP dir
+| - - - - Loose       <== Unpacked KoboldCPP
+| - - - - Settings    <== KoboldCPP configs (.kcpps)
+| - - - - .exe        <== KoboldCPP binary file
 |
-| - - UI              <== Фронтенд
-| - - - SillyTavern   <== Директория с SillyTavern
+| - - UI              <== Frontend
+| - - - SillyTavern   <== SillyTavern dir
 |
-| - - Models          <== Директория с моделями
-| - - - Text          <== Текстовые модели
+| - - Models          <== Models directory
+| - - - Text          <== Text models
 ```
 
 ### KoboldCPP
 
-Переходим на страницу [релизов](https://github.com/LostRuins/koboldcpp/releases?sl) на GitHub страницы [репозитория KoboldCPP](https://github.com/LostRuins/koboldcpp?sl).
+Go to the [releases page](https://github.com/LostRuins/koboldcpp/releases?sl) on the GitHub [KoboldCPP repository](https://github.com/LostRuins/koboldcpp?sl).
 
-Качаем бинарный файл для вашей системы, что качать выбираем исходя из описания релиза, перевод:
+Download the binary for your system, choosing based on the release notes.
 
-{{% details/1 "Описания релиза" %}}
-
-{{< callout/warn >}}
-Обратите внимание, оригинальный текст может быть изменен в будущих релизах, и перевод может быть не актуален.
-{{< /callout/warn >}}
-
-- Если вам не нужно CUDA, вы можете использовать **koboldcpp_nocuda.exe**, который значительно меньше.  
-- Если у вас есть видеокарта Nvidia, но старый процессор, и **koboldcpp.exe** не работает, попробуйте **koboldcpp_oldcpu.exe**.  
-- Если у вас современная видеокарта Nvidia, вы можете использовать версию CUDA 12 - **koboldcpp_cu12.exe** (она значительно больше, но немного быстрее).  
-- Если вы используете **Linux**, выберите соответствующий бинарный файл для Linux (не .exe).  
-- Если у вас современный **MacOS** (M1, M2, M3), вы можете попробовать **koboldcpp-mac-arm64**, бинарный файл для MacOS.
-- Если вы используете **AMD**, мы рекомендуем сначала попробовать вариант с **Vulkan** (доступен во всех версиях) для лучшей совместимости. В качестве альтернативы вы можете попробовать **koboldcpp_rocm** в форке [YellowRoseCx](https://github.com/YellowRoseCx/koboldcpp-rocm/releases?sl).
-
-{{% /details/1 %}}
-
-Запускаем бинарный файл:
+Run the binary file:
 
 {{< imgs/imgc
 width=""
-caption="Тут можно смотреть логи"
+caption="You can see the logs here"
 alt="KoboldCPP - Start Terminal"
 src="@img/koboldcpp-start-terminal-logs-1.avif" >}}
 
@@ -374,157 +363,156 @@ caption="KoboldCPP - GUI"
 alt="KoboldCPP - Start GUI"
 src="@img/koboldcpp-start-gui-2.avif" >}}
 
-Запуск не быстрый, так как это упакованные python файлы (код), интерпретатор python и другие файлы в один файл.
+The startup isn't fast because these are packed Python files (code), the Python interpreter, and other files bundled into one.
 
-С бинарным файлом можно так же взаимодействовать через терминал, например:
+You can also interact with the binary through the terminal, for example:
 
 ```batch
 koboldcpp_cu12.exe --help
 ```
 
-Чтобы распаковать KoboldCPP переходим в «Extra» => «Unpack KoboldCpp To Folder», выбираем пустую директорию куда распаковать.
+To unpack KoboldCPP, go to «Extra» => «Unpack KoboldCpp To Folder» and choose an empty directory to extract to.
 
-Теперь можно запускать KoboldCPP уже **в разы быстрее** используя python:
+Now you can run KoboldCPP **much faster** using Python:
 
 ```bash
 python koboldcpp.py --help
 ```
 
-Но в таком случае GUI работать не будет, GUI работает только если запускать бинарный файл.
+However, in this case the GUI won't work, GUI only works when running the binary file.
 
-Но если вы не хотите заморачиваться с терминалом и писать кучу флагов, то есть вариант настройки через GUI.
+If you don't want to deal with the terminal and typing lots of flags, there's an option to configure everything through the GUI.
 
-Стартуем бинарный файл и настраиваем все через GUI, после сохраняем конфиг (кнопка - «Save»).
+Start the binary file and set up everything via the GUI, then save the config (click the «Save» button).
 
-И в будущем уже используем такую команду:
+After that, you can use this command:
 
 ```bash
 python koboldcpp.py --config "/path/to/myconfig.kcpps"  
 ```
 
-Чтобы запустить KoboldCPP с созданным ранее конфигом.
+This will launch KoboldCPP using the previously created config.
 
-Если конфиг необходимо изменить, можно сделать это точно так же через GUI (загрузив его, кнопка - «Load», а потом сохранив после изменений), или просто открыть конфиг через блокнот, например чтобы заменить одну модель на другую или поменять размер контекста.
+If you need to edit the config, you can do it the same way through the GUI (by loading it with the «Load» button, making changes, and then saving), or simply open the config file in a text editor to swap models or change the context size.
 
 ### SillyTavern
 
-Качаем исходный код с GitHub [репозитория](https://github.com/SillyTavern/SillyTavern?sl) вручную, либо используем git:
+Download the source code manually from the GitHub [repository](https://github.com/SillyTavern/SillyTavern?sl) or use git:
 
 ```bash
 git clone https://github.com/SillyTavern/SillyTavern -b release
 ```
 
-Эта команда клонирует репозиторий в папку "SillyTavern" в той же директории, откуда была запущена команда.
+This command clones the repository into a folder named "SillyTavern" in the same directory where the command was run.
 
-Запуск на Windows:
+Running on Windows:
 
-Двойной клик на «Start.bat» или в терминале:
+Double-click «Start.bat» or run in the terminal:
 
 ```batch
 Start.bat
 ```
 
-Запуск на Linux:
+Running on Linux:
 
-Сделать файл исполняемым:
+Make the file executable:
 
 ```bash
 chmod +x start.sh
 ```
 
-Запустить:
+Run:
 
 ```bash
 ./start.sh
 ```
 
-#### Базовая настройка
+#### Base settings
 
-Откройте вкладку «API Connections» (сверху):
+Open the «API Connections» tab (at the top):
 
 - API: Text Completion
 - API Type: KoboldCpp
-- API URL: API URL KoboldCPP
+- API URL: KoboldCPP API URL
 
-«API URL» - можно посмотреть в терминале после запуска KoboldCPP, но обычно это `:5001`, если этот порт был свободен.
+You can find the «API URL» in the terminal after starting KoboldCPP, but usually it's `:5001` if that port was free.
 
-Крайне рекомендую включить «Derive context size from backend», чтобы значение «Context (tokens)» автоматически подтягивалось с бэкенда, то есть из параметра KoboldCPP где вы установили размер контекста.
+I highly recommend enabling «Derive context size from backend» so that the «Context (tokens)» value is automatically fetched from the backend -- meaning from the KoboldCPP setting where you set the context size.
 
-«Auto-connect to Last Server» - тоже полезная опция, чтобы при запуске SillyTavern, не нужно было вручную нажимать на «Connect», и оно само подключалось к последнему бэкенд серверу.
+«Auto-connect to Last Server» is also a useful option. It lets SillyTavern connect automatically to the last backend server on startup, so you don't have to tap «Connect» manually every time.
 
 {{< imgs/imgc
 width=""
-caption="SillyTavern - вкладка с настройкой API бэкенда"
-alt="SillyTavern - вкладка с настройкой API бэкенда"
+caption="SillyTavern - tab with backend API settings"
+alt="SillyTavern - tab with backend API settings"
 src="@img/sillytavern-api.avif" >}}
 
-Нажимайте «Connect», если вы видите 🟢 и название модель, значит все работает.
+Tap «Connect», and if you see 🟢 and the model name, that means everything is working.
 
 ### LM Studio
 
-Переходим на сайт [LM Studio](https://lmstudio.ai/download?sl), выбираем ОС, архитектуру, качаем и устанавливаем.
+Go to the [LM Studio website](https://lmstudio.ai/download?sl), select your OS and architecture, then download and install it.
 
 {{< callout/note >}}
-«Enable Local LLM Service» рекомендую отключить, если вы не хотите чтобы сервис работал когда LM Studio закрыта.
+I recommend disabling «Enable Local LLM Service» if you don't want the service to run when LM Studio is closed.
 {{< /callout/note >}}
 
-Переходим в настройки:
+Now, go to the settings:
 
 {{< imgs/imgc
 width=""
-caption="LM Studio - Настройки приложения"
-alt="LM Studio - Настройки приложения"
+caption="LM Studio - App settings"
+alt="LM Studio - App settings"
 src="@img/lm-studio-app-settings.avif" >}}
 
+- «User Interface Complexity Level» - set to «Power User»  
+- «Show side button labels» - enable (for clarity)  
+- «Model loading guardrails» - your choice, I personally use «Relaxed»  
+- «Use LM Studio's Hugging Face Proxy» - helps with accessing HF through LM Studio if a direct connection doesn't work  
+- Other settings are up to you
 
-- «User Interface Complexity Level» - «Power User»
-- «Show side button labels» - Включить (для понятности)
-- «Model loading guardrails», на ваше усмотрение, лично я использую «Relaxed»
-- «Use LM Studio's Hugging Face Proxy», помогает с доступом к HF через LM Studio, если прямое соединение не работает
-- Остальные настройки на ваше усмотрение
-
-Нажимаем на «Discover» в сайдбаре:
+Tap «Discover» in the sidebar:
 
 {{< imgs/imgc
 width=""
-caption="LM Studio - Обзор моделей для скачивания"
-alt="LM Studio -  Обзор моделей для скачивания"
+caption="LM Studio - Overview of models for download"
+alt="LM Studio -  Overview of models for download"
 src="@img/lm-studio-discover.avif" >}}
 
 {{< callout/hint >}}
-При поиске моделей не забудьте поставить галочку на «GGUF».
+When searching for models, don't forget to check the «GGUF» box.
 {{< /callout/hint >}}
 
-Переходим в «Runtime»:
+Go to «Runtime»:
 
 {{< imgs/imgc
 width=""
-caption="LM Studio - Обзор Runtime компонентов"
-alt="LM Studio - Обзор Runtime компонентов"
+caption="LM Studio - Overview of Runtime components"
+alt="LM Studio - Overview of Runtime components"
 src="@img/lm-studio-runtime-extension-packs.avif" >}}
 
-Обновляем «CPU llama.cpp», и второй пакет CUDA для видеокарт Nvidia. Vulkan или ROCm для видеокарт AMD.
+Update «CPU llama.cpp», and the second CUDA package for Nvidia GPUs. For AMD GPUs, use Vulkan or ROCm.
 
-На странице «My Models» (в сайдбаре), можно посмотреть и настроить параметры по умолчанию для каждой модели:
+On the «My Models» page (in the sidebar), you can view and adjust default settings for each model.
 
 {{< imgs/imgc
 width=""
-caption="LM Studio - Управление скачанными моделями"
-alt="LM Studio - Управление скачанными моделями"
+caption="LM Studio - Managing downloaded models"
+alt="LM Studio - Managing downloaded models"
 src="@img/lm-studio-my-models.avif" >}}
 
-Если вы скачиваете модели вручную, а не через LM Studio, они должны быть расположены так:
+If you download models manually instead of through LM Studio, they should be placed like this:
 
 ```text
-| - Text        <== «Models Directory» в LM Studio
-| - - dir1      <== Какая-то директория (автор)
-| - - - dir2    <== Какая-то директория (название модели)
-| - - - - .gguf <== Модель
+| - Text        <== «Models Directory» in LM Studio
+| - - dir1      <== Some dir (author)
+| - - - dir2    <== Some dir (model name)
+| - - - - .gguf <== Model
 ```
 
-`dir1` и `dir2`, не обязательно должный быть названы в честь автора и модели, главное чтобы просто была такая иерархия, иначе LM Studio их не увидит.
+`dir1` and `dir2` don't have to be named after the author or model, the main thing is to keep this hierarchy, otherwise LM Studio won't recognize them.
 
-Модели загружаются и выгружаются сверху:
+Models load and unload from the top:
 
 {{< imgs/imgc
 width=""
@@ -533,135 +521,135 @@ alt="LM Studio - GUI"
 src="@img/lm-studio-gui.avif" >}}
 
 
-## Советы KoboldCPP & SillyTavern
+## Tips for KoboldCPP & SillyTavern
 
 ### KoboldCPP
 
 {{< callout/note >}}
-Советы даны для KoboldCPP & llama.cpp, в другом ПО работа технологий может отличаться.
+These tips are for KoboldCPP & llama.cpp, behavior may vary in other software.
 {{< /callout/note >}}
 
-CuBLAS обычно работает быстрее чем CLBlast для видеокарт Nvidia.
+CuBLAS usually runs faster than CLBlast for Nvidia GPUs.
 
-Для видеокарт AMD следует использовать Vulkan, а еще лучше ROCm.
+For AMD GPUs, you should use Vulkan, or even better, ROCm.
 
 ---
 
-Возможно использование «MMQ», «MMAP», «MLOCK», «ContextShift», «FastForwarding» и «FlashAttention», поможет ускорить скорость генерации, выясняется путем экспериментов.
+Using «MMQ», «MMAP», «MLOCK», «ContextShift», «FastForwarding», and «FlashAttention» might help speed up generation -- this is best determined through experimentation.
 
-{{% details/1 "Пояснение: MMQ, MMAP, MLOCK, ContextShift, FastForwarding, FlashAttention" %}}
+{{% details/1 "Explanation: MMQ, MMAP, MLOCK, ContextShift, FastForwarding, FlashAttention" %}}
 
 **MMQ (Quantized Matrix Multiplication)**
 
-MMQ режим, при котором для prompt processing вместо стандартных операций cuBLAS используются квантованные матричные умножения. Это позволяет экономить VRAM и может давать прирост производительности для некоторых квантованных форматов (например, Q4_0), хотя для других форматов эффект может быть менее заметен.
+MMQ mode uses quantized matrix multiplications for prompt processing instead of the standard cuBLAS operations. This saves VRAM and can boost performance for some quantized formats (like Q4_0), though the effect might be less noticeable for other formats.
 
-Представьте, что у вас есть два способа выполнения матричных вычислений при генерации нового токена в языковой модели. Один способ использует стандартный алгоритм cuBLAS, который уже поддерживает низкую точность, а другой -- режим MMQ, оптимизированный для квантованных данных. При включении MMQ система выбирает именно оптимизированный алгоритм для prompt processing, что позволяет быстрее обрабатывать запросы и снижать потребление видеопамяти, если модель заквантована до нужного уровня. Это не означает, что cuBLAS перестает использоваться -- режим MMQ работает в составе инфраструктуры cuBLAS, изменяя лишь способ обработки данных для определенных квантованных форматов.
+Imagine you have two ways to do matrix calculations when generating a new token in a language model. One uses the standard cuBLAS algorithm, which already supports low precision, and the other is MMQ mode, optimized specifically for quantized data. When MMQ is enabled, the system picks the optimized algorithm for prompt processing, allowing faster request handling and reduced VRAM usage if the model is quantized at the right level. This doesn't mean cuBLAS stops being used--MMQ operates within the cuBLAS framework but changes how data is processed for certain quantized formats.
 
 **MMAP (Memory Mapping)**
 
-MMAP -- это способ работы с весами и слоями модели, когда они загружаются в оперативную память, но не полностью. Система подгружает нужные части по требованию.
+MMAP is a way of handling model weights and layers where they're loaded into RAM only partially. The system loads needed parts on demand.
 
-При запуске LLM, MMAP позволяет "подключить" модель к оперативной памяти так, как будто она уже загружена, но реально считывать только те блоки, которые требуются для текущего запроса.
+When running an LLM, MMAP lets the model appear as if it's fully loaded into RAM, but in reality, only the blocks required for the current request are read.
 
 **MLOCK (Memory Lock)**
 
-Опция MLOCK заставляет операционную систему "закреплять" загруженные данные модели в оперативной памяти, не позволяя им выгружаться на диск (swap). Это предотвращает задержки, связанные с обращением к медленной виртуальной памяти.
+MLOCK forces the operating system to "lock" the loaded model data in RAM, preventing it from being swapped out to disk. This avoids delays caused by accessing slower virtual memory.
 
-При использовании LLM важно, чтобы ключевые веса модели оставались в быстрой памяти (VRAM или RAM). MLOCK фиксирует данные в RAM, если часть модели загружена туда, предотвращая свопинг и снижая задержки.
+For LLMs, it's important that key model weights stay in fast memory (VRAM or RAM). MLOCK pins data in RAM if part of the model is loaded there, preventing swapping and reducing latency.
 
-**_Свопинг_** (Swapping) -- перемещение процессов или их частей из RAM на диск (в файл подкачки).
+**_Swapping_** is moving processes or parts of them from RAM to disk (swap file).
 
 **ContextShift**
 
-ContextShift -- позволяет эффективно работать с большим контекстом. Вместо того чтобы пересчитывать всю информацию (весь контекст), система "сдвигает" KV-кэш, старые данные удаляются, а новые переносятся в начало нового окна.
+ContextShift allows efficient handling of large context windows. Instead of recalculating the entire context, the system "shifts" the KV cache--old data is discarded, and new data is moved to the start of the new window.
 
-Например, если чат-бот участвует в длительном диалоге, при генерации нового ответа модель не начинает обработку с нуля всего контекста. Вместо того чтобы пересчитывать весь контекст, модель сохраняет промежуточные вычисленные представления (скрытые состояния) уже обработанных сообщений. При генерации нового ответа используются эти сохраненные данные, чтобы быстрее использовать новую информацию из последних сообщений. Это похоже на инкрементную генерацию в трансформерах, когда модель продолжает вычисления, опираясь на уже обработанную часть текста.
+For example, if a chatbot is in a long conversation, when generating a new response, the model doesn't start processing the entire context from scratch. Instead of recomputing everything, it keeps intermediate computed representations (hidden states) of the processed messages. When generating the new reply, the model uses these saved states to quickly incorporate the latest messages. This is like incremental generation in transformers, where the model continues calculations based on what's already been processed.
 
-Такой подход значительно ускоряет обработку, так как модель фокусируется только на новой информации.
+This approach speeds up processing significantly, since the model focuses only on the new information.
 
 **FastForwarding (KV-caching)**
 
-FastForwarding позволяет модели пропускать повторную обработку токенов, для которых уже были вычислены скрытые состояния (KV-кэш), и выполнять генерацию новых токенов только для изменений в последовательности. Эта функция особенно полезна, когда используется «ContextShift».
+FastForwarding lets the model skip reprocessing tokens for which hidden states (KV cache) have already been computed, generating new tokens only for changes in the sequence. This feature is especially useful when using «ContextShift».
 
-Представьте процесс инкрементной генерации в трансформерах: при генерации нового токена модель не пересчитывает полностью все предыдущие токены, а использует сохраненный KV-кэш для уже обработанных частей. FastForwarding в KoboldCPP действует аналогично – если модель продолжает генерировать текст в длинном диалоге или документе, она «перематывает» уже вычисленные участки и обновляет только последние, неизменные части последовательности, что значительно ускоряет обработку.
+Think of incremental generation in transformers: when generating a new token, the model doesn't fully recalculate all previous tokens but uses the saved KV cache for the already processed parts. FastForwarding in KoboldCPP works similarly -- if the model continues generating text in a long conversation or document, it “fast-forwards” through the already computed sections and updates only the latest, changed parts of the sequence, which significantly speeds up processing.
 
-Пример, есть история из 1000 токенов, FastForwarding создает KV-кэш этих 1000 токенов за один проход, и при следующей генерации используется кэш, а не пересчитывается все с нуля.
+For example, if there's a history of 1000 tokens, FastForwarding creates a KV cache of those 1000 tokens in one pass, and on the next generation, it uses this cache instead of recalculating everything from scratch.
 
 **FlashAttention**
 
-FlashAttention -- использует более эффективное распределение данных и работу с кэш-памятью GPU, что позволяет ускорить вычисления и снизить потребление VRAM.
+FlashAttention uses more efficient data handling and GPU cache usage, which speeds up computations and reduces VRAM consumption.
 
-В трансформерных моделях вычисление внимания обычно требует квадратичного количества операций при увеличении длины последовательности. FlashAttention оптимизирует этот процесс, позволяя быстрее обрабатывать большие последовательности, что особенно важно при работе с высоконагруженными серверными приложениями ИИ.
+In transformer models, attention calculations usually require a quadratic amount of operations as sequence length grows. FlashAttention optimizes this process, enabling faster processing of long sequences, which is especially important for high-load AI server applications.
 
 {{% /details/1 %}}
 
 ---
 
-Для контекста тоже требуется VRAM и не мало, не следует загружать всю VRAM только слоями если вы используйте большой контекст 8-12К+.
+Context also requires VRAM--and quite a bit of it--so you shouldn't load all your VRAM just with model layers if you're using a large context of 8-12K+ tokens.
 
-Старайтесь поместить как можно больше слоев в VRAM, но при этом оставить место для контекста. Если в VRAM не влезает всего 1 слой, лучше оставить не загруженным больше 1 слоя, 2-3 слоя.
+Try to fit as many layers as possible into VRAM while leaving enough space for the context. If even one layer doesn't fit fully in VRAM, it's better to leave more than one layer unloaded--like 2-3 layers.
 
-Если VRAM не хватает для загрузки большинства слоев, используйте другие кванты. Не влезает Q6, используйте Q5. Не влезает Q5, используйте Q4.
+If your VRAM isn't enough to load most layers, switch to lighter quantization formats. If Q6 doesn't fit, use Q5. If Q5 doesn't fit, go for Q4.
 
-Это ухудшит качество генерации, но это будет работать. Если критически важна точность и качество, возможно не следует запускать локально если не хватает железа.
+This will reduce generation quality, but it will work. If accuracy and quality are critical, running locally might not be the best option if your hardware is insufficient.
 
-В крайнем случае если у вас много RAM, можно _сильно_ пожертвовать скоростью, загрузив в RAM большее кол-во слоев чем в VRAM.
-
----
-
-Проверьте скорость генерации с «BLAS Batch Size» -- 512, после поменяйте на 2048 и снова проверьте. Если 2048 медленнее 512, возможно подойдет 1024.
-
-В идеале чем больше «BLAS Batch Size» тем лучше, но большое значение «BLAS Batch Size» может замедлить скорость генерации.
+As a last resort, if you have a lot of RAM, you can _significantly_ sacrifice speed by loading more layers into RAM than VRAM.
 
 ---
 
-Что касается «Threads», значение "-1" означает "авто".
+Check the generation speed with «BLAS Batch Size» set to 512, then set it to 2048 and check again. If 2048 is slower than 512, maybe 1024 will work better.
 
-Если вы вручную не установите какое-то значение для каждого параметра «Threads», оно будет использоваться из главного параметра «Threads».
-
-Пример: у вас 6 ядер, 12 потока, если вы укажете для «Threads» все 12 потока, а у «BLAS threads» значения не будет, то «BLAS threads» тоже будет использовать 12 потока. В итоге 24 потока, но у вас всего 12, а так же ОС тоже нужны ресурсы.
-
-Обычно KoboldCPP сам устанавливает оптимальное кол-во потоков, но стоит проверить, какие значения выставлены автоматически и убедиться что все окей. Посмотреть это можно рядом с параметром «Threads» (после "запуска" модели) через GUI или после запуска в логах в терминале.
-
-Если система работает медленно или нестабильно, попробуйте уменьшить количество потоков вручную.
-
-Следите чтобы KoboldCPP не использовал потоков больше чем у вас есть, и чтобы у системы оставались ресурсы (2-4+ потока).
+Ideally, the bigger the «BLAS Batch Size», the better, but too large a value can actually slow down generation speed.
 
 ---
 
-Чтобы поменять модель, нужно перезапустить KoboldCPP.
+Regarding «Threads», the value "-1" means "auto."
+
+If you don't manually set a value for each «Threads» parameter, it will inherit the value from the main «Threads» setting.
+
+For example: you have 6 cores, 12 threads, if you set «Threads» to 12 but leave «BLAS threads» unset, then «BLAS threads» will also use 12 threads. In total, that would be 24 threads used, while you only have 12 available--and the OS also needs resources.
+
+Usually, KoboldCPP sets the optimal number of threads automatically, but it's worth checking which values are assigned by default to ensure everything is okay. You can see this next to the «Threads» parameter (after the model starts) via the GUI or in the terminal logs.
+
+If your system runs slowly or unstably, try lowering the number of threads manually.
+
+Make sure KoboldCPP does not use more threads than you physically have, and that the system keeps some free resources (2-4+ threads) for itself.
+
+---
+
+To change the model, you need to restart KoboldCPP.
 
 ### SillyTavern
 
-На YouTube я так и не смог найти гайд по всем настройкам SillyTavern где все бы объяснялось и все такое.
+I couldn't find a complete guide on YouTube that explains all the SillyTavern settings in one place.
 
-Поэтому, если вы решите остаться, вам придется экспериментировать и гуглить... А если вы совсем новичок, то придется очень много гуглить.
+So, if you decide to stick around, you'll have to experiment and do a lot of googling... And if you're a total beginner, you'll be googling even more.
 
-Вот два ваших новых лучших друга - [SillyTavern Documentation](https://docs.sillytavern.app/?sl) & [r/SillyTavernAI](https://www.reddit.com/r/SillyTavernAI/?sl), где вы возможно найдете нужную вам информацию.
-
----
-
-Модели не создаются в GGUF формате, GGUF это формат для хранения квантов модели. Поэтому там где вы качаете GGUF модель (зачастую это HF) должна быть указана ссылка на "оригинал" или предоставлены соответствующие инструкции.
-
-На странице оригинала обычно можно найти не только описание модели, а еще настройки, в некоторых случаях даже пресеты для ST[^st].
-
-[^st]: ST - сокращение SillyTavern.
-
-Например модель которую я использую на момент написания этой статьи «[NemoMix Unleashed 12B](https://huggingface.co/MarinaraSpaghetti/NemoMix-Unleashed-12B?sl)» ([GGUF](https://huggingface.co/bartowski/NemoMix-Unleashed-12B-GGUF?sl)).
-
-Там все описано, даны настройки и пресеты ST.
-
-На самом деле правильные настройки не обязательны. Но правильные настройки «Context Template» (очень важно), «Instruct Template» (если есть), «System Prompt» (не так важно) и настройки семплеров для тонкой настройки вывода, могут **ОЧЕНЬ** сильно повысить качество генерации.
-
-
-## Заключение
-
-KoboldCPP в сочетании с SillyTavern -- это мощный инструмент для энтузиастов, которым важна гибкость, кастомизация и возможность детальной настройки. Это идеальный выбор для экспериментов и RP. Однако из-за большого количества параметров и тонких настроек это может потребовать времени.
-
-LM Studio, напротив, предлагает простоту и удобство. Это отличный вариант для тех, кто хочет сразу приступить к использованию локальных моделей с минимальными настройками. Если ваша цель -- генерирование текста, кода или ответов на вопросы без необходимости тонкой настройки, то LM Studio станет оптимальным выбором.
+Here are your two new best friends -- [SillyTavern Documentation](https://docs.sillytavern.app/?sl) & [r/SillyTavernAI](https://www.reddit.com/r/SillyTavernAI/?sl), where you might find the info you need.
 
 ---
 
-Читайте также:
+Models are not created in the GGUF format, GGUF is a format for storing the model's quantizations. So, wherever you download a GGUF model (often from HF), there should be a link to the "original" or instructions provided.
 
-{{< embedPost "local-ai-image-generation-stability-matrix">}}
+On the original page, you can usually find not only the model description but also settings, and in some cases, even presets for ST[^st].
+
+[^st]: ST - short for SillyTavern.
+
+For example, the model I'm using at the time of writing this article is «[NemoMix Unleashed 12B](https://huggingface.co/MarinaraSpaghetti/NemoMix-Unleashed-12B?sl)» ([GGUF](https://huggingface.co/bartowski/NemoMix-Unleashed-12B-GGUF?sl)).
+
+Everything is described there, with settings and ST presets provided.
+
+Actually, having the perfect settings isn't mandatory. But the right settings for the «Context Template» (very important), «Instruct Template» (if available), «System Prompt» (less important), and sampler settings for fine-tuning output can **VERY** significantly improve generation quality.
+
+
+## Conclusion
+
+KoboldCPP combined with SillyTavern is a powerful tool for enthusiasts who value flexibility, customization, and detailed tweaking. It's the perfect choice for experiments and RP. However, because of the many parameters and fine settings, it can take some time to get used to.
+
+LM Studio, offers simplicity and ease of use. It's a great option for those who want to start using local models right away with minimal setup. If your goal is to generate text, code, or answers without needing fine-tuning, LM Studio is the optimal choice.
+
+---
+
+Read too:
+
+{{< embedPost url="local-ai-image-generation-stability-matrix">}}

@@ -124,7 +124,7 @@ src="@img/003-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 Но Forge версия, имеет больше фич и может работать не только с SD (Stable Diffusion) моделями, а еще и с Flux.
 
-{{< embedPost "start-flux-model-local">}}
+{{< embedPost url="start-flux-model-local">}}
 
 Когда выбрали нужную панель, нажимаете **Install**:
 

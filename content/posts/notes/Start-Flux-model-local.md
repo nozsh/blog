@@ -54,7 +54,7 @@ cover:
 Это заметка о том как запустить **Flux** модель.<br> **А не о том как запустить локальную установку для генерации пикч.**
 {{< /callout/warn >}}
 
-{{< embedPost "local-ai-image-generation-stability-matrix">}}
+{{< embedPost url="local-ai-image-generation-stability-matrix">}}
 
 Если вы получаете шум или пустоту, значит панель не поддерживает Flux модели.
 

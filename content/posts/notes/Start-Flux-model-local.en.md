@@ -57,7 +57,7 @@ This is note about how to run the **Flux** model.<br>
 **Not tutorial on setting up local installation for image generation.**
 {{< /callout/warn >}}
 
-{{< embedPost "local-ai-image-generation-stability-matrix">}}
+{{< embedPost url="local-ai-image-generation-stability-matrix">}}
 
 If you're getting noise or blank image, that means your panel doesn't support Flux models.
 
