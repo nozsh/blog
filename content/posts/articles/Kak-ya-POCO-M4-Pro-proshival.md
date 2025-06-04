@@ -167,7 +167,7 @@ src="@img/access-denied-download-mi-unlock-update.avif" >}}
 - [ROM](https://xdaforums.com/t/updated-custom-rom-list-for-redmi-note-11s-4g-poco-m4-pro-4g-fleur.4658349/?sl)
 - [Recovery](https://xdaforums.com/t/list-of-custom-recoveries-for-fleur.4593591/?sl)
   - Советую TWRP.
-- [Прошивка MIUI с возможностью прошивки](https://miuirom.org/phones/redmi-note-11s?sl)
+- [Прошивка MIUI с возможностью прошивки](https://xdaforums.com/t/go-back-to-miui-2-methods.4594535/?sl)
   - См. требования у нужной вам прошивки.
 
 Возможно понадобится:
@@ -228,7 +228,7 @@ src="@img/access-denied-download-mi-unlock-update.avif" >}}
 
 Прошивка прошивается либо через adb, либо recovery.
 
-Я прошивал MIUI используя MiFlash, использовал platform-tools для TWRP, и TWRP для установки самой прошивки. Подробный [гайд](https://xdaforums.com/t/guide-install-custom-rom-on-fleur-device.4606709/?sl).
+Я [прошивал MIUI](https://xdaforums.com/t/go-back-to-miui-2-methods.4594535/?sl) используя MiFlash, использовал platform-tools для TWRP, и TWRP для установки самой прошивки. Подробный [гайд](https://xdaforums.com/t/guide-install-custom-rom-on-fleur-device.4606709/?sl).
 
 Очень кратко:
 
