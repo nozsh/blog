@@ -40,7 +40,7 @@ cover:
   image: "@img/how-flash-poco-m4-pro-fleur-cover.webp" # image path/url
   width: "1580" # only for img from url; EX: 1920
   height: "961" # only for img from url; EX: 1080
-  alt: "Article - Cover" # alt text
+  alt: "Как я POCO M4 Pro прошивал - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
