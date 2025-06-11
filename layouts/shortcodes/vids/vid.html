@@ -1,39 +1,44 @@
-<div class='video-container {{ if .Get "align" }}{{ .Get "align" }}{{ end }}'>
-  <video
-  {{ if .Get "width" }}
-    width='{{ .Get "width" }}'
-  {{ end }}
-
-  {{ .Get "attr" | safeHTMLAttr }}
-
-  {{ if .Get "controlslist" }}
-    controlslist='{{ .Get "controlslist" | safeHTMLAttr }}'
-  {{ end }}
-
-  {{ if .Get "preload" }}
-    preload='{{ .Get "preload" }}'
-  {{ end }}
-
-  {{ if .Get "poster" }}
-    {{- $src := .Get "poster" | safeURL -}}
-    poster='{{ partial "utils/getAsset" (dict "src" $src "page" .Page) }}'
-  {{ end }}
-  >
-
-    {{ if .Get "webm" }}
-      {{- $src := .Get "webm" | safeURL -}}
-      {{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page) -}}
-      <source src='{{ $src }}' type="video/webm">
-      <a href='{{ $src }}'>Download WEBM</a>
+<figure>
+  <div class='video-container {{ if .Get "align" }}{{ .Get "align" }}{{ end }}'>
+    <video
+    {{ if .Get "width" }}
+      width='{{ .Get "width" }}'
     {{ end }}
 
-    {{ if .Get "mp4" }}
-      {{- $src := .Get "mp4" | safeURL -}}
-      {{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page) -}}
-      <source src='{{ $src }}' type="video/mp4">
-      <a href='{{ $src }}'>Download MP4</a>
+    {{ .Get "attr" | safeHTMLAttr }}
+
+    {{ if .Get "controlslist" }}
+      controlslist='{{ .Get "controlslist" | safeHTMLAttr }}'
     {{ end }}
 
-    Your browser does not support video.
-  </video>
-</div>
+    {{ if .Get "preload" }}
+      preload='{{ .Get "preload" }}'
+    {{ end }}
+
+    {{ if .Get "poster" }}
+      {{- $src := .Get "poster" | safeURL -}}
+      poster='{{ partial "utils/getAsset" (dict "src" $src "page" .Page) }}'
+    {{ end }}
+    >
+
+      {{ if .Get "webm" }}
+        {{- $src := .Get "webm" | safeURL -}}
+        {{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page) -}}
+        <source src='{{ $src }}' type="video/webm">
+        <a href='{{ $src }}'>Download WEBM</a>
+      {{ end }}
+
+      {{ if .Get "mp4" }}
+        {{- $src := .Get "mp4" | safeURL -}}
+        {{- $src = partial "utils/getAsset" (dict "src" $src "page" .Page) -}}
+        <source src='{{ $src }}' type="video/mp4">
+        <a href='{{ $src }}'>Download MP4</a>
+      {{ end }}
+
+      Your browser does not support video.
+    </video>
+  </div>
+  {{ if .Get "caption" }}
+    <figcaption>{{.Get "caption" | markdownify}}</figcaption>
+  {{ end }}
+</figure>

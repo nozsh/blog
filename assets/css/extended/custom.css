@@ -136,3 +136,7 @@ mark {
   background: var(--tertiary);
   border: 0;
 }
+
+.mb--content-gap {
+  margin-bottom: var(--content-gap);
+}

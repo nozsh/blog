@@ -1,4 +1,6 @@
 <figure>
   <img loading="lazy" alt='{{ .Get "alt" }}' width='{{ .Get "width" }}' src='{{ partial "utils/getAsset" (dict "src" (.Get "src") "page" .Page) }}'>
-  <figcaption>{{.Get "caption" | markdownify}}</figcaption>
+  {{ if .Get "caption" }}
+    <figcaption>{{.Get "caption" | markdownify}}</figcaption>
+  {{ end }}
 </figure>

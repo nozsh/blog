@@ -1,7 +1,7 @@
 .video-container {
   display: flex;
   justify-content: start;
-  margin-bottom: var(--content-gap);
+  /* margin-bottom: var(--content-gap); */
 }
 
 .video-container.center {

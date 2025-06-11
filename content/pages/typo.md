@@ -393,7 +393,8 @@ controlslist="nodownload nofullscreen noremoteplayback"
 webm="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
 mp4="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 preload="metadata"
-poster="@img/typo-cover.avif" >}}
+poster="@img/typo-cover.avif"
+caption="Flowers" >}}
 
 ```md
 {{</* vids/vid
@@ -404,7 +405,8 @@ controlslist="nodownload nofullscreen noremoteplayback"
 webm="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
 mp4="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
 preload="metadata"
-poster="typo-cover.jpg" */>}}
+poster="typo-cover.jpg"
+caption="Flowers" */>}}
 ```
 
 ```md
@@ -416,7 +418,8 @@ controlslist=""
 webm=""
 mp4=""
 preload="metadata"
-poster="" */>}}
+poster=""
+caption="" */>}}
 ```
 
 ### Параметры
