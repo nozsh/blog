@@ -163,6 +163,18 @@ cover:
 {{</* iframes/yt jfKfPfyJRdk "title" "params" */>}}
 ```
 
+Примеры `params`:
+
+- `start=30` - начать с 30 секунд
+- `end=35` - закончить на 35 секундах
+- `controls=0` - убрать элементы управления
+
+Параметры объединяются через `&`, например:
+
+```text
+start=30&end=35&controls=0
+```
+
 ## Ссылка на пост
 
 {{< embedPost url="typo" >}}

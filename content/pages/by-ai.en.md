@@ -39,8 +39,8 @@ cover:
   # hidden: true # only hide on current single page
 ---
 
-Part of this content was prepared by AI.
+<!-- Part of this content was prepared by AI. -->
 
 All AI-generated material has been reviewed.
 
-Nevertheless, it is strongly recommended to carefully analyze and verify the information.
+<!-- Nevertheless, it is strongly recommended to carefully analyze and verify the information. -->

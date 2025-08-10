@@ -5,7 +5,7 @@ description: "Как запушить этот код?"
 summary: "Как запушить этот код?"
 date: 2024-08-08
 categories: ["Short Read", "Dev"] # ["cat 1", "cat 2"]
-tags: ["By AI", "Windows"] # ['tag 1', 'tag 2']
+tags: ["Windows", "By AI"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1

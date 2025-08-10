@@ -5,7 +5,7 @@ description: "AI облегчает написание статей, повыш�
 summary: "AI облегчает написание статей, повышая их доступность и эффективность."
 date: 2024-06-01
 categories: ["Long Read", "AI"] # ["cat 1", "cat 2"]
-tags: ["By AI", "AI Text Gen"] # ['tag 1', 'tag 2']
+tags: ["AI Text Gen", "By AI"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
 # canonicalURL: "yourself"
 # weight: 1

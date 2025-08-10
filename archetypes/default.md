@@ -37,7 +37,7 @@ showToc: true
 # UseHugoToc: false
 # byai: true
 cover:
-  # image: "article/image" # image path/url
+  # image: "image" # image url
   # width: "1920" # only for img from url; EX: 1920
   # height: "1080" # only for img from url; EX: 1080
   alt: "Article - Cover" # alt text
