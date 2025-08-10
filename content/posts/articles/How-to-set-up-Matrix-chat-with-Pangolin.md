@@ -144,7 +144,7 @@ location / {
 ## Установка Matrix
 
 {{< callout/note >}}
-Synapse по умолчанию использует sqlite, (личное мнение) это *[совсем](https://www.google.com/search?q=why+postgresql+better+than+sqlite?sl)* не очень хороший выбор базы данных, поэтому будем использовать PostgreSQL.
+Synapse по умолчанию использует sqlite, (личное мнение) это _[совсем](https://www.google.com/search?q=why+postgresql+better+than+sqlite?sl)_ не очень хороший выбор базы данных, поэтому будем использовать PostgreSQL.
 {{< /callout/note >}}
 
 {{< callout/hint >}}
@@ -215,7 +215,7 @@ database:
 Редактирование конфига Element:
 
 ```bash
-nano element-config.json 
+nano element-config.json
 ```
 
 В `base_url` ваш домен с протоколом и без "/" в конце. Используйте "https", Pangolin сам работает с SSL сертификатами.
@@ -369,7 +369,7 @@ uploads_path: /media/data/uploads
 
 Путь получится "/data/data/", в корень файлы лучше не записывать, потому что корень зачастую не пустой из-за "lost+found" (зависит от файловой системы). А программа может требовать чтобы директория была пуста, так например требует PostgreSQL, к тому же зачем смешивать файлы.
 
-*Не красиво, но точно будет работать.*
+_Не красиво, но точно будет работать._
 
 ### Максимальный размер загружаемых файлов (Max Upload Size)
 
@@ -410,8 +410,8 @@ homeserver.yaml:
 
 ```yaml
 media_retention:
-  local_media_lifetime: 90d     # медиа от пользователей
-  remote_media_lifetime: 14d    # медиа с других серверов (федерация)
+  local_media_lifetime: 90d   # медиа от пользователей
+  remote_media_lifetime: 14d  # медиа с других серверов (федерация)
 ```
 
 100% рабочий вариант через API:
@@ -421,7 +421,7 @@ media_retention:
 Получить токен:
 
 ```bash
-URL="http://10.10.10.2:8008"; USER="@admin:domain.org"; PASS="abrakadabra"; curl -X POST "$URL/_matrix/client/v3/login" -H "Content-Type: application/json" -d "{\"type\":\"m.login.password\",\"user\":\"$USER\",\"password\":\"$PASS\"}"
+URL="http://10.10.10.2:8008"; USER="@admin:domain.org"; PASS='abrakadabra'; curl -X POST "$URL/_matrix/client/v3/login" -H "Content-Type: application/json" -d "{\"type\":\"m.login.password\",\"user\":\"$USER\",\"password\":\"$PASS\"}"
 ```
 
 Удалить все что старше 1 минуты (60000 в мс):
@@ -433,7 +433,7 @@ BEFORE_TS=$(($(date +%s%3N) - 60000)); URL="http://10.10.10.2:8008"; TOKEN="toke
 Или в одну команду, получить токен, выполнить удаление, отозвать токен:
 
 ```bash
-URL="http://10.10.10.2:8008"; USER="@admin:domain.org"; PASS="abrakadabra"; DELAFTERMS=60000; LOGIN_RESP=$(curl -s -X POST "$URL/_matrix/client/v3/login" -H "Content-Type: application/json" -d "{\"type\":\"m.login.password\",\"user\":\"$USER\",\"password\":\"$PASS\"}"); echo "Login response: $LOGIN_RESP"; TOKEN=$(echo "$LOGIN_RESP" | grep -oP '"access_token":"\K[^"]+'); BEFORE_TS=$(($(date +%s%3N) - DELAFTERMS)); curl -X POST -H "Authorization: Bearer $TOKEN" "$URL/_synapse/admin/v1/media/delete?before_ts=$BEFORE_TS"; curl -X POST "$URL/_matrix/client/v3/logout" -H "Authorization: Bearer $TOKEN"
+URL="http://10.10.10.2:8008"; USER="@admin:domain.org"; PASS='abrakadabra'; DELAFTERMS=60000; LOGIN_RESP=$(curl -s -X POST "$URL/_matrix/client/v3/login" -H "Content-Type: application/json" -d "{\"type\":\"m.login.password\",\"user\":\"$USER\",\"password\":\"$PASS\"}"); echo "Login response: $LOGIN_RESP"; TOKEN=$(echo "$LOGIN_RESP" | grep -oP '"access_token":"\K[^"]+'); BEFORE_TS=$(($(date +%s%3N) - DELAFTERMS)); curl -X POST -H "Authorization: Bearer $TOKEN" "$URL/_synapse/admin/v1/media/delete?before_ts=$BEFORE_TS"; curl -X POST "$URL/_matrix/client/v3/logout" -H "Authorization: Bearer $TOKEN"
 ```
 
 Или [скриптом](https://github.com/nozsh/matrix-element-pangolin-conf/blob/main/utilities/media-cleanup.sh?sl). И сделать cron задачу, типо такого:
