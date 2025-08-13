@@ -5,7 +5,7 @@ title: "Разворачиваем Matrix-чат дома и выбрасыва�
 description: "Расскажу как развернуть Matrix на домашнем сервере за NAT и сделать его доступным в интернете через Pangolin."
 summary: "Расскажу как развернуть Matrix на домашнем сервере за NAT и сделать его доступным в интернете через Pangolin."
 date: 2025-08-10
-# lastmod: 2001-01-29
+lastmod: 2025-08-13
 categories: ["Long read", "Self-hosted"] # ["cat 1", "cat 2"]
 tags: ["Linux", "By AI"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
@@ -45,6 +45,12 @@ cover:
   relative: true # when using page bundles set this to true
   hidden: false # only hide on current single page
 ---
+
+{{% details/1 "Изменения" %}}
+- 13 авг. 2025
+  - Добавлено: Установка TURN сервера (Coturn)
+{{% /details/1 %}}
+
 
 ## Введение
 
@@ -577,3 +583,50 @@ sudo sh -c 'docker compose down && docker compose up -d --force-recreate && dock
 ```
 
 [Подробнее](https://docs.mau.fi/bridges/general/docker-setup.html?bridge=telegram?sl).
+
+### Установка TURN сервера (Coturn)
+
+TURN сервер лучше установить на VPS с публичным IP, можно рядом с Pangolin, все будет работать. В Pangolin для TURN сервера ничего добавлять и настраивать не нужно.
+
+```bash
+git clone https://github.com/nozsh/matrix-element-pangolin-conf coturn && cd coturn && mv extra/coturn . && find . -maxdepth 1 -not -name 'coturn' -not -name '.' -exec rm -rf {} + && mv coturn/* . && rm -rf coturn/
+```
+
+Открыть порты UFW (на всякий случай):
+
+```bash
+sudo sh -c 'ufw allow 3478/tcp && ufw allow 3478/udp && ufw allow 5349/tcp && ufw allow 5349/udp && ufw allow 59000:60100/udp && ufw status'
+```
+
+```bash
+nano coturn.conf
+```
+
+Поменять `external-ip`, `realm` и `server-name`. А также данные `user=test:test` - логин:пароль.
+
+Сертификаты можно получить через certbot, или в другом месте, например Cloudflare:
+
+- "cert.pem" - публичный ключ
+- "private.key" - приватный ключ
+
+```bash
+touch certs/cert.pem certs/private.key
+```
+
+```bash
+docker compose up -d && docker compose logs -f --tail=200
+```
+
+homeserver.yaml:
+
+```yaml
+turn_uris:
+  - "turns:turn.domain.org:5349?transport=tcp"
+  - "turns:turn.domain.org:5349?transport=udp"
+  - "turn:turn.domain.org:3478?transport=tcp"
+  - "turn:turn.domain.org:3478?transport=udp"
+
+turn_username: "test"
+turn_password: "test"
+turn_allow_guests: true
+```
