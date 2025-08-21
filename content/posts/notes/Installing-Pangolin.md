@@ -57,10 +57,10 @@ cover:
 
 Необходимо указать DNS запись на поддомен/домен для админки Pangolin, например "pangolin.domain.org". Указывать DNS запись на сам домен "domain.org" в таком случае -- необязательно.
 
-Если вы используйте фаервол, нужно разрешить следующие порты: "80/tcp", "443/tcp", "51820/udp". На примере ufw:
+Если вы используйте фаервол, нужно разрешить следующие порты: "80/tcp", "443/tcp", "51820/udp", "21820/udp". На примере ufw:
 
 ```bash
-sudo sh -c 'ufw allow 80/tcp && ufw allow 443/tcp && ufw allow 51820/udp'
+sudo sh -c 'ufw allow 80/tcp && ufw allow 443/tcp && ufw allow 51820/udp && ufw allow 21820/udp'
 ```
 
 Установка Docker:
