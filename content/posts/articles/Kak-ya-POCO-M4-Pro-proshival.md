@@ -5,7 +5,7 @@ title: "Как я POCO M4 Pro прошивал"
 description: "Расскажу как я разблокировал загрузчик HyperOS и MIUI, устанавливал TWRP и прошивал кастомный ROM на POCO M4 Pro a.k.a Fleur."
 summary: "Расскажу как я разблокировал загрузчик HyperOS и MIUI, устанавливал TWRP и прошивал кастомный ROM на POCO M4 Pro a.k.a Fleur."
 date: 2025-06-04
-# lastmod: 2001-01-29
+lastmod: 2025-09-24
 categories: ["Long Read", "System"] # ["cat 1", "cat 2"]
 tags: ["Android"] # ['tag 1', 'tag 2']
 author: ["nozsh"] # ['Me', 'You'] multiple authors
@@ -66,6 +66,12 @@ POCO M4 Pro 4G на A13 и HyperOS 1.0.8.0, не китайский.
 Мой путь начался в этом прекрасном [треде](https://xdaforums.com/t/updated-custom-rom-list-for-redmi-note-11s-4g-poco-m4-pro-4g-fleur.4658349/?sl) со списком прошивок на xda, перетек [сюда](https://xdaforums.com/t/guide-install-custom-rom-on-fleur-device.4606709/?sl), далее [сюда](https://xdaforums.com/t/mtk-unlock-bootloader-without-waiting-a-week.4523431/?sl). А так же я побывал [здесь](https://xdaforums.com/t/root-poco-m4-pro-4g-fleur-using-magisk.4449193/#post-86965237?sl), [тут](https://xdaforums.com/t/unlock-bootloader-redmi-note-11s.4431675/), [там](https://github.com/bkerler/mtkclient?sl) и вот [здесь вот](https://github.com/MlgmXyysd/Xiaomi-HyperOS-BootLoader-Bypass?sl), а закончился мой путь в этом [треде](https://xdaforums.com/t/hypersploit-bypass-hyperos-bootloader-unlocking-restrictions.4668775/?sl).
 
 Вкратце, не берите *первые попавшиеся* Xiaomi/POCO в надежде что прошьете. А если берете, то сначала посмотрите есть ли актуальные ROM на вашу модель, и если есть и вы взяли, НЕ обновляйте телефон, так шансов провернуть этот финт будет выше.
+
+{{< callout/note >}}
+Если вы оказались тут не по причине разблокировки и прошивки этого телефона, а еще в процессе решения, еще ничего не приобрели и думаете что взять -- настоятельно рекомендую ознакомиться с [этим](https://github.com/melontini/bootloader-unlock-wall-of-shame?sl).
+
+В этом списке указаны бренды телефонов у которых сложно разблокировать загрузчик, невозможно, и рекомендуемые бренды у которых это сделать можно и просто.
+{{< /callout/note >}}
 
 ## История
 
