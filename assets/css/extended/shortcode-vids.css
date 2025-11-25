@@ -8,9 +8,9 @@
   justify-content: center;
 }
 
-.video-container.right {
+/* .video-container.right {
   justify-content: end;
-}
+} */
 
 .video-container video {
   max-width: 100%;

@@ -3,5 +3,6 @@
   <summary>{{ $summary | .Page.RenderString }}</summary>
   <div class="a-details-inner">
     {{ .Inner }}
+    <!-- {{- .Inner | .Page.RenderString -}} -->
   </div>
 </details>

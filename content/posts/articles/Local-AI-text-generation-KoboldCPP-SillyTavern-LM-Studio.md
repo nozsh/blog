@@ -362,13 +362,13 @@ operable program or batch file.
 
 Запускаем бинарный файл:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="Тут можно смотреть логи"
 alt="KoboldCPP - Start Terminal"
 src="@img/koboldcpp-start-terminal-logs-1.avif" >}}
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="KoboldCPP - GUI"
 alt="KoboldCPP - Start GUI"
@@ -452,7 +452,7 @@ chmod +x start.sh
 
 «Auto-connect to Last Server» - тоже полезная опция, чтобы при запуске SillyTavern, не нужно было вручную нажимать на «Connect», и оно само подключалось к последнему бэкенд серверу.
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="SillyTavern - вкладка с настройкой API бэкенда"
 alt="SillyTavern - вкладка с настройкой API бэкенда"
@@ -470,7 +470,7 @@ src="@img/sillytavern-api.avif" >}}
 
 Переходим в настройки:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Настройки приложения"
 alt="LM Studio - Настройки приложения"
@@ -484,7 +484,7 @@ src="@img/lm-studio-app-settings.avif" >}}
 
 Нажимаем на «Discover» в сайдбаре:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Обзор моделей для скачивания"
 alt="LM Studio -  Обзор моделей для скачивания"
@@ -496,7 +496,7 @@ src="@img/lm-studio-discover.avif" >}}
 
 Переходим в «Runtime»:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Обзор Runtime компонентов"
 alt="LM Studio - Обзор Runtime компонентов"
@@ -506,7 +506,7 @@ src="@img/lm-studio-runtime-extension-packs.avif" >}}
 
 На странице «My Models» (в сайдбаре), можно посмотреть и настроить параметры по умолчанию для каждой модели:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Управление скачанными моделями"
 alt="LM Studio - Управление скачанными моделями"
@@ -525,7 +525,7 @@ src="@img/lm-studio-my-models.avif" >}}
 
 Модели загружаются и выгружаются сверху:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - GUI"
 alt="LM Studio - GUI"

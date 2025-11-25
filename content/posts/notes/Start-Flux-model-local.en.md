@@ -53,8 +53,7 @@ Or maybe you're get error **"You do not have CLIP state dict!"** when using the 
 And that's probably why you're reading this.
 
 {{< callout/warn >}}
-This is note about how to run the **Flux** model.<br>  
-**Not tutorial on setting up local installation for image generation.**
+This is note about how to run the **Flux** model.<br> **Not tutorial on setting up local installation for image generation.**
 {{< /callout/warn >}}
 
 {{< embedPost url="local-ai-image-generation-stability-matrix">}}
@@ -110,4 +109,3 @@ You can load them in any order.
 ---
 
 For more details, check out [this discussion](https://github.com/lllyasviel/stable-diffusion-webui-forge/discussions/1050?sl) from the WebUI Forge developer.
-

@@ -351,13 +351,13 @@ Download the binary for your system, choosing based on the release notes.
 
 Run the binary file:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="You can see the logs here"
 alt="KoboldCPP - Start Terminal"
 src="@img/koboldcpp-start-terminal-logs-1.avif" >}}
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="KoboldCPP - GUI"
 alt="KoboldCPP - Start GUI"
@@ -441,7 +441,7 @@ I highly recommend enabling «Derive context size from backend» so that the «C
 
 «Auto-connect to Last Server» is also a useful option. It lets SillyTavern connect automatically to the last backend server on startup, so you don't have to tap «Connect» manually every time.
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="SillyTavern - tab with backend API settings"
 alt="SillyTavern - tab with backend API settings"
@@ -459,7 +459,7 @@ I recommend disabling «Enable Local LLM Service» if you don't want the service
 
 Now, go to the settings:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - App settings"
 alt="LM Studio - App settings"
@@ -473,7 +473,7 @@ src="@img/lm-studio-app-settings.avif" >}}
 
 Tap «Discover» in the sidebar:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Overview of models for download"
 alt="LM Studio -  Overview of models for download"
@@ -485,7 +485,7 @@ When searching for models, don't forget to check the «GGUF» box.
 
 Go to «Runtime»:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Overview of Runtime components"
 alt="LM Studio - Overview of Runtime components"
@@ -495,7 +495,7 @@ Update «CPU llama.cpp», and the second CUDA package for Nvidia GPUs. For AMD G
 
 On the «My Models» page (in the sidebar), you can view and adjust default settings for each model.
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - Managing downloaded models"
 alt="LM Studio - Managing downloaded models"
@@ -514,7 +514,7 @@ If you download models manually instead of through LM Studio, they should be pla
 
 Models load and unload from the top:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="LM Studio - GUI"
 alt="LM Studio - GUI"

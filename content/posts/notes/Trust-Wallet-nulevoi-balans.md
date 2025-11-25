@@ -36,7 +36,7 @@ cover:
 
 Вероятней всего вы используйте "какую-то другую" валюту. Когда вам кто-то кидает крипту, или когда вы сами себе ее кидаете, она "включается". Разумеется при восстановлении кошелька, никто ее не включит.
 
-{{< imgs/imgc width="" caption="Trust Wallet (Android)" alt="Trust Wallet (Android интерфейс с инструкцией как включить валюту)" src="@img/trust-wallet-nulievoi-balans-android.avif" >}}
+{{< imgs/img width="" caption="Trust Wallet (Android)" alt="Trust Wallet (Android интерфейс с инструкцией как включить валюту)" src="@img/trust-wallet-nulievoi-balans-android.avif" >}}
 
 1. Нажимаем на два круга сверху справа.
 2. Используем поиск, если не можем найти нужную валюту.

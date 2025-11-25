@@ -1,26 +1,27 @@
+{{- if (.Param "ListMasonry") }}
+  {{- $listMasonry := resources.Get "js/list-masonry.js" }}
+  <script src="{{ $listMasonry.RelPermalink }}?v=2" defer></script>
+{{- end }}
+
 {{- $ntlinks := resources.Get "js/ntlinks.js" }}
 <script src="{{ $ntlinks.RelPermalink }}?v=2" defer></script>
 
-{{/* Load Smooth Anchor Scroll script */}} {{- $anchorscroll := resources.Get
-"js/anchor-scroll.js" }}
+{{/* Load Smooth Anchor Scroll script */}}
+{{- $anchorscroll := resources.Get "js/anchor-scroll.js" }}
 <script src="{{ $anchorscroll.RelPermalink }}?v=1" defer></script>
 
-{{/* Load Lite YouTube Embed JS */}} {{- $liteytembedJS := resources.Get
-"js/lite-yt-embed.js" }}
+{{/* Load Lite YouTube Embed JS */}}
+{{- $liteytembedJS := resources.Get "js/lite-yt-embed.js" }}
 <script src="{{ $liteytembedJS.RelPermalink }}?v=0.3.3" defer></script>
 
-{{/* Load mediumZoom script */}} {{- if (.Param "EnableImageZoom") }} {{-
+{{/* Load mediumZoom script */}}
+{{- if (.Param "EnableImageZoom") }} {{-
 $imagezoom := resources.Get "js/medium-zoom.min.js" }}
 <script
   src="{{ $imagezoom.RelPermalink }}?v=1.0.6"
-  {{-
-  if
-  site.Params.assets.disableFingerprinting
-  }}
+  {{- if site.Params.assets.disableFingerprinting }}
   integrity="{{ $imagezoom.Data.Integrity }}"
-  {{-
-  end
-  }}
+  {{- end }}
 ></script>
 <script>
   mediumZoom(".entry-cover img");
@@ -28,7 +29,8 @@ $imagezoom := resources.Get "js/medium-zoom.min.js" }}
 </script>
 {{- end }}
 
-{{/* XMAS */}} {{/* <style>
+{{/* XMAS */}} {{/* */}}
+  <style>
   .xny-bg {
     animation: 1s xnyBgAnim;
     opacity: 0.3;
@@ -41,7 +43,7 @@ $imagezoom := resources.Get "js/medium-zoom.min.js" }}
       opacity: 0.3;
     }
   }
-  .kg-callout-card {
+  .kg-callout-card, article.first-entry, details.a-details, .embed-post-card, .references-card {
     backdrop-filter: blur(6px);
   }
 </style>
@@ -59,15 +61,16 @@ $imagezoom := resources.Get "js/medium-zoom.min.js" }}
     opacityThreshold: 0.5, // Opacity on start dying
   };
 </script>
-*/}}
+{{/* */}}
 
 <!-- Load xmas.js -->
-{{/*
+{{/* */}}
 <script
   src="https://assets.nozsh.com/js/loose/xmas.min.js?v={{ time.Now.Unix }}"
   defer
 ></script>
-*/}} {{/* GoatCounter */}}
+{{/* */}}
+{{/* GoatCounter */}}
 <script
   data-goatcounter="https://saladvisor-blog.goatcounter.com/count"
   async

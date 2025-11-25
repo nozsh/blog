@@ -85,7 +85,7 @@ Stability Matrix можно установить или запустить бе�
 
 Разумеется, соглашаемся с лицензионным соглашением, даже не читая его:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="Установка Stability Matrix"
 alt="Установка Stability Matrix"
@@ -94,7 +94,7 @@ src="@img/003-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 Далее выбираем путь куда установить или используем **Portable Mode**:
 
-{{< imgs/img "Установка Stability Matrix" "100%" "@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
+{{< imgs/img alt="Установка Stability Matrix" width="100%" src="@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 {{% details/1 "О Portable Mode" %}}
 В Portable Mode все данные и настройки будут храниться в той же директории, что и приложение. Вы сможете перенести приложение с папкой "Data" в другое место или на другой компьютер.
@@ -104,7 +104,7 @@ src="@img/003-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 Если вы не знаете что вам нужно, нажимайте **Skip first-time setup**:
 
-{{< imgs/img "Конец установка Stability Matrix" "100%" "@img/005-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
+{{< imgs/img alt="Конец установка Stability Matrix" width="100%" src="@img/005-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 ## 🚀 Установка и запуск первой панели
 
@@ -152,7 +152,7 @@ local URL:  http://127.0.0.1:7860
 
 Если этот URL не открылся в браузере автоматически, перейдите по URL или скопируйте вручную.
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="WebUI by AUTOMATIC1111"
 alt="Stable Diffusion WebUI by AUTOMATIC1111"

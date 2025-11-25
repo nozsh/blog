@@ -87,7 +87,7 @@ You can install Stability Matrix or run it without installation (portable). I re
 
 Of course, agree the license agreement -- without even reading it:
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="Installing Stability Matrix"
 alt="Installing Stability Matrix"
@@ -95,13 +95,13 @@ src="@img/003-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 Next, choose the installation path or use **Portable Mode**:
 
-{{< imgs/img "Installing Stability Matrix" "100%" "@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
+{{< imgs/img alt="Installing Stability Matrix" width="100%" src="@img/004-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 At the end of installation, Stability Matrix will suggest you install panel right away.
 
 If you're not sure what you need, click **Skip first-time setup**:
 
-{{< imgs/img "Installation Complete - Stability Matrix" "100%" "@img/005-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
+{{< imgs/img alt="Installation Complete - Stability Matrix" width="100%" src="@img/005-local-ai-image-generation-stability-matrix-ustanovka.avif" >}}
 
 ## 🚀 Installing and Launching first panel
 
@@ -151,7 +151,7 @@ local URL:  http://127.0.0.1:7860
 
 If this URL does not open automatically in your browser, click manually or copy and paste into your browser.
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="WebUI by AUTOMATIC1111"
 alt="Stable Diffusion WebUI by AUTOMATIC1111"

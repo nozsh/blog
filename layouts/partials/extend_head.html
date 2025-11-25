@@ -1,6 +1,12 @@
 <base href="{{ .Permalink }}">
 <meta name="darkreader-lock">
 
+{{- if (.Param "ListMasonry") }}
+  {{- $listMasonry := resources.Get "css/list-masonry.css" }}
+  <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css"
+  href="{{ $listMasonry.RelPermalink }}?v=2">
+{{- end }}
+
 {{/* Load Lite YouTube Embed CSS */}}
 {{- $liteytembedCSS := resources.Get "css/lite-yt-embed.css" }}
 {{- $liteytembedCustomCSS := resources.Get "css/lite-yt-embed-custom.css" }}

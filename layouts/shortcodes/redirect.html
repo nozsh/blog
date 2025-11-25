@@ -1,1 +1,15 @@
 <meta http-equiv="refresh" content="{{ .Get 0 }};URL={{ .Get 1}}">
+
+<p>
+  You should have been redirected to this URL (<code>{{ .Get 0 }}</code>), <br>if not manually click <a href="{{ .Get 0 }}">here</a>.
+</p>
+
+<script>
+const url = "{{ .Get 0 }}";
+const seconds = {{ .Get 1}};
+
+// СКРИПТ РЕДИРЕКТА
+setTimeout(() => {
+    window.location.href = url;
+}, seconds * 1000);
+</script>

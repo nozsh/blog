@@ -1,0 +1,36 @@
+{{ $align := "" }}
+{{ if .Get "align" }}
+  {{ $align = .Get "align" }}
+  {{ if eq $align "left" }}
+    {{ $align = "" }}
+  {{ else if eq $align "center" }}
+    {{ $align = "kg-flex-center-content" }}
+  {{ else if eq $align "right" }}
+    {{ $align = "kg-flex-right-content" }}
+  {{ end }}
+{{ end }}
+
+{{ $items := "" }}
+{{ if .Get "items" }}
+  {{ $items = printf "align-items:%s;" (.Get "items") }}
+{{ end }}
+
+{{ $gap := "" }}
+{{ if .Get "gap" }}
+  {{ $gap = printf "gap:%s;" (.Get "gap") }}
+{{ end }}
+
+{{ $grow := "" }}
+{{ if .Get "grow" }}
+  {{ if eq (.Get "grow") true }}
+    {{ $grow = "kg-flex-grow-1" }}
+  {{ end }}
+{{ end }}
+
+{{ $basis := .Get "basis" | default "auto" }}
+
+{{ $style := printf "%s%s" $gap $items }}
+
+<div class="kg-flex-container {{ $align }} {{ $grow }}" style="{{ $style | safeCSS }}--flex-basis:{{ $basis }}">
+  {{ .Inner }}
+</div>

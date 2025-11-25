@@ -101,9 +101,9 @@ WIM так же удобен если вы модифицируете и под�
 
 Запускаем Dism++ > "Файл" > "Сохранить образ как". Сохраните его например на рабочий стол. После того как он создастся, кидаем его на флешку.
 
-{{< imgs/imgc width="" caption="Подготовка к созданию install.wim" alt="" src="@img/001-kak-sdelat-sborku-windows-dism-podgotovka.avif" >}}
+{{< imgs/img width="" caption="Подготовка к созданию install.wim" alt="" src="@img/001-kak-sdelat-sborku-windows-dism-podgotovka.avif" >}}
 
-{{< imgs/imgc width="" caption="Процесс создания install.wim" alt="" src="@img/002-kak-sdelat-sborku-windows-dism-process.avif" >}}
+{{< imgs/img width="" caption="Процесс создания install.wim" alt="" src="@img/002-kak-sdelat-sborku-windows-dism-process.avif" >}}
 
 ## Создание образа (Хост)
 
@@ -111,11 +111,11 @@ WIM так же удобен если вы модифицируете и под�
 
 Открываем WinAIO Maker. Выбираем "Select WIMs". Далее выбираем модифицированный install.wim из папки sources.
 
-{{< imgs/imgc width="" caption="" alt="" src="@img/003-kak-sdelat-sborku-windows-winaio-maker-professional-1.avif" >}}
+{{< imgs/img width="" caption="" alt="" src="@img/003-kak-sdelat-sborku-windows-winaio-maker-professional-1.avif" >}}
 
 Нажимаем "Save all into ISO". В "Label" вводим что-то, в "Destination" - указываем путь куда сохранить. И жмем "Make ISO".
 
-{{< imgs/imgc width="" caption="" alt="" src="@img/004-kak-sdelat-sborku-windows-winaio-maker-professional-2.avif" >}}
+{{< imgs/img width="" caption="" alt="" src="@img/004-kak-sdelat-sborku-windows-winaio-maker-professional-2.avif" >}}
 
 Ожидаем создания образа, обычно это недолго.
 

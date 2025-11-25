@@ -10,6 +10,36 @@ body {
   z-index: 2;
 }
 
+@media (min-width: 768px) {
+  .header {
+    top: 1rem;
+    background: transparent;
+    backdrop-filter: none;
+    margin-bottom: 0.5rem;
+  }
+  .nav {
+    /* max-width: calc(var(--main-width) + var(--gap) * 4); */
+    max-width: calc(var(--main-width));
+    padding: 0 var(--gap);
+    background: var(--header-bg);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(124, 139, 154, 0.25);
+    border-radius: var(--radius);
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-out;
+  }
+
+  .logo,
+  #menu {
+    margin: auto calc(var(--gap) - var(--gap) * 1.5);
+  }
+
+  .nav #menu li {
+    font-weight: 600;
+  }
+}
+
 #menu li {
   font-weight: 500;
 }
@@ -101,9 +131,25 @@ body {
 
 .entry-footer,
 .archive-meta {
-  overflow-x: hidden;
+  overflow-x: auto;
+  position: relative;
+  z-index: 1;
   word-break: keep-all;
   white-space: nowrap;
+  cursor: grab;
+  -ms-overflow-style: none; /* IE, Edge */
+  scrollbar-width: none; /* Firefox */
+  user-select: none;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+.entry-footer::-webkit-scrollbar,
+.archive-meta::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 .paginav {

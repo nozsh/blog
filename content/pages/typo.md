@@ -196,7 +196,25 @@ start=30&end=35&controls=0
 {{< embedPost source=true url="https://example.com" title="Example Title" desc="Some description" cover="@img/typo-cover.avif" author="Author" site="Website" >}}
 
 ```md
-{{</* embedPost source=true ...
+{{</* embedPost source=true ... */>}}
+```
+
+## Список источников
+
+В markdown.
+
+{{< references >}}
+- Источник [Источник](#)
+- Источник [Источник](#)
+- Источник [Источник](#)
+{{< /references >}}
+
+```md
+{{</* references */>}}
+- Источник [Источник](#)
+- Источник [Источник](#)
+- Источник [Источник](#)
+{{</* /references */>}}
 ```
 
 ## Заголовки
@@ -349,29 +367,29 @@ start=30&end=35&controls=0
 ![alt](typo-cover.jpg)
 ```
 
-### Другой размер
+### С параметрами
 
-{{< imgs/img "Type - Cover" "50%" "@img/typo-cover.avif" >}}
-
-```md
-{{</* imgs/img "alt" "50%" "typo-cover.jpg" */>}}
-```
-
-### С подписью
-
-{{< imgs/imgc
-width=""
+{{< imgs/img
+notp=false
+loading=""
 caption="Это подпись"
-alt="Type - Cover"
+alt="Это alt"
+width="50%"
 src="@img/typo-cover.avif" >}}
 
 ```md
-{{</* imgs/imgc
-width=""
-caption="Текст"
-alt="alt"
+{{</* imgs/img
+notp=false
+loading=""
+caption="Это подпись"
+alt="Это alt"
+width="50%"
 src="typo-cover.jpg" */>}}
 ```
+
+- notp - true - не оборачивать в тег &lt;p&gt;, обычно нужно если используется внутри другого шорткода
+- loading - lazy/eager, по умолчанию lazy
+- caption - подпись
 
 ### Галерея
 
@@ -396,7 +414,6 @@ src |
 ```
 
 ## Видео
-
 {{< vids/vid
 width="100%"
 align="center"
@@ -438,7 +455,7 @@ caption="" */>}}
 
 `width` - Ширина видео.
 
-`align` - Выравнивание видео на странице: `center`, `right`. По умолчанию _без значения_ видео выравнивается по левому краю.
+`align` - Выравнивание видео на странице: `left`, `center`. По умолчанию _без значения_ видео выравнивается по левому краю - `left`.
 
 `attr` - Атрибуты видео.
 

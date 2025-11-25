@@ -2,6 +2,13 @@
 {{- if (and .Params.cover.image (not $.isHidden)) }}
 <figure class="entry-cover">
     {{- $loading := cond $.IsSingle "eager" "lazy" }}
+
+    {{/*  CUSTOM  */}}
+    {{- if (.Param "ListMasonry") }}
+      {{- $loading = "eager" }}
+    {{- end }}
+    {{/*  CUSTOM  */}}
+
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
     {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}

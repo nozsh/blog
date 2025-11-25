@@ -1,0 +1,23 @@
+{{ $lang := .Page.Language.Lang }}
+{{ $title := cond (eq $lang "en") "References" "Источники" }}
+
+<hr class="references-hr">
+
+<div class="references-card" style="cursor: help;">
+
+  <div class="source-post-line references-post-line">
+    <img src='{{- partial "utils/getAssetFree" . -}}/img/loose/sourcePostBG.avif' alt="Source Post Background" no-zoom>
+    <div class="source-post-line-bg"></div>
+    <div class="source-post-line-content references-post-line-content">
+      <span class="references-title">{{ $title }}</span>
+    </div>
+  </div>
+
+  <div class="references-container">
+    <div class="references-content">
+      <div class="references-text">
+          {{- .Inner | markdownify -}}
+      </div>
+    </div>
+  </div>
+</div>

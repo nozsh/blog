@@ -60,7 +60,7 @@ cover:
 - .nomedia <== файл
 ```
 
-{{< imgs/imgc
+{{< imgs/img
 width=""
 caption="[Total Commander](https://play.google.com/store/apps/details?id=com.ghisler.android.TotalCommander?sl)"
 alt="Файл .nomedia - Total Commander"

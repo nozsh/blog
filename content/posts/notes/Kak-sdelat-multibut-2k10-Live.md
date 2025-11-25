@@ -39,7 +39,7 @@ cover:
 
 Если же вы хотите сделать несколько разделов, на одном из которых будет 2k10 Live, то его нужно делать первым:
 
-{{< imgs/imgc width="" caption="Мой внешний SSD диск, с 2k10 Live на разделе \"zboot\", в NTFS" alt="Пример 2k10 live на одном из разделов SSD - Мультибут 2k10 Live" src="@img/002-kak-sdelat-multibut-2k10-live-neskolko-razdelov.avif" >}}
+{{< imgs/img width="" caption="Мой внешний SSD диск, с 2k10 Live на разделе \"zboot\", в NTFS" alt="Пример 2k10 live на одном из разделов SSD - Мультибут 2k10 Live" src="@img/002-kak-sdelat-multibut-2k10-live-neskolko-razdelov.avif" >}}
 
 Я буду использовать флешку. Но вы можете использовать как внешний SDD, так и внешний HDD.
 
@@ -75,7 +75,7 @@ cover:
 
 Запускаем утилиту **UTmake**, которая идет в комплекте с 2k10 Live. Если по какой-то причине UTMake не была скачена с ISO образом, запускаем ее из распакованного образа - `\2k10\Programs-2k10\Flash-Utilites\UTmake\`.
 
-{{< imgs/imgc width="" caption="Это старый скриншот с файловой системой NTFS, я делаю на FAT32" alt="" src="@img/003-kak-sdelat-multibut-2k10-live-interfeis-utmake.avif" >}}
+{{< imgs/img width="" caption="Это старый скриншот с файловой системой NTFS, я делаю на FAT32" alt="" src="@img/003-kak-sdelat-multibut-2k10-live-interfeis-utmake.avif" >}}
 
 Выбираете другой накопитель, если программа выбрала его не правильно.
 
@@ -107,7 +107,7 @@ UTMake можно закрыть.
 
 Далее **ВАЖНО**! Не перепутайте, вы должны в корне вашего накопителя открыть **SetLDR-2k10** из `\2k10\`. То есть это нужно делать НА накопители, а не из папки откуда вы изначально запускали UTMake и где лежит образ!
 
-{{< imgs/imgc width="" caption="Скриншот старый, я делаю на FAT32" alt="Установка загрузчика - Мультибут 2k10 Live" src="@img/005-kak-sdelat-multibut-2k10-live-ustanovka-zagruzchika.avif" >}}
+{{< imgs/img width="" caption="Скриншот старый, я делаю на FAT32" alt="Установка загрузчика - Мультибут 2k10 Live" src="@img/005-kak-sdelat-multibut-2k10-live-ustanovka-zagruzchika.avif" >}}
 
 Выбираем загрузчик который вам больше нравится, но я опять таки советую **Syslinux**, с ним будет большая совместимость со старым железом. Нажимаем **Setup**. Если **Syslinux** недоступен, то ставьте **Grub4Dos**.
 
