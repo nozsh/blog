@@ -1,7 +1,7 @@
 {{ $loading := .Get "loading" | default "lazy" }}
 {{ $notp := false }}
+<!-- {{- $notp := .Get "notp" | default false -}} TODO -->
 {{ $alt := .Get "alt" | default (printf "%s - Image" .Page.Title) }}
-<!-- {{ $alt := .Get "caption" | default (printf "%s - Image" .Page.Title) }} -->
 {{ $caption := .Get "caption" }}
 
 {{ if eq (.Get "notp") true }}
