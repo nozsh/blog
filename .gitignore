@@ -9,3 +9,6 @@ content/**/*.webp
 content/**/*.webm
 content/**/*.gif
 content/**/*.avif
+
+# Other
+.zettel-notes/
