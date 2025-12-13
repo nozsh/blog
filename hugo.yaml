@@ -9,7 +9,7 @@ theme: ["PaperMod"]
 
 pagination:
   disableAliases: false
-  pagerSize: 12
+  pagerSize: 11
 
 enableRobotsTXT: false
 buildDrafts: false
