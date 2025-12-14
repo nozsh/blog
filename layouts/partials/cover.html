@@ -5,7 +5,8 @@
 
     {{/*  CUSTOM  */}}
     {{- if (.Param "ListMasonry") }}
-      {{- $loading = "eager" }}
+      {{/* - $loading = "eager" */}}
+      {{- $loading = "lazy" }}
     {{- end }}
     {{/*  CUSTOM  */}}
 
