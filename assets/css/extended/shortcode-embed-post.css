@@ -62,7 +62,7 @@
   transform: scale(1.5);
 }
 
-.dark .source-post-line img {
+[data-theme="dark"] .source-post-line img {
   opacity: 0.04;
 }
 

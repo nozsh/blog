@@ -40,6 +40,11 @@ body {
   }
 }
 
+.post-meta,
+.breadcrumbs {
+  flex-wrap: wrap;
+}
+
 #menu li {
   font-weight: 500;
 }
@@ -59,7 +64,7 @@ body {
   --color: #fff;
 }
 
-.dark .post-tags .category {
+[data-theme="dark"] .post-tags .category {
   --color: #000;
 }
 

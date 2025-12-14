@@ -1,16 +1,26 @@
 <base href="{{ .Permalink }}">
 <meta name="darkreader-lock">
 
+{{/* Load Masonry List */}}
 {{- if (.Param "ListMasonry") }}
-  {{- $listMasonry := resources.Get "css/list-masonry.css" }}
-  <link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css"
-  href="{{ $listMasonry.RelPermalink }}?v=2">
+  {{- $listMasonry := resources.Get "css/list-masonry.css" | resources.Minify }}
+  {{- if not site.Params.assets.disableFingerprinting }}
+    {{- $listMasonry := $listMasonry | fingerprint }}
+    <link crossorigin="anonymous" integrity="{{ $listMasonry.Data.Integrity }}" rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="{{ $listMasonry.RelPermalink }}">
+  {{- else }}
+    <link crossorigin="anonymous" rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="{{ $listMasonry.RelPermalink }}">
+  {{- end }}
 {{- end }}
 
+
 {{/* Load Lite YouTube Embed CSS */}}
-{{- $liteytembedCSS := resources.Get "css/lite-yt-embed.css" }}
-{{- $liteytembedCustomCSS := resources.Get "css/lite-yt-embed-custom.css" }}
-<link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css"
-  href="{{ $liteytembedCSS.RelPermalink }}?v=1.0.0">
-<link rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css"
-  href="{{ $liteytembedCustomCSS.RelPermalink }}?v=1.0.0">
+{{- $liteytembedCSS := resources.Get "css/lite-yt-embed/lite-yt-embed.css" }}
+{{- $liteytembedCustomCSS := resources.Get "css/lite-yt-embed/lite-yt-embed-custom.css" }}
+{{- $liteytembed := (slice $liteytembedCSS $liteytembedCustomCSS) | resources.Concat "assets/css/lite-yt-embed.css" | resources.Minify }}
+
+{{- if not site.Params.assets.disableFingerprinting }}
+    {{- $liteytembed := $liteytembed | fingerprint }}
+    <link crossorigin="anonymous" integrity="{{ $liteytembed.Data.Integrity }}" rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="{{ $liteytembed.RelPermalink }}?v=1.0.0">
+  {{- else }}
+    <link crossorigin="anonymous" rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="{{ $liteytembed.RelPermalink }}?v=1.0.0">
+{{- end -}}

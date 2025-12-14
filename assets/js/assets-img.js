@@ -1,4 +1,4 @@
-let imgURL = "https://assets.nozsh.su/img/blog/";
+let imgURL = "https://assets.nozsh.com/img/blog/";
 let imgPATH = "@img/";
 
 // /my/link/url/

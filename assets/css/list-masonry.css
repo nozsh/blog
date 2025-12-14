@@ -1,4 +1,8 @@
-@media (min-width: 769px) {
+main.main > .first-entry {
+  padding: var(--gap);
+}
+
+@media (min-width: 640px) {
   main.main:has(> article.first-entry, > article.post-entry) {
     column-count: 2;
   }

@@ -12,7 +12,7 @@
   --code-block-bg: rgb(46, 46, 51);
 }
 
-.dark {
+[data-theme="dark"] {
   --header-bg: rgba(29, 30, 32, 0.5);
   --accent: var(--accent-acid);
   --mark-color: #000;
