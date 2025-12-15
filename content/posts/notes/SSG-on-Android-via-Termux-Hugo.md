@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 # url: "" # slug
 title: "SSG на Android через Termux на примере hugo"
 description: "Настраиваем Termux и компилируем hugo на Android."
@@ -37,13 +37,13 @@ showToc: true
 # UseHugoToc: false
 # byai: true
 cover:
-  image: "@img/cover.ssg-on-android-via-termux-hugo.avif" # image url
-  width: "1508" # only for img from url; EX: 1920
-  height: "928" # only for img from url; EX: 1080
-  alt: "SSG на Android через Termux на примере hugo - Cover" # alt text
+  # image: "" # image url
+  # width: "1920" # only for img from url; EX: 1920
+  # height: "1080" # only for img from url; EX: 1080
+  alt: "Article - Cover" # alt text
   # caption: "Photo by [Sajad Nori](#?sl) / [Unsplash](https://unsplash.com/?sl)" # display caption under cover
   relative: true # when using page bundles set this to true
-  # hidden: true # only hide on current single page
+  hidden: true # only hide on current single page
 ---
 
 {{< callout/note >}}
