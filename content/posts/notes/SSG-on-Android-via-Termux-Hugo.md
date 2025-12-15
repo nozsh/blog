@@ -150,7 +150,7 @@ CGO_ENABLED=1 go install -tags extended github.com/gohugoio/hugo@latest
 ls ~/go/bin/
 ```
 
-Там должен быть"hugo", если так, значит оно скомпилировалось.
+Там должен быть "hugo", если так, значит оно скомпилировалось.
 
 Теперь добавим это в переменные среды, чтобы не писать путь до бинарника каждый раз:
 
@@ -164,7 +164,9 @@ echo 'export PATH="$HOME/go/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 
 Проверка: `hugo version`.
 
-А еще при запуске сервера например `hugo server -D`, нужно использоваться флаг `noBuildLock` из-за особенности файловой системы Android блокировки файлов. То есть:
+А еще при запуске сервера например `hugo server -D`, нужно использоваться флаг `noBuildLock` из-за особенности файловой системы Android блокировки файлов.
+
+То есть:
 
 ```bash
 hugo server -D --noBuildLock
