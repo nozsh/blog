@@ -1,0 +1,8 @@
+{{/* From https://github.com/foxihd/hugo-brewm \ marginpar.html */}}
+
+{{- $var := .Get 0 }}
+{{- $hyphens := eq $var "hyphens" }}
+{{- $calloutInlineID := print "callout-inline-" .Ordinal }}
+<input id="{{ $calloutInlineID }}" class="callout-inline-ctrl" type="checkbox" aria-label="Additional Notes" aria-controls="the-{{ $calloutInlineID }}" hidden>
+<label for="{{ $calloutInlineID }}" tabindex="0" aria-label="Additional Notes" aria-controls="the-{{ $calloutInlineID }}"></label>
+<span id="the-{{ $calloutInlineID }}" class="callout-inline" role="note" {{ if $hyphens }}style="hyphens: auto;"{{ end }}>{{ .Inner | .Page.RenderString }}</span>

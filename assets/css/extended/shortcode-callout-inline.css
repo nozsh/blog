@@ -1,0 +1,116 @@
+/* From https://github.com/foxihd/hugo-brewm \ marginpar.html */
+
+:root {
+  --marginparwidth: calc(var(--main-width) * 0.38196602);
+  --indent: 1.618pc;
+  --small: calc(var(--font-size) - 0.125rem);
+}
+
+/* --- */
+
+.callout-inline {
+  position: relative;
+  /* float: right; */
+  float: left;
+  /* clear: right; */
+  clear: left;
+  width: var(--marginparwidth);
+  /* hyphens: auto; */
+}
+
+.callout-inline img {
+  width: 100%;
+  height: auto;
+}
+
+/* --- */
+
+/* .callout-inline-ctrl:checked + label + .callout-inline {
+  --anm: expand 99ms forwards;
+  --tso: top;
+} */
+
+.callout-inline-ctrl + label::before {
+  position: relative;
+  top: 0.23em;
+  /* left: 0.43em; */
+  right: 0.43em;
+  align-self: center;
+  /* margin-left: auto; */
+  margin-right: auto;
+  background: linear-gradient(to top, transparent 49%, var(--accent) 0%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font: 8pt "base-ui";
+  content: "\e913";
+}
+
+.callout-inline-ctrl:checked + label::before {
+  background: unset;
+  top: 0;
+  color: var(--accent);
+}
+
+/* --- */
+
+.callout-inline {
+  /* left: calc(var(--marginparwidth) + var(--indent)); */
+  left: calc(-1 * (var(--marginparwidth) + var(--indent)));
+  /* margin-right: 0; */
+  margin-left: 0;
+  /* margin-left: calc(var(--marginparwidth) * -1); */
+  margin-right: calc(var(--marginparwidth) * -1);
+  font-size: var(--small);
+  font-style: italic;
+}
+
+/* .callout-inline.abs {
+  left: unset;
+  padding-left: var(--indent);
+} */
+
+.callout-inline-ctrl,
+.callout-inline-ctrl + label::before {
+  position: absolute;
+  top: -100vh;
+}
+
+/* @media screen and (max-width: 1024px) {
+  .callout-inline.abs {
+    left: -1rem;
+    padding-left: unset;
+  }
+} */
+
+/* @media screen and (max-width: 640px) { */
+@media screen and (max-width: 1350px) {
+  .callout-inline-ctrl + label {
+    display: inline-flex;
+    padding: 2pt;
+  }
+
+  .callout-inline-ctrl + label::before {
+    position: unset;
+    display: block !important;
+    left: 0;
+  }
+
+  .callout-inline-ctrl:checked + label::before {
+    --anm: unset;
+    color: var(--accent);
+  }
+
+  .callout-inline {
+    display: none;
+    float: unset;
+  }
+
+  .callout-inline-ctrl:checked + label + .callout-inline {
+    display: block;
+    position: unset;
+    margin: 0 var(--indent) 1ex;
+    padding-right: var(--indent);
+    width: 100%;
+  }
+}

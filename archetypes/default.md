@@ -35,6 +35,7 @@ showToc: true
 # ShowRssButtonInSectionTermList: false
 # ShowCanonicalLink: true
 # UseHugoToc: false
+# math: true
 # byai: true
 cover:
   # image: "image" # image url

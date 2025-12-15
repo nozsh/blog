@@ -24,3 +24,8 @@
   {{- else }}
     <link crossorigin="anonymous" rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css" href="{{ $liteytembed.RelPermalink }}?v=1.0.0">
 {{- end -}}
+
+{{/* Math*/}}
+{{ if or .Params.math }}
+  {{ partial "math.html" . }}
+{{ end }}

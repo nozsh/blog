@@ -32,6 +32,7 @@ ShowBreadCrumbs: false
 # ShowCanonicalLink: true
 # CanonicalLinkText: "Источник:"
 # UseHugoToc: false
+math: true
 hideAuthor: true
 # byai: true
 cover:
@@ -104,6 +105,26 @@ cover:
 "" - background-color: transparent;
 "" - background-image: none;
 ```
+
+<br>
+
+**Inline callout**
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam duo dolores et ea rebum. {{< callout/inline hyphens >}}Lorem Ipsum is simply dummy text of the printing and typesetting industry.{{< /callout/inline >}} Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+```md {hl_lines=[3,4]}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam duo dolores et ea rebum. {{</* callout/inline hyphens */>}}Lorem
+Ipsum is simply dummy text of the printing and typesetting industry.{{</* /callout/inline */>}}
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+```
+
+```md
+{{</* callout/inline hyphens */>}}Inline{{</* /callout/inline */>}}
+```
+
+Наличие "hyphens" включает переносы.
 
 ## Ахтунг
 
@@ -544,7 +565,7 @@ caption="" */>}}
 
 ## Блоки кода
 
-```js
+```
 llinks_safe = document
   .querySelectorAll("a[href*='?sl']")
   .forEach((llinks_safe) => {
@@ -559,7 +580,7 @@ llinks_safe = document
 
 Подсветка синтаксиса указывается после первых трех обратных кавычек:
 
-````
+````md
 ```js
 llinks_safe = document
   .querySelectorAll("a[href*='?sl']")
@@ -572,7 +593,7 @@ llinks_safe = document
 ```
 ````
 
-Убрать нумерацию строк `{linenos=false}`.
+Убрать нумерацию строк `{linenos=false}`:
 
 ````{linenos=false}
 ```js {linenos=false}
@@ -586,3 +607,52 @@ llinks_safe = document
   });
 ```
 ````
+
+Выделить строку или строки `{hl_lines=[1,2,3]}`:
+
+````{hl_lines=[2,5]}
+```js {hl_lines=[2,5]}
+llinks_safe = document
+  .querySelectorAll("a[href*='?sl']")
+  .forEach((llinks_safe) => {
+    llinks_safe.setAttribute("rel", "noreferrer nofollow noopener");
+
+    let llinks_safe_href = llinks_safe.href.toString().slice(0, -3);
+    llinks_safe.setAttribute("href", "https://href.li/?" + llinks_safe_href);
+  });
+```
+````
+
+Можно объединять `{linenos=false,hl_lines=[1,2,3]}`.
+
+## Математика
+
+Включить в frontmatter:
+
+```yaml {linenos=false}
+---
+math: true
+---
+```
+
+Инлайн $E = mc^2$ формула:
+
+```md {linenos=false}
+Инлайн $E = mc^2$ формула
+```
+
+<br>
+
+Блок с формулой:
+
+$$
+\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$$
+
+```md {linenos=false}
+$$
+\int_{0}^{\infty} e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
+$$
+```
+
+Шпаргалки: [Katex](https://katex.org/docs/supported.html?nt), [Detexify](https://detexify.kirelabs.org/).
