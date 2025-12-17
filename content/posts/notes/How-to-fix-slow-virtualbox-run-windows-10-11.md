@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 # url: "" # slug
 title: "Исправление медленной работы VirtualBox на Windows 10&11"
 description: "Как же убрать эту чертову черепаху?"
@@ -61,11 +61,11 @@ cover:
 
 Если вы видите это:
 
-![](@img/virtual-box-turtle-indicator.avif)
+![VirtualBox - значок медленной работы VM](@img/virtual-box-turtle-indicator.avif)
 
 А должно быть что-то типо такого:
 
-![](@img/virtual-box-no-turtle-indicator.avif)
+![VirtualBox - значок нормальной работы VM](@img/virtual-box-no-turtle-indicator.avif)
 
 Значит ваша виртуальная машина работает медленно, потому что не использует аппаратную виртуализацию вашего процессора.
 
@@ -99,9 +99,9 @@ Windows как бы "отнимает" виртуализацию, и поэто
 - Kernel-mode Hardware-enforced Stack Protection
 
 {{% details/1 "Скрины" %}}
-![](@img/windows-11-windows-security-settings.avif)
-![](@img/windows-11-device-security-settings.avif)
-![](@img/windows-11-core-isolation-settings.avif)
+![Windows 11 Security Settings](@img/windows-11-windows-security-settings.avif)
+![Windows 11 Device Security Settings](@img/windows-11-device-security-settings.avif)
+![Windows 11 Core Isolation Settings](@img/windows-11-core-isolation-settings.avif)
 {{% /details/1 %}}
 
 Далее, скачать [эту](https://www.microsoft.com/en-us/download/details.aspx?id=53337?nt) утилиту с официального сайта. Открыть PowerShell от имени администратора:
@@ -237,7 +237,7 @@ Write-Host "Credential Guard: " -NoNewline; if($dg.SecurityServicesRunning -cont
 
 Что если вы все отключили, попользовались виртуальной машиной, включили все обратно, но решили снова попользоваться виртуальной машиной, и так по кругу, но:
 
-![](@img/windows-11-core-isolation-unavailable-settings.avif)
+![Windows 11 Core Isolation Settings is unavailable](@img/windows-11-core-isolation-unavailable-settings.avif)
 
 Вы не можете изменить настройки. В таком случае просто пропускаете шаг с отключением параметров в изоляции ядра (Core Isolation) и идете дальше.
 
