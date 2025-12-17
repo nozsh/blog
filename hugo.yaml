@@ -228,7 +228,8 @@ languages:
           url: tags/
           weight: 300
         - identifier: nozshub
-          name: 🌀 hub
+          # name: 🌀 hub
+          name: cd ~/
           url: https://nozsh.com/
           weight: 340
 
