@@ -77,7 +77,7 @@ Windows как бы "отнимает" виртуализацию, и поэто
 
 ## Windows 10 & 11
 
-Нужно отключить все что связано с виртуализацией, <kbd>win</kbd> + <kbd>R</kbd> --> "optionalfeatures":
+Нужно отключить все что связано с виртуализацией, <kbd>WIN</kbd> + <kbd>R</kbd> --> "optionalfeatures":
 
 - Hyper-V
 - Virtual Machine Platform
@@ -134,7 +134,7 @@ cd <путь_до_утилиты>
 Прежде чем делать описанное ниже, прочитайте полностью!
 {{< /callout/warn >}}
 
-<kbd>win</kbd> + <kbd>R</kbd> --> "msinfo32", если "Secure Boot State" - "on" то промотайте вниз до проверки. Если "off", то идем дальше.
+<kbd>WIN</kbd> + <kbd>R</kbd> --> "msinfo32", если "Secure Boot State" - "on" то промотайте вниз до проверки. Если "off", то идем дальше.
 
 Заходим в BIOS/UEFI:
 
