@@ -46,6 +46,10 @@ cover:
   hidden: true # only hide on current single page
 ---
 
+*Смотрите так же:*
+
+{{< embedPost url="tunnel-between-home-server-and-vps-via-zerotier" >}}
+
 Это короткая заметка о том как установить Pangolin для туннелирования трафика.
 
 Понадобится сервер VPS/VDS с публичным IP адресом и доменное имя. Если вы используете Cloudflare и тп. проксирование для админки Pangolin должно быть выключено (DNS only).
