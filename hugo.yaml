@@ -55,6 +55,7 @@ params:
   TocSide: "right"
   EnableImageZoom: true
   ListMasonry: true
+  xmas: true
 
   assets:
     disableHLJS: true # to disable highlight.js
