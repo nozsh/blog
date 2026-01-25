@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 # url: "" # slug
 title: "Дом. VPS. Хранилище. ZeroTier. NFS. SSHFS"
 description: "О том как подключить сетевое хранилище и не забыть про проблемы с SSHFS."
