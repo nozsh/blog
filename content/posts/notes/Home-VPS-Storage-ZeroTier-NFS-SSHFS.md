@@ -177,6 +177,10 @@ mount -t nfs <VPS_ZeroTier_IP>:/ /mnt/storage -o soft,timeo=30,retrans=5
 
 ```bash {linenos=false}
 umount /mnt/storage
+# ИЛИ
+umount -l /mnt/storage
+# ИЛИ
+fusermount -u /mnt/storage
 ```
 
 Для `nano /etc/fstab`:
@@ -190,6 +194,8 @@ umount /mnt/storage
 ![](@img/home-server-localhost-nfs-sshfs-nas-scheme.avif)
 
 Эта схема без кругов, подключаем хранилище напрямую к домашнему серверу по SSHFS, а затем по NFS с localhost так еще и через докер :D
+
+Да, опять докер, но можно просто поднять NFS сервер и сделать тоже самое, но вероятно возникнут проблемы, потому что кажется nfs docker image содержит и делает больше чем просто вручную поднятый NFS сервер. *В будущем будет дополнено как это сделать.*
 
 {{< imgs/img
 notp=false
