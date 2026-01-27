@@ -48,7 +48,8 @@ cover:
 
 {{% details/1 "Изменения" %}}
 - 27 янв. 2026
-  - Дополнение: Исправление PostgreSQL v18+
+  - Добавлено: Настройка и включение федерации
+  - Дополнение: Исправление для PostgreSQL v18+
 - 13 авг. 2025
   - Добавлено: Установка TURN сервера (Coturn)
 {{% /details/1 %}}
@@ -308,6 +309,88 @@ Element должен открываться по ip:port (в конфиге 4100
 **Это доп. инструкции для людей которые чего-то хотят и понимают что именно и как именно хотят. Если вы не знаете надо ли оно вам, или не понимаете о чем речь -- не делайте этого.**
 {{< /callout/warn >}}
 
+### Включение/Настройка федерации
+
+{{< callout/warn >}}
+Настроить федерацию вероятно не получится с Pangolin, потому что нужно настроить проксирование 8448 порта на VPS. А на момент написания этой статьи в Pangolin нельзя вручную менять конфиги. *8448 это порт федерации.*
+{{< /callout/warn >}}
+
+{{< callout/note >}}
+Примеры будут на NGINX.
+{{< /callout/note >}}
+
+**Домашний сервер**
+
+docker-compose.yaml:
+
+```yaml
+  reverse-proxy:
+    ports:
+      - "4100:80"
+      - "4101:8448"
+```
+
+NGINX default.conf:
+
+```conf
+...
+server {
+    listen 80;
+    listen [::]:80;
+    listen 8448;
+    listen [::]:8448;
+...
+```
+
+**VPS**
+
+Открыть порт 8448 в firewall и указать его в Docker если вы используете Docker, на примере ufw и ZT:
+
+```bash
+ufw allow 8448/tcp
+```
+
+```yaml {hl_lines=[6]}
+  zerotier:
+    ports:
+      - "9993:9993/udp"
+      - "80:80"
+      - "443:443"
+      - "8448:8448"
+```
+
+NGINX, в конце добавить еще один server блок:
+
+```conf {hl_lines=[4,6,7,15]}
+server {
+    listen 8448 ssl;
+    http2 on;
+    server_name domain.org;
+
+    client_max_body_size 100M;
+
+    ssl_certificate /etc/letsencrypt/live/domain.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/domain.org/privkey.pem;
+
+    ssl_session_cache shared:le_nginx_SSL:10m;
+    ssl_session_timeout 1440m;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_prefer_server_ciphers on;
+
+    location / {
+        proxy_pass http://ip:4101;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto https;
+
+        proxy_http_version 1.1;
+    }
+}
+```
+
+Проверь работоспособность федерации можно [здесь](https://federationtester.matrix.org/?sl).
+
 ### Отключение федерации
 
 homeserver.yaml:
@@ -315,6 +398,16 @@ homeserver.yaml:
 ```yaml
 federation_domain_whitelist: []
 ```
+
+Или отключить федерацию со всеми, кроме некоторых:
+
+```yaml
+federation_domain_whitelist:
+  - server.org
+  - server.com
+```
+
+*Разницы форматирования между этими двумя нету, это просто разный синтаксис, но если перечислять -- так просто удобнее, чем в строку.*
 
 ### Подключение Google reCaptcha
 
@@ -330,9 +423,11 @@ recaptcha_private_key: "x"
 enable_registration_captcha: true
 ```
 
-Обратите внимание, капча будет работать только на домене, при доступе через ip:port работать не будет и вы не сможете зарегистрировать аккаунт.
+Обратите внимание, капча будет работать только на домене. При доступе через ip:port капча работать не будет и вы не сможете зарегистрировать аккаунт соответственно.
 
 ### Разделение хранилища
+
+*На примере LVM дисков.*
 
 Есть SSD и HDD, оба LVM, нужно сделать так, чтобы был отдельный логический том SSD диска для БД Synapse и отдельный логический том HDD для медиа файлов, а сам Docker контейнер работал в home/root.
 
