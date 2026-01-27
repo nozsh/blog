@@ -361,7 +361,7 @@ ufw allow 8448/tcp
 
 NGINX, в конце добавить еще один server блок:
 
-```conf {hl_lines=[4,6,7,15]}
+```conf {hl_lines=[4,8,9,17]}
 server {
     listen 8448 ssl;
     http2 on;
