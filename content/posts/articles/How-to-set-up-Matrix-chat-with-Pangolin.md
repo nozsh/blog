@@ -48,6 +48,7 @@ cover:
 
 {{% details/1 "Изменения" %}}
 - 27 янв. 2026
+  - Добавлено: Как сделать красивые юзернеймы
   - Добавлено: Настройка и включение федерации
   - Дополнение: Исправление для PostgreSQL v18+
 - 13 авг. 2025
@@ -308,6 +309,109 @@ Element должен открываться по ip:port (в конфиге 4100
 {{< callout/warn >}}
 **Это доп. инструкции для людей которые чего-то хотят и понимают что именно и как именно хотят. Если вы не знаете надо ли оно вам, или не понимаете о чем речь -- не делайте этого.**
 {{< /callout/warn >}}
+
+### Красивые юзернеймы
+
+Если вы используете поддомен, и везде укажите поддомен "sub.domain.org", то юзернемы будут такими "user:sub.domain.org". Я покажу как сделать чтобы они были такими -- "user:domain.org".
+
+Если вы уже все настроили, все запустили, и все уже давно работает -- то ничего не делайте, чтобы это сделать нужно очистить базу данных. Ну, а если вы еще ничего не запускали то смело делайте. А если запускали, но хотите переделать выполните:
+
+```bash
+sudo docker compose down -v
+```
+
+```bash
+rm -rf /path/to/location/where/db/*
+```
+
+Это для очистки БД. *Ну или можете вручную попробовать поменять базу.*
+
+**Домашний сервер**
+
+```bash
+nano synapse/homeserver.yaml
+```
+
+```yaml
+server_name: "sub.domain.org" ==> "domain.org"
+```
+
+*Вот element-config.json менять чисто для общей эстетики, не обязательно.*
+
+```bash
+nano element-config.json
+```
+
+```json {hl_lines=[5]}
+{
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "https://sub.domain.org",
+            "server_name": "domain.org"
+        }
+    },
+    "disable_custom_urls": true
+}
+```
+
+```bash
+nano nginx/default.conf
+```
+
+Убрать:
+
+```conf
+    location /.well-known/matrix/ {
+        root /usr/share/nginx/html;
+        default_type application/json;
+        add_header Access-Control-Allow-Origin *;
+    }
+```
+
+**VPS**
+
+В корне сайта domain.org:
+
+```bash
+mkdir -p .well-known/matrix/ && touch .well-known/matrix/client && touch .well-known/matrix/server && ls .well-known/matrix/
+```
+
+client:
+
+```json
+{
+  "m.homeserver": {
+    "base_url": "https://sub.domain.org"
+  }
+}
+```
+
+server:
+
+```json
+{
+  "m.server": "sub.domain.org:443"
+}
+```
+
+NGINX для "domain.org" (**НЕ** "sub.domain.org"):
+
+```conf {hl_lines=[4,5,6,7]}
+server {
+    listen 443 ssl;
+...
+    location /.well-known/matrix/ {
+        default_type application/json;
+        add_header Access-Control-Allow-Origin *;
+    }
+
+    location / {
+...
+```
+
+Если вы используете федерацию, проверьте что она работает [здесь](https://federationtester.matrix.org/?sl).
+
+У "sub.domain.org" вероятно будет ошибка "MatchingServerName", это нормально. Но у "domain.org" -- ошибок быть не должно, то есть проверять нужно то что указано в `server_name`.
 
 ### Включение/Настройка федерации
 
