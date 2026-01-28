@@ -118,6 +118,12 @@ apt install sshfs -y
 ```
 
 ```bash
+nano /etc/fuse.conf
+```
+
+Раскоментить `user_allow_other`.
+
+```bash
 sshfs -o IdentityFile=/root/.ssh/key user@host:/path /mnt/storage/ \
   -o reconnect \
   -o ServerAliveInterval=15 \
@@ -210,6 +216,12 @@ src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXVkOG51YWhmNW5lMDNiODU2a
 ```bash
 apt install sshfs nfs-common -y
 ```
+
+```bash
+nano /etc/fuse.conf
+```
+
+Раскоментить `user_allow_other`.
 
 ```bash
 sshfs -o IdentityFile=/root/.ssh/key user@host:/path /mnt/sshfs/ \
