@@ -852,9 +852,24 @@ nano coturn.conf
 touch certs/cert.pem certs/private.key
 ```
 
+Если вы создали сертификаты с помощью "certbot" то нужно использовать "fullchain.pem" и "privkey.pem":
+
+- /etc/letsencrypt/live/turn.domain.org/fullchain.pem
+- /etc/letsencrypt/live/turn.domain.org/privkey.pem
+
 ```bash
 docker compose up -d && docker compose logs -f --tail=200
 ```
+
+Если при запуске все виснет -- уберите порты и используйте:
+
+```yaml {hl_lines=[3]}
+services:
+  coturn:
+    network_mode: host
+```
+
+*Более того, так лучше сделать в любом случае, потому что Docker будет открывать все эти порты с 59000 до 60100, это довольно много, и может быть плохо.*
 
 homeserver.yaml:
 
@@ -869,3 +884,5 @@ turn_username: "test"
 turn_password: "test"
 turn_allow_guests: true
 ```
+
+Протестировать turn сервер независимо от matrix можно [здесь](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/?sl), но если у вас в браузере отключен WebRTC -- временно включите его.
