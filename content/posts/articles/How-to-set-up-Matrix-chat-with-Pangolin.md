@@ -886,3 +886,5 @@ turn_allow_guests: true
 ```
 
 Протестировать turn сервер независимо от matrix можно [здесь](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/?sl), но если у вас в браузере отключен WebRTC -- временно включите его.
+
+{{< 1wordfix >}}
