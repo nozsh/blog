@@ -298,6 +298,9 @@ sudo docker exec matrix-1-synapse_db-1 env | grep PGDATA
 
 {{< callout/hint >}}
 Некоторые вещи из "Дополнительно" желательно сделать до запуска.
+
+🚀 - лучше сделать до первого запуска<br>
+🧩 - значения не имеет
 {{< /callout/hint >}}
 
 Запуск:
@@ -318,7 +321,7 @@ Element должен открываться по ip:port (в конфиге 4100
 "Красивые юзернеймы" и "Включение/Настройка федерации" вероятно не получится сделать с Pangolin, потому что нужно писать/править конфиги руками. А на момент написания этой статьи в Pangolin нельзя вручную менять конфиги.
 {{< /callout/warn >}}
 
-### Красивые юзернеймы
+### 🚀 Красивые юзернеймы
 
 Если вы используете поддомен, и везде укажите поддомен "sub.domain.org", то юзернемы будут такими "user:sub.domain.org". Я покажу как сделать чтобы они были такими -- "user:domain.org".
 
@@ -421,7 +424,7 @@ server {
 
 У "sub.domain.org" вероятно будет ошибка "MatchingServerName", это нормально. Но у "domain.org" -- ошибок быть не должно, то есть проверять нужно то что указано в `server_name`.
 
-### Включение/Настройка федерации
+### 🧩 Включение/Настройка федерации
 
 {{< callout/note >}}
 Примеры будут на NGINX.
@@ -499,7 +502,7 @@ server {
 
 Проверь работоспособность федерации можно [здесь](https://federationtester.matrix.org/?sl).
 
-### Отключение федерации
+### 🧩 Отключение федерации
 
 homeserver.yaml:
 
@@ -517,7 +520,7 @@ federation_domain_whitelist:
 
 *Разницы форматирования между этими двумя нету, это просто разный синтаксис, но если перечислять -- так просто удобнее, чем в строку.*
 
-### Подключение Google reCaptcha
+### 🧩 Подключение Google reCaptcha
 
 Создать ключи [тут](https://www.google.com/recaptcha/admin/create?sl) (v2, "I'm not a robot").
 
@@ -533,7 +536,11 @@ enable_registration_captcha: true
 
 Обратите внимание, капча будет работать только на домене. При доступе через ip:port капча работать не будет и вы не сможете зарегистрировать аккаунт соответственно.
 
-### Разделение хранилища
+### 🚀 Разделение хранилища
+
+{{< callout/note >}}
+Если у вас уже есть файлы -- их можно просто перенести после изменений (когда разметите пространство) и перед запуском контейнера.
+{{< /callout/note >}}
 
 *На примере LVM дисков.*
 
@@ -616,7 +623,7 @@ uploads_path: /media/data/uploads
 
 _Не красиво, но точно будет работать._
 
-### Максимальный размер загружаемых файлов (Max Upload Size)
+### 🧩 Максимальный размер загружаемых файлов (Max Upload Size)
 
 homeserver.yaml:
 
@@ -630,7 +637,7 @@ nginx:
 client_max_body_size 500M;
 ```
 
-### Другие размеры миниатюр
+### 🧩 Другие размеры миниатюр
 
 Может работать некорректно, или не работать вовсе. Лично у меня не работало и сломало аватарки.
 
@@ -646,6 +653,155 @@ thumbnail_sizes:
 В любом случае миниатюры обычно создаются сами.
 
 [Подробнее](https://element-hq.github.io/synapse/latest/usage/configuration/config_documentation.html?#thumbnail_sizes?sl).
+
+### 🧩 Мосты
+
+#### Telegram
+
+В существующем docker-compose.yaml:
+
+```yaml
+mautrix-telegram:
+    image: dock.mau.dev/mautrix/telegram:latest
+    container_name: mautrix-telegram
+    restart: unless-stopped
+    volumes:
+      - ./mautrix-telegram:/data
+    networks:
+      m_network:
+        ipv4_address: 10.10.10.6
+    depends_on:
+      - synapse
+```
+
+```bash
+mkdir mautrix-telegram
+```
+
+```bash
+sudo docker compose run --rm mautrix-telegram
+```
+
+```bash
+sudo nano mautrix-telegram/config.yaml
+```
+
+```yaml
+address: http://synapse:8008
+domain: domain.org
+verify_ssl: false
+appservice:
+    address: http://mautrix-telegram:29317
+    database: postgres://synapse:password@synapse_db/mautrix_telegram
+#   postgres://username:password@hostname/dbname
+
+...
+
+telegram:
+    # Get your own API keys at https://my.telegram.org/apps
+    api_id: xyz
+    api_hash: xyz
+
+bridge:
+    permissions:
+        '*': relaybot
+        domain.org: puppeting
+#        domain.org: full
+        '@admin:domain.org': admin
+```
+
+```bash
+sudo docker compose exec synapse_db psql -U synapse -c "CREATE DATABASE mautrix_telegram WITH ENCODING='UTF8';"
+```
+
+```bash
+sudo docker compose run --rm mautrix-telegram
+```
+
+```bash
+cp mautrix-telegram/registration.yaml synapse/mautrix-telegram-registration.yaml
+```
+
+```bash
+nano synapse/homeserver.yaml
+```
+
+```yaml
+app_service_config_files:
+  - /data/mautrix-telegram-registration.yaml
+```
+
+```bash
+sudo sh -c 'docker compose down && docker compose up -d --force-recreate && docker compose logs -f'
+```
+
+[Подробнее](https://docs.mau.fi/bridges/general/docker-setup.html?bridge=telegram?sl).
+
+### 🧩 Установка TURN сервера (Coturn)
+
+TURN сервер лучше установить на VPS с публичным IP, можно рядом с Pangolin, все будет работать. В Pangolin для TURN сервера ничего добавлять и настраивать не нужно.
+
+```bash
+git clone https://github.com/nozsh/matrix-element-pangolin-conf coturn && cd coturn && mv extra/coturn . && find . -maxdepth 1 -not -name 'coturn' -not -name '.' -exec rm -rf {} + && mv coturn/* . && rm -rf coturn/
+```
+
+Открыть порты UFW (на всякий случай):
+
+```bash
+sudo sh -c 'ufw allow 3478/tcp && ufw allow 3478/udp && ufw allow 5349/tcp && ufw allow 5349/udp && ufw allow 59000:60100/udp && ufw status'
+```
+
+```bash
+nano coturn.conf
+```
+
+Поменять `external-ip`, `realm` и `server-name`. А также данные `user=test:test` - логин:пароль.
+
+Сертификаты можно получить через certbot, или в другом месте, например Cloudflare:
+
+- "cert.pem" - публичный ключ
+- "private.key" - приватный ключ
+
+```bash
+touch certs/cert.pem certs/private.key
+```
+
+Если вы создали сертификаты с помощью "certbot" то нужно использовать "fullchain.pem" и "privkey.pem":
+
+- /etc/letsencrypt/live/turn.domain.org/fullchain.pem
+- /etc/letsencrypt/live/turn.domain.org/privkey.pem
+
+```bash
+docker compose up -d && docker compose logs -f --tail=200
+```
+
+Если при запуске все виснет -- уберите порты и используйте:
+
+```yaml {hl_lines=[3]}
+services:
+  coturn:
+    network_mode: host
+```
+
+*Более того, так лучше сделать в любом случае, потому что Docker будет открывать все эти порты с 59000 до 60100, это довольно много, и может быть плохо.*
+
+homeserver.yaml:
+
+```yaml
+turn_uris:
+  - "turns:turn.domain.org:5349?transport=tcp"
+  - "turns:turn.domain.org:5349?transport=udp"
+  - "turn:turn.domain.org:3478?transport=tcp"
+  - "turn:turn.domain.org:3478?transport=udp"
+
+turn_username: "test"
+turn_password: "test"
+turn_allow_guests: true
+```
+
+Протестировать turn сервер независимо от matrix можно [здесь](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/?sl), но если у вас в браузере отключен WebRTC -- временно включите его.
+
+{{< 1wordfix >}}
 
 ### Удаление "старых" медиа файлов
 
@@ -739,152 +895,3 @@ synapse:
 ```
 
 Порт 8008 - это порт Synapse по умолчанию.
-
-### Мосты
-
-#### Telegram
-
-В существующем docker-compose.yaml:
-
-```yaml
-mautrix-telegram:
-    image: dock.mau.dev/mautrix/telegram:latest
-    container_name: mautrix-telegram
-    restart: unless-stopped
-    volumes:
-      - ./mautrix-telegram:/data
-    networks:
-      m_network:
-        ipv4_address: 10.10.10.6
-    depends_on:
-      - synapse
-```
-
-```bash
-mkdir mautrix-telegram
-```
-
-```bash
-sudo docker compose run --rm mautrix-telegram
-```
-
-```bash
-sudo nano mautrix-telegram/config.yaml
-```
-
-```yaml
-address: http://synapse:8008
-domain: domain.org
-verify_ssl: false
-appservice:
-    address: http://mautrix-telegram:29317
-    database: postgres://synapse:password@synapse_db/mautrix_telegram
-#   postgres://username:password@hostname/dbname
-
-...
-
-telegram:
-    # Get your own API keys at https://my.telegram.org/apps
-    api_id: xyz
-    api_hash: xyz
-
-bridge:
-    permissions:
-        '*': relaybot
-        domain.org: puppeting
-#        domain.org: full
-        '@admin:domain.org': admin
-```
-
-```bash
-sudo docker compose exec synapse_db psql -U synapse -c "CREATE DATABASE mautrix_telegram WITH ENCODING='UTF8';"
-```
-
-```bash
-sudo docker compose run --rm mautrix-telegram
-```
-
-```bash
-cp mautrix-telegram/registration.yaml synapse/mautrix-telegram-registration.yaml
-```
-
-```bash
-nano synapse/homeserver.yaml
-```
-
-```yaml
-app_service_config_files:
-  - /data/mautrix-telegram-registration.yaml
-```
-
-```bash
-sudo sh -c 'docker compose down && docker compose up -d --force-recreate && docker compose logs -f'
-```
-
-[Подробнее](https://docs.mau.fi/bridges/general/docker-setup.html?bridge=telegram?sl).
-
-### Установка TURN сервера (Coturn)
-
-TURN сервер лучше установить на VPS с публичным IP, можно рядом с Pangolin, все будет работать. В Pangolin для TURN сервера ничего добавлять и настраивать не нужно.
-
-```bash
-git clone https://github.com/nozsh/matrix-element-pangolin-conf coturn && cd coturn && mv extra/coturn . && find . -maxdepth 1 -not -name 'coturn' -not -name '.' -exec rm -rf {} + && mv coturn/* . && rm -rf coturn/
-```
-
-Открыть порты UFW (на всякий случай):
-
-```bash
-sudo sh -c 'ufw allow 3478/tcp && ufw allow 3478/udp && ufw allow 5349/tcp && ufw allow 5349/udp && ufw allow 59000:60100/udp && ufw status'
-```
-
-```bash
-nano coturn.conf
-```
-
-Поменять `external-ip`, `realm` и `server-name`. А также данные `user=test:test` - логин:пароль.
-
-Сертификаты можно получить через certbot, или в другом месте, например Cloudflare:
-
-- "cert.pem" - публичный ключ
-- "private.key" - приватный ключ
-
-```bash
-touch certs/cert.pem certs/private.key
-```
-
-Если вы создали сертификаты с помощью "certbot" то нужно использовать "fullchain.pem" и "privkey.pem":
-
-- /etc/letsencrypt/live/turn.domain.org/fullchain.pem
-- /etc/letsencrypt/live/turn.domain.org/privkey.pem
-
-```bash
-docker compose up -d && docker compose logs -f --tail=200
-```
-
-Если при запуске все виснет -- уберите порты и используйте:
-
-```yaml {hl_lines=[3]}
-services:
-  coturn:
-    network_mode: host
-```
-
-*Более того, так лучше сделать в любом случае, потому что Docker будет открывать все эти порты с 59000 до 60100, это довольно много, и может быть плохо.*
-
-homeserver.yaml:
-
-```yaml
-turn_uris:
-  - "turns:turn.domain.org:5349?transport=tcp"
-  - "turns:turn.domain.org:5349?transport=udp"
-  - "turn:turn.domain.org:3478?transport=tcp"
-  - "turn:turn.domain.org:3478?transport=udp"
-
-turn_username: "test"
-turn_password: "test"
-turn_allow_guests: true
-```
-
-Протестировать turn сервер независимо от matrix можно [здесь](https://webrtc.github.io/samples/src/content/peerconnection/trickle-ice/?sl), но если у вас в браузере отключен WebRTC -- временно включите его.
-
-{{< 1wordfix >}}
