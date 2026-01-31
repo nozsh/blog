@@ -835,7 +835,7 @@ password_config:
 
 Можно сделать через homeserver.yaml, искать пример `attribute_requirements` [тут](https://element-hq.github.io/synapse/latest/usage/configuration/config_documentation.html?sl).
 
-Но есть так же как по мне лучший вариант сделать это чисто на стороне Authentik: Applications ==> Applications ==> ваше приложение ==> Policy / Group / User Bindings ==> Bind existing Policy / Group / User ==> Group ==> выбрать нужную группу.
+Но есть так же как по мне лучший вариант сделать это чисто на стороне Authentik: Applications ==> Applications ==> ваше приложение ==> Policy / Group / User Bindings ==> Bind existing Policy / Group / User ==> Group ==> выбрать нужную ранее созданную группу.
 
 #### Капча (Authentik)
 
